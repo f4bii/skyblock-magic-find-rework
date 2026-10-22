@@ -17480,8 +17480,8 @@ const DROPS = [
 "item": "Fairy Armor Piece",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.05,
-"oldAmount": 1.0,
+"oldChance": 0.01,
+"oldAmount": 1,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17996,7 +17996,7 @@ const DROPS = [
 "region": "Park",
 "mob": "Pack Spirit",
 "variant": "",
-"item": "$leg$ Hound Pet",
+"item": "LEG Hound Pet",
 "newChance": null,
 "newAmount": null,
 "oldChance": 1e-05,
@@ -18131,7 +18131,7 @@ const DROPS = [
 "region": "Park",
 "mob": "Howling Spirit",
 "variant": "",
-"item": "$leg$ Hound Pet",
+"item": "LEG Hound Pet",
 "newChance": null,
 "newAmount": null,
 "oldChance": 1e-05,
@@ -18341,7 +18341,7 @@ const DROPS = [
 "region": "Park",
 "mob": "Soul of the Alpha",
 "variant": "",
-"item": "$leg$ Hound Pet",
+"item": "LEG Hound Pet",
 "newChance": null,
 "newAmount": null,
 "oldChance": 1e-05,
@@ -22364,6 +22364,22 @@ const DROPS = [
 ]
 },
 {
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "Pearlescent Dye",
+"newChance": 4e-05,
+"newAmount": 1,
+"oldChance": 2e-05,
+"oldAmount": 1,
+"status": "changed",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
 "region": "Catacombs",
 "mob": "Admin",
 "variant": "",
@@ -23616,6 +23632,710 @@ const DROPS = [
 "types": [
 "Aquatic",
 "Critter"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "Protector Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Protector",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "Old Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Old",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "Wise Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Wise",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "Travel Scroll to Dragon's Nest",
+"newChance": 0.35,
+"newAmount": 1.0,
+"oldChance": 0.35,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "Unstable Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Unstable",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "Young Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "Dragon Scale",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Young",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "Strong Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "Aspect of the Dragons",
+"newChance": 0.12,
+"newAmount": 1.0,
+"oldChance": 0.12,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Strong",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "Superior Dragon Armor Piece",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "Dragon Claw",
+"newChance": 0.08,
+"newAmount": 1.0,
+"oldChance": 0.08,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "Dragon Horn",
+"newChance": 0.3,
+"newAmount": 1.0,
+"oldChance": 0.3,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "EPIC Ender Dragon Pet",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.002,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "LEGENDARY Ender Dragon Pet",
+"newChance": 0.0004,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
+]
+},
+{
+"region": "Dragon's Nest",
+"mob": "Ender Dragon",
+"variant": "Superior",
+"item": "Dragon Essence",
+"newChance": 1.0,
+"newAmount": 10.0,
+"oldChance": 1.0,
+"oldAmount": 10.0,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Arcane",
+"Ender"
 ]
 },
 {
@@ -25364,7 +26084,7 @@ const DROPS = [
 "region": "Other Sea Creatures",
 "mob": "Night Squid",
 "variant": "",
-"item": "$Uncommon$ Fishing Exp Boost",
+"item": "UNCOMMON Fishing Exp Boost",
 "newChance": 0.001,
 "newAmount": 1.0,
 "oldChance": 0.001,
@@ -25380,7 +26100,7 @@ const DROPS = [
 "region": "Other Sea Creatures",
 "mob": "Night Squid",
 "variant": "",
-"item": "$Rare$ Fishing Exp Boost",
+"item": "RARE Fishing Exp Boost",
 "newChance": 0.0002,
 "newAmount": 1.0,
 "oldChance": 0.0002,

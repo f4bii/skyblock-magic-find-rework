@@ -290,12 +290,12 @@ def parse_wiki_drops(text):
     out = []
     for label, body in tabs:
         rows = []
-        for row in re.findall(r"\{\{Mob Drops Row(.*?)\}\}", body, re.S):
+        for row in re.findall(r"\{\{Mob Drops Row((?:[^{}]|\{\{[^{}]*\}\})*)\}\}", body):
             f = dict((k.strip(), v.strip()) for k, v in re.findall(r"\|\s*(\w+)\s*=([^|]*)", row))
             chance = parse_chance(f.get("chance", ""))
             if not f.get("drop") or chance is None:
                 continue
-            item = re.sub(r"\$(\w)\$\s*", lambda m: RARITY_CODE.get(m[1].lower(), "") + " ", f["drop"]).strip()
+            item = re.sub(r"\$(\w+)\$\s*", lambda m: RARITY_CODE.get(m[1].lower(), m[1].upper()) + " ", f["drop"]).strip()
             item = re.sub(r"^Enchanted Book &(.*)&$", r"\1", item)
             lo, _, hi = f.get("count", "1").replace(",", "").partition("-")
             try:
@@ -375,6 +375,8 @@ def unlisted_tables(covered_texts, texts):
         if text in covered_texts or title == "Baby Magma Slug" or "motes" in text or "{{mt|Pest}}" in text \
                 or re.search(r"\((Stranded|Minion Mob|Watcher|Bonzo|Elle's Quest)\)$", title):
             continue
+        if title == "Ender Dragon":  # eye-scaled drops are listed as "0-X%" for 0-8 eyes; assume 4 eyes placed
+            text = re.sub(r"chance = 0-([\d.]+)%", lambda m: f"chance = {float(m[1]) / 2:g}%", text)
         texts[title] = text
         cat = re.search(r"\|\s*category\s*=\s*(.+)", text)
         loc = re.search(r"\|\s*spawn_location\s*=\s*(.+)", text)
@@ -473,6 +475,9 @@ def main():
                                  "status": "removed", **rule})
 
     rows += slayer_dyes(first_post_text(fetch(OCT15, "oct15.html")))
+    # Oct 15 Dyes spoiler: "Increased Superior Dragon drop rate from 1/50,000 → 1/25,000" (other dragons unchanged)
+    rows.append({"region": "Dragon's Nest", "mob": "Ender Dragon", "variant": "Superior", "item": "Pearlescent Dye",
+                 "newChance": 1 / 25000, "newAmount": 1, "oldChance": 1 / 50000, "oldAmount": 1, "status": "changed"})
     for (region, mob, variant), old_rows in unlisted_tables(set(pages.values()), texts).items():
         rows += [{"region": region, "mob": mob, "variant": variant, "item": o["item"],
                   "newChance": o["chance"], "newAmount": o["amount"], "oldChance": o["chance"], "oldAmount": o["amount"],
