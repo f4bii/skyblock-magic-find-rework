@@ -13233,7 +13233,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Undead",
@@ -13249,7 +13249,23 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
+"types": [
+"Aquatic",
+"Undead",
+"Woodland"
+]
+},
+{
+"region": "Moonglade Marsh",
+"mob": "Tidetot",
+"variant": "",
+"item": "Gill Membrane",
+"newChance": null,
+"newAmount": null,
+"oldChance": 1.0,
+"oldAmount": 1,
+"status": "removed",
 "types": [
 "Aquatic",
 "Undead",
@@ -13297,7 +13313,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Undead",
@@ -13313,7 +13329,23 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
+"types": [
+"Aquatic",
+"Undead",
+"Woodland"
+]
+},
+{
+"region": "Moonglade Marsh",
+"mob": "Seacurse",
+"variant": "",
+"item": "Gill Membrane",
+"newChance": null,
+"newAmount": null,
+"oldChance": 1.0,
+"oldAmount": 1,
+"status": "removed",
 "types": [
 "Aquatic",
 "Undead",
@@ -13329,7 +13361,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Undead",
@@ -13345,7 +13377,39 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
+"types": [
+"Aquatic",
+"Undead",
+"Woodland"
+]
+},
+{
+"region": "Moonglade Marsh",
+"mob": "Hydrospear",
+"variant": "",
+"item": "Gill Membrane",
+"newChance": null,
+"newAmount": null,
+"oldChance": 1.0,
+"oldAmount": 1,
+"status": "removed",
+"types": [
+"Aquatic",
+"Undead",
+"Woodland"
+]
+},
+{
+"region": "Moonglade Marsh",
+"mob": "Hydrospear",
+"variant": "",
+"item": "Sturdy Bone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "removed",
 "types": [
 "Aquatic",
 "Undead",
@@ -13527,7 +13591,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Critter",
@@ -13543,7 +13607,7 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Critter",
@@ -13559,7 +13623,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Critter",
@@ -13575,7 +13639,7 @@ const DROPS = [
 "newAmount": 16,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Critter",
@@ -13591,7 +13655,7 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Aquatic",
 "Critter",
@@ -13639,7 +13703,7 @@ const DROPS = [
 "newAmount": 16,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Animal",
 "Aquatic",
@@ -13655,7 +13719,7 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Animal",
 "Aquatic",
@@ -13671,7 +13735,7 @@ const DROPS = [
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Animal",
 "Aquatic",
@@ -13687,7 +13751,7 @@ const DROPS = [
 "newAmount": 16,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Animal",
 "Aquatic",
@@ -13703,7 +13767,7 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Animal",
 "Aquatic",
@@ -19353,9 +19417,9 @@ const DROPS = [
 "item": "Bone",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "unknown",
+"oldChance": 1.0,
+"oldAmount": 2.0,
+"status": "changed",
 "types": [
 "Skeletal"
 ]
@@ -19369,7 +19433,7 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
-"status": "unknown",
+"status": "added",
 "types": [
 "Skeletal"
 ]
@@ -21076,9 +21140,9 @@ const DROPS = [
 "item": "Enchanted End Stone",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "unknown",
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "same",
 "types": [
 "Arthropod",
 "Ender"
@@ -21091,9 +21155,9 @@ const DROPS = [
 "item": "Mite Gel",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "unknown",
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "same",
 "types": [
 "Arthropod",
 "Ender"
@@ -22380,6 +22444,51 @@ const DROPS = [
 ]
 },
 {
+"region": "The End",
+"mob": "Endstone Protector",
+"variant": "",
+"item": "Tier Boost Core",
+"newChance": 0.002,
+"newAmount": 1,
+"oldChance": 0.002,
+"oldAmount": 1,
+"status": "unlisted",
+"types": [
+"Construct",
+"Ender"
+]
+},
+{
+"region": "The End",
+"mob": "Endstone Protector",
+"variant": "",
+"item": "LEGENDARY Golem Pet",
+"newChance": 0.006,
+"newAmount": 1,
+"oldChance": 0.006,
+"oldAmount": 1,
+"status": "unlisted",
+"types": [
+"Construct",
+"Ender"
+]
+},
+{
+"region": "The End",
+"mob": "Endstone Protector",
+"variant": "",
+"item": "EPIC Golem Pet",
+"newChance": 0.02,
+"newAmount": 1,
+"oldChance": 0.02,
+"oldAmount": 1,
+"status": "unlisted",
+"types": [
+"Construct",
+"Ender"
+]
+},
+{
 "region": "Catacombs",
 "mob": "Admin",
 "variant": "",
@@ -23245,6 +23354,20 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Critter"
+]
+},
+{
+"region": "Slayer",
+"mob": "Burningsoul Demon",
+"variant": "",
+"item": "Derelict Ashe",
+"newChance": 1.0,
+"newAmount": 5.0,
+"oldChance": 1.0,
+"oldAmount": 5.0,
+"status": "unlisted",
+"types": [
+"Infernal"
 ]
 },
 {
@@ -25417,6 +25540,70 @@ const DROPS = [
 ]
 },
 {
+"region": "Other",
+"mob": "Hidden Jerry",
+"variant": "Green Jerry",
+"item": "Green Jerry Box",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Humanoid",
+"Shielded",
+"Timid"
+]
+},
+{
+"region": "Other",
+"mob": "Hidden Jerry",
+"variant": "Blue Jerry",
+"item": "Blue Jerry Box",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Humanoid",
+"Shielded",
+"Timid"
+]
+},
+{
+"region": "Other",
+"mob": "Hidden Jerry",
+"variant": "Purple Jerry",
+"item": "Purple Jerry Box",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Humanoid",
+"Shielded",
+"Timid"
+]
+},
+{
+"region": "Other",
+"mob": "Hidden Jerry",
+"variant": "Golden Jerry",
+"item": "Golden Jerry Box",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Humanoid",
+"Shielded",
+"Timid"
+]
+},
+{
 "region": "Torrhus Canyon",
 "mob": "Hideonsun",
 "variant": "",
@@ -25677,6 +25864,36 @@ const DROPS = [
 "newChance": 0.01,
 "newAmount": 1.0,
 "oldChance": 0.01,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Animal",
+"Aquatic"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Lotusfish",
+"variant": "",
+"item": "Lotus",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Animal",
+"Aquatic"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Lotusfish",
+"variant": "",
+"item": "Silver Lotus",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.001,
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
@@ -27378,6 +27595,22 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": []
+},
+{
+"region": "Torrhus Canyon",
+"mob": "Timil",
+"variant": "",
+"item": "Raw Cod",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Aquatic",
+"Critter",
+"Timid"
+]
 },
 {
 "region": "Other Sea Creatures",

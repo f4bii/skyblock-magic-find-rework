@@ -279,10 +279,10 @@ def parse_chance(s):
 
 def parse_wiki_drops(text):
     """-> [(tab_label, [ {item, amount, chance} ])]; tab_label '' when page has no tabs."""
-    i = text.find("== Drops")
-    if i < 0:
+    m = re.search(r"== ?(Drops?|Loot) ?==", text)  # most pages say "Drops", a few "Drop" or "Loot"
+    if not m:
         return []
-    sec = text[i:]
+    sec = text[m.start():]
     nxt = re.search(r"\n==[^=]", sec[5:])
     sec = sec[: nxt.start() + 5] if nxt else sec
     parts = re.split(r"\|-\|([^=\n]+)=", sec)
@@ -478,6 +478,11 @@ def main():
     # Oct 15 Dyes spoiler: "Increased Superior Dragon drop rate from 1/50,000 → 1/25,000" (other dragons unchanged)
     rows.append({"region": "Dragon's Nest", "mob": "Ender Dragon", "variant": "Superior", "item": "Pearlescent Dye",
                  "newChance": 1 / 25000, "newAmount": 1, "oldChance": 1 / 50000, "oldAmount": 1, "status": "changed"})
+    # End Stone Protector's wiki loot is a plain wikitable (quality-based), not Mob Drops Rows
+    rows += [{"region": "The End", "mob": "Endstone Protector", "variant": "", "item": item, "newChance": c,
+              "newAmount": 1, "oldChance": c, "oldAmount": 1, "status": "unlisted"}
+             for item, c in [("Tier Boost Core", 0.002), ("LEGENDARY Golem Pet", 0.006), ("EPIC Golem Pet", 0.02)]]
+    texts.update(wiki_pages(["Endstone Protector"]))
     for (region, mob, variant), old_rows in unlisted_tables(set(pages.values()), texts).items():
         rows += [{"region": region, "mob": mob, "variant": variant, "item": o["item"],
                   "newChance": o["chance"], "newAmount": o["amount"], "oldChance": o["chance"], "oldAmount": o["amount"],
