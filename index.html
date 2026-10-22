@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magic Find Rework — Drop Rate Compare</title>
+<meta name="description" content="Hypixel SkyBlock Magic Find rework: compare live drop rates with the Alpha rework for your own Magic Find.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>✯</text></svg>">
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262b36; --text: #e6e8ee; --muted: #8a92a6;
+    --accent: #55ffff; --gold: #ffaa00; --up: #55ff55; --down: #ff5555; --same: #8a92a6;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-size: 14px; }
+  header { padding: 28px 24px 12px; max-width: 1280px; margin: auto; }
+  h1 { margin: 0; font-size: 24px; letter-spacing: .3px; }
+  h1 span { color: var(--accent); }
+  header p { margin: 6px 0 0; color: var(--muted); }
+  main { max-width: 1280px; margin: auto; padding: 0 24px 48px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
+  .inputs { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  label { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: var(--muted); }
+  label b { color: var(--text); font-weight: 600; font-size: 13px; }
+  input, select { background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font: inherit; }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  input[type=checkbox] { padding: 0; width: 15px; height: 15px; accent-color: var(--accent); }
+  .summary { margin-top: 12px; color: var(--muted); font-size: 13px; }
+  .summary strong { color: var(--gold); font-variant-numeric: tabular-nums; }
+  details summary { cursor: pointer; color: var(--accent); margin-top: 12px; font-size: 13px; }
+  .est { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 6px 18px; margin-top: 10px; }
+  .est label { flex-direction: row; align-items: center; justify-content: space-between; color: var(--text); font-size: 13px; }
+  .est input[type=number] { width: 70px; padding: 4px 6px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+  .filters label { flex: 1 1 160px; }
+  .filters label.grow { flex: 3 1 260px; }
+  .count { color: var(--muted); font-size: 12px; margin: 0 0 8px 2px; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  thead th { position: sticky; top: 0; background: var(--panel); text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 10px; border-bottom: 1px solid var(--line); }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:hover { background: #1b1f28; }
+  .mob { font-weight: 600; }
+  .sub { display: block; color: var(--muted); font-size: 12px; font-weight: 400; }
+  .chip { display: inline-block; font-size: 10px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); color: var(--gold); margin-left: 4px; vertical-align: 1px; }
+  .rare { color: var(--gold); }
+  .num { white-space: nowrap; }
+  .delta { font-weight: 700; white-space: nowrap; }
+  .up { color: var(--up); } .down { color: var(--down); } .same { color: var(--same); }
+  .badge { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 4px; }
+  .badge.up { background: #133a1a; } .badge.down { background: #3a1515; } .badge.same { background: #23262f; }
+  button { background: var(--bg); color: var(--accent); border: 1px solid var(--line); border-radius: 6px; padding: 3px 10px; font: inherit; cursor: pointer; }
+  .est label .sub { font-size: 11px; }
+  .notes { color: var(--muted); line-height: 1.55; font-size: 13px; }
+  .notes h2 { color: var(--text); font-size: 16px; margin: 0 0 8px; }
+  .notes code { color: var(--accent); }
+  .notes a { color: var(--accent); }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Magic Find Rework — <span>Drop Rate Compare</span></h1>
+  <p>Hypixel SkyBlock: live drop rates vs. the Alpha rework (Oct 15 + Oct 22, 2026), calculated with your Magic Find.</p>
+</header>
+<main>
+  <noscript><p class="panel">This page needs JavaScript to calculate drop rates.</p></noscript>
+  <section class="panel">
+    <div class="inputs">
+      <label><b>Magic Find now (live)</b>Your current MF on this mob, incl. Bestiary
+        <input id="oldMf" type="number" min="0" step="1" value="250"></label>
+      <label><b>Looting now</b>Looting / Chance on your weapon
+        <select id="oldLoot"><option value="0">None</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+      <label><b>Magic Find after rework</b>Without Looting — use the estimator below
+        <input id="newMf" type="number" min="0" step="1" value="100"></label>
+      <label><b>Looting after rework</b>Gives flat MF (auto-set from your old level)
+        <select id="newLoot"><option value="0">None</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></label>
+      <label><b>Pet Luck</b>Only used on pet drops
+        <input id="petLuck" type="number" min="0" step="1" value="0"></label>
+    </div>
+    <div class="summary" id="summary"></div>
+    <details>
+      <summary>Estimate my Magic Find after the rework</summary>
+      <div class="est" id="est">
+        <label>Booster Cookie (+20) <input type="checkbox" data-mf="20" checked></label>
+        <label>God Potion / MF Potion IV (+20) <input type="checkbox" data-mf="20" checked></label>
+        <label>MF Account Upgrades (0–5) <input type="number" min="0" max="5" value="5" data-mf="1"></label>
+        <label>SkyBlock Level (+1 per 20) <input type="number" min="0" value="536" data-per="20"></label>
+        <label>Pet Score MF (0–13) <input type="number" min="0" max="13" value="11" data-mf="1"></label>
+        <label>Private Island Beacon (0–6) <input type="number" min="0" max="6" value="5" data-mf="1"></label>
+        <label>Cinderbat attribute (0–5) <input type="number" min="0" max="5" value="5" step="0.5" data-mf="1"></label>
+        <label>Divine Gift (0–5) <input type="number" min="0" max="5" value="0" data-mf="1"></label>
+        <label>Pulse Ring (0.5–2) <input type="number" min="0" max="2" value="0" step="0.5" data-mf="1"></label>
+        <label>Anguish line (0.5–1.5) <input type="number" min="0" max="1.5" value="1.5" step="0.5" data-mf="1"></label>
+        <label>Century Cake (+1) <input type="checkbox" data-mf="1" checked></label>
+        <label>Diana's Bookshelf (+1) <input type="checkbox" data-mf="1"></label>
+        <label>Necron's Ladder (+1) <input type="checkbox" data-mf="1"></label>
+        <label>Bestiary on this mob (0–75) <input type="number" min="0" max="75" value="0" data-mf="1"></label>
+        <label>Mayor Aatrox Pathfinder (+20) <input type="checkbox" data-mf="20"></label>
+        <label>Other MF (tagged mob, island shards…) <input type="number" min="0" value="0" data-mf="1"></label>
+        <label>Mayor Jerry (+10%) <input type="checkbox" data-mult="1.1"></label>
+      </div>
+    </details>
+    <details>
+      <summary>Mob-type Magic Find (Alpha, added only on mobs of that type)</summary>
+      <p class="summary">Each mob's types come from its wiki page and are listed under its name. The max is every source from the Alpha post stacked. <button id="typeMax" type="button">Fill all max</button> <button id="typeZero" type="button">Clear</button></p>
+      <div class="est" id="types"></div>
+    </details>
+  </section>
+
+  <section class="panel">
+    <div class="filters">
+      <label class="grow">Search mob or item<input id="q" type="search" placeholder="e.g. Titanoboa, Daedalus Stick, Scatha"></label>
+      <label>Area<select id="region"><option value="">All areas</option></select></label>
+      <label id="subWrap" hidden><span id="subName"></span><select id="sub"></select></label>
+      <label>Show<select id="status">
+        <option value="">All drops</option>
+        <option value="rare">Rare drops (≤ 5% base)</option>
+        <option value="changed">Base rate changed</option>
+        <option value="unlisted">Not in the patch notes</option>
+        <option value="added">New drops</option>
+        <option value="removed">No longer in table</option>
+        <option value="unknown">No live data</option>
+      </select></label>
+      <label>Sort<select id="sort">
+        <option value="">Area / mob</option>
+        <option value="gain">Biggest improvement</option>
+        <option value="loss">Biggest nerf</option>
+        <option value="rarest">Rarest (alpha)</option>
+      </select></label>
+    </div>
+  </section>
+
+  <p class="count" id="count"></p>
+  <div class="panel table-wrap" style="padding:0">
+    <table>
+      <thead><tr><th>Mob</th><th>Drop</th><th>Base chance<br>live → alpha</th><th>Live<br>with your MF</th><th>Alpha<br>with your MF</th><th>Change</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <section class="panel notes">
+    <h2>How it's calculated</h2>
+    <p><b>Live:</b> chance = base × (1 + 0.15 × Looting). If that's below 5%, it's then × (1 + MF/100), with MF capped at 900. Looting doesn't apply to pets; pets add Pet Luck to MF. Over 100% means extra copies.</p>
+    <p><b>Alpha:</b> every mob drop gets MF (cap 500). Looting I–VII is now flat +1/2/3/4/6/8/10 MF. For drops under 100%: chance = base × (1 + MF/100); anything over 100% is a guaranteed drop plus a chance of another (e.g. 122 MF on a 50% drop gives 1 + 11%). For 100% drops, you get MF/100 extra items (8 Pumpkins at 145 MF = 9.45 on average).</p>
+    <p><b>Mobs not in the patch notes</b> keep their live base rates (from the wiki), but MF now applies to all of their drops, so their real rates still change. Rift mobs (no MF there) and Garden pests are left out.</p>
+    <p><b>Mob-type MF</b> (shards, Griffin, Megalodon, Sorrow Armor…) is added to your Alpha MF only on mobs with that type, before the 500 cap. It isn't added to live, since the live MF you enter already includes whatever you use. Some mobs have no type on the wiki and get none.</p>
+    <p><b>"Change"</b> compares the average items per kill. Amount ranges from the wiki (e.g. 2–4) are averaged.</p>
+    <p><b>Assumptions:</b> Pet Luck is assumed to still add to MF for pets on Alpha. For drops under 100% with more than one item, extra rolls are assumed to give the whole stack. Zombie Slayer uses Hypixel's published Alpha sheet; its live rates are worked out from the wiki's weights at max Slayer level. Slayer boss loot (from the wiki's weight tables) ignores Looting and only gets MF on drops under 5%. Tarantula, Sven, Voidgloom and Inferno keep that system on Alpha (Hypixel is trialling the new one on Revenant first), so only your MF and their dye rates change. Riftstalker is in the Rift, where MF doesn't apply, so only its dye change is listed. Other dyes, Dungeon chests, and tables marked "No Changes" aren't included. Mobs that share a name with a different wiki page (Hub Skeleton, Private Island Enderman, Crystal Hollows Goblin, Hub Rat) have no live data.</p>
+    <p><b>Sources:</b> <a href="https://hypixel.net/threads/october-15-magic-find-rework-ghost-visitors.6162638/">Oct 15 Alpha post</a> ·
+      <a href="https://hypixel.net/threads/october-22-magic-find-rework-testing-2.6164761/">Oct 22 Alpha post</a> ·
+      <a href="https://hypixel.net/threads/design-thread-magic-find-march-17th-update.6015417/">Design thread</a> ·
+      <a href="https://hypixelskyblock.minecraft.wiki/w/Magic_Find">Wiki: Magic Find</a> ·
+      <a href="https://hypixelskyblock.minecraft.wiki/w/Magic_Find/Alpha">Wiki: Magic Find/Alpha</a>.
+      Live drop tables are scraped from each mob's wiki page; rebuild with <code>python3 build/build.py</code>.</p>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="mf.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
