@@ -4,6 +4,7 @@ Static site that compares Hypixel SkyBlock drop rates on the live game vs. the A
 
 - Open `index.html` directly, or serve the folder: `python3 -m http.server`.
 - `python3 build/build.py` regenerates `data.js`: it parses the new tables from the Oct 15 forum post, applies the Oct 22 changes (hand-transcribed in `patch_oct22`), adds the Zombie Slayer sheet and the slayer dye changes, adds every other wiki mob with a drop table (same base rates, new MF rules), and joins everything with the live drop tables scraped from the wiki. Downloads are cached in `build/cache/`; delete it to refresh.
+- `python3 build/check.py` then validates every row of `data.js` against the raw sources (forum posts, Zombie Slayer sheet, wiki) and the formulas in `mf.js`.
 - `node test.cjs` checks the formulas in `mf.js` against the worked examples from Hypixel's design thread and the wiki.
 
 When a new Alpha patch lands, add its changes to `patch_oct22` (or a new function next to it) and rebuild.

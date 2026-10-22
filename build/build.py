@@ -98,7 +98,8 @@ def patch_oct22(t):
         "Atoll Croaker": [("Tropical Fish", 100)],
         "Lotus Guardian": [("Tropical Fish", 100)],
         "gorF": [("Tropical Fish", 100), ("Enchanted Tropical Fish", 5)],
-        "Drowned Captain": [("Enchanted Tropical Fish", 20), ("Unlucky Doubloon", 2.5)],
+        # "Removed the 50% chance for an extra Enchanted Gold Ingot": 1-2 -> always 1
+        "Drowned Captain": [("Enchanted Tropical Fish", 20), ("Unlucky Doubloon", 2.5), ("Enchanted Gold Ingot", 100)],
         "Puddle Jumper": [("Enchanted Tropical Fish", 100)],
         "Frog Prince": [("Enchanted Tropical Fish", 100), ("Prince's Crown Jewel", 1)],
         "Puck": [("Bottled Mischief", 10)],
@@ -265,7 +266,9 @@ def wiki_pages(titles):
     return out
 
 
-RARITY_CODE = {"c": "COMMON", "u": "UNCOMMON", "r": "RARE", "e": "EPIC", "l": "LEGENDARY", "m": "MYTHIC"}
+def rarity(code):
+    """Wiki rarity abbreviations: $l$, $leg$, $Epic$ ... -> LEGENDARY, EPIC (first match in GRIFFIN order)."""
+    return next(r for r in GRIFFIN if r.startswith(code.upper()))
 
 
 def parse_chance(s):
@@ -297,7 +300,7 @@ def parse_wiki_drops(text):
             chance = parse_chance(f.get("chance", ""))
             if not f.get("drop") or chance is None:
                 continue
-            item = re.sub(r"\$(\w+)\$\s*", lambda m: RARITY_CODE.get(m[1].lower(), m[1].upper()) + " ", f["drop"]).strip()
+            item = re.sub(r"\$(\w+)\$\s*", lambda m: rarity(m[1]) + " ", f["drop"]).strip()
             item = re.sub(r"^Enchanted Book &(.*)&$", r"\1", item)
             lo, _, hi = f.get("count", "1").replace(",", "").partition("-")
             try:
@@ -460,9 +463,10 @@ def main():
         old_by = {norm(r["item"]): r for r in (old_rows or []) if keep(r["item"], mob)}
         rule = SLAYER_RULE.get(mob, {}) if mob in bosses else {}
         seen = set()
-        for r in new_rows:
+        for i, r in enumerate(new_rows):
             k = old_lookup(old_by, r["item"])
-            o = old_by.get(k)
+            # a second roll of the same item (e.g. 100% + 40%) has no live counterpart
+            o = None if any(x["item"] == r["item"] for x in new_rows[:i]) else old_by.get(k)
             seen.add(k)
             rows.append({"region": region, "mob": mob, "variant": variant, "item": r["item"],
                          "newChance": r["chance"], "newAmount": r["amount"],
@@ -492,7 +496,7 @@ def main():
             c = wt_cells(row)
             if len(c) == 4 and keep(c[0], "Arachne"):
                 pet = re.search(r"rarity=(\w)", row)
-                item = (RARITY_CODE[pet[1]] + " " if pet else "") + c[0]
+                item = (rarity(pet[1]) + " " if pet else "") + c[0]
                 rows.append({"region": "Spider's Den", "mob": "Arachne", "variant": tier.strip(), "item": item,
                              "newChance": parse_chance(c[3]), "newAmount": avg_amount(c[1].split(" +")[0]),
                              "oldChance": parse_chance(c[3]), "oldAmount": avg_amount(c[1].split(" +")[0]),

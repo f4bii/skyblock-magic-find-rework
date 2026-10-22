@@ -9031,9 +9031,9 @@ const DROPS = [
 "item": "Enchanted Mithril",
 "newChance": 0.4,
 "newAmount": 1,
-"oldChance": 0.2,
-"oldAmount": 8.0,
-"status": "changed",
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Aquatic",
 "Arthropod",
@@ -17971,9 +17971,9 @@ const DROPS = [
 "item": "LEGENDARY Hound Pet",
 "newChance": 3e-05,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
+"oldChance": 1e-05,
+"oldAmount": 1.0,
+"status": "changed",
 "types": [
 "Animal",
 "Arcane"
@@ -18032,21 +18032,6 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 0.0002,
-"oldAmount": 1.0,
-"status": "removed",
-"types": [
-"Animal",
-"Arcane"
-]
-},
-{
-"region": "Park",
-"mob": "Pack Spirit",
-"variant": "",
-"item": "LEG Hound Pet",
-"newChance": null,
-"newAmount": null,
-"oldChance": 1e-05,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -18136,9 +18121,9 @@ const DROPS = [
 "item": "LEGENDARY Hound Pet",
 "newChance": 3e-05,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
+"oldChance": 1e-05,
+"oldAmount": 1.0,
+"status": "changed",
 "types": [
 "Animal",
 "Arcane"
@@ -18167,21 +18152,6 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 0.0002,
-"oldAmount": 1.0,
-"status": "removed",
-"types": [
-"Animal",
-"Arcane"
-]
-},
-{
-"region": "Park",
-"mob": "Howling Spirit",
-"variant": "",
-"item": "LEG Hound Pet",
-"newChance": null,
-"newAmount": null,
-"oldChance": 1e-05,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -18346,9 +18316,9 @@ const DROPS = [
 "item": "LEGENDARY Hound Pet",
 "newChance": 5e-05,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
+"oldChance": 1e-05,
+"oldAmount": 1.0,
+"status": "changed",
 "types": [
 "Animal",
 "Arcane"
@@ -18377,21 +18347,6 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 0.0001,
-"oldAmount": 1.0,
-"status": "removed",
-"types": [
-"Animal",
-"Arcane"
-]
-},
-{
-"region": "Park",
-"mob": "Soul of the Alpha",
-"variant": "",
-"item": "LEG Hound Pet",
-"newChance": null,
-"newAmount": null,
-"oldChance": 1e-05,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -21237,6 +21192,22 @@ const DROPS = [
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
+"status": "changed",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Enchanted Gold Ingot",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": 1.0,
+"oldAmount": 1.5,
 "status": "changed",
 "types": [
 "Aquatic",
