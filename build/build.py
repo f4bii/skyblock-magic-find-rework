@@ -285,6 +285,8 @@ def parse_wiki_drops(text):
     sec = text[m.start():]
     nxt = re.search(r"\n==[^=]", sec[5:])
     sec = sec[: nxt.start() + 5] if nxt else sec
+    # "Loot Sharing" tables are what a helper gets (e.g. Water Hydra Head 2.8% vs 14%), not the killer's drops
+    sec = re.sub(r"\{\{Mob Drops Table[^{]*?loot_share\s*=\s*true.*?\n\}\}", "", sec, flags=re.S)
     parts = re.split(r"\|-\|([^=\n]+)=", sec)
     tabs = [("", parts[0])] + list(zip(parts[1::2], parts[2::2]))
     out = []

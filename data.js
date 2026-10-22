@@ -4960,7 +4960,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 32,
 "oldChance": 1.0,
-"oldAmount": 10.0,
+"oldAmount": 50.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -4975,9 +4975,9 @@ const DROPS = [
 "item": "Orb of Energy",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Magmatic",
@@ -4991,7 +4991,7 @@ const DROPS = [
 "item": "Staff of the Volcano",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.01,
+"oldChance": 0.05,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5144,7 +5144,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 32,
 "oldChance": 1.0,
-"oldAmount": 8.0,
+"oldAmount": 40.0,
 "status": "changed",
 "types": [
 "Infernal",
@@ -5175,9 +5175,9 @@ const DROPS = [
 "item": "Flaming Heart",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Infernal",
 "Magmatic",
@@ -5191,7 +5191,7 @@ const DROPS = [
 "item": "Flaming Chestplate",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5208,7 +5208,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 16,
 "oldChance": 1.0,
-"oldAmount": 4.0,
+"oldAmount": 20.0,
 "status": "changed",
 "types": [
 "Arthropod",
@@ -5223,9 +5223,9 @@ const DROPS = [
 "item": "Cup of Blood",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Arthropod",
 "Magmatic",
@@ -5239,7 +5239,7 @@ const DROPS = [
 "item": "Blade of the Volcano",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.01,
+"oldChance": 0.05,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5255,7 +5255,7 @@ const DROPS = [
 "item": "Pitchin\u2019 Koi",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.004,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5288,9 +5288,9 @@ const DROPS = [
 "item": "Magma Lord Fragment",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Construct",
 "Elusive",
@@ -5322,7 +5322,7 @@ const DROPS = [
 "item": "Radioactive Vial",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5565,8 +5565,8 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 8,
 "oldChance": 1.0,
-"oldAmount": 2.0,
-"status": "changed",
+"oldAmount": 8.0,
+"status": "same",
 "types": [
 "Animal",
 "Magmatic",
@@ -5580,9 +5580,9 @@ const DROPS = [
 "item": "Moogma Pelt",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Magmatic",
@@ -5596,7 +5596,7 @@ const DROPS = [
 "item": "Moogma Leggings",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5708,7 +5708,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -5725,7 +5725,7 @@ const DROPS = [
 "item": "Enchanted Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -5777,7 +5777,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 16,
 "oldChance": 1.0,
-"oldAmount": 2.0,
+"oldAmount": 10.0,
 "status": "changed",
 "types": [
 "Cubic",
@@ -5792,9 +5792,9 @@ const DROPS = [
 "item": "Pyroclastic Scale",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Cubic",
 "Magmatic",
@@ -5808,7 +5808,7 @@ const DROPS = [
 "item": "Charm I",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5857,9 +5857,9 @@ const DROPS = [
 "item": "Horn of Taurus",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Humanoid",
@@ -5874,26 +5874,9 @@ const DROPS = [
 "item": "Taurus Helmet",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
-"types": [
-"Animal",
-"Humanoid",
-"Magmatic",
-"Sea Creature"
-]
-},
-{
-"region": "Crimson Isle",
-"mob": "Taurus",
-"variant": "",
-"item": "Magmafish",
-"newChance": null,
-"newAmount": null,
-"oldChance": 1.0,
-"oldAmount": 16.0,
-"status": "removed",
 "types": [
 "Animal",
 "Humanoid",
@@ -5942,7 +5925,7 @@ const DROPS = [
 "item": "Flash I",
 "newChance": 0.02,
 "newAmount": 1,
-"oldChance": 0.003,
+"oldChance": 0.015,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -5959,7 +5942,7 @@ const DROPS = [
 "item": "Thunder Fragment",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -6278,9 +6261,9 @@ const DROPS = [
 "item": "Worm Membrane",
 "newChance": 0.25,
 "newAmount": 1,
-"oldChance": 0.05,
+"oldChance": 0.25,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Arthropod",
 "Magmatic",
@@ -6294,7 +6277,7 @@ const DROPS = [
 "item": "Eternal Flame Ring",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -6416,7 +6399,7 @@ const DROPS = [
 "item": "Eternal Flame Ring",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -6432,9 +6415,9 @@ const DROPS = [
 "item": "Magma Core",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Magmatic",
 "Sea Creature",
@@ -6465,7 +6448,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 8,
 "oldChance": 1.0,
-"oldAmount": 1.0,
+"oldAmount": 5.0,
 "status": "changed",
 "types": [
 "Infernal",
@@ -6480,9 +6463,9 @@ const DROPS = [
 "item": "Blazen Sphere",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Infernal",
 "Magmatic",
@@ -6496,7 +6479,7 @@ const DROPS = [
 "item": "Eternal Flame Ring",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -6512,9 +6495,9 @@ const DROPS = [
 "item": "Magma Core",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Infernal",
 "Magmatic",
@@ -6545,7 +6528,7 @@ const DROPS = [
 "item": "Worm Membrane",
 "newChance": 0.15,
 "newAmount": 1,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -6580,7 +6563,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 2.0,
+"oldAmount": 10.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -6842,9 +6825,9 @@ const DROPS = [
 "item": "Worm Membrane",
 "newChance": 0.15,
 "newAmount": 1,
-"oldChance": 0.03,
+"oldChance": 0.15,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Aquatic",
 "Subterranean"
@@ -6858,7 +6841,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 2.0,
+"oldAmount": 10.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -6994,7 +6977,7 @@ const DROPS = [
 "item": "Flawed Amethyst Gemstone",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -7011,7 +6994,7 @@ const DROPS = [
 "item": "Flawed Jade Gemstone",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -7028,7 +7011,7 @@ const DROPS = [
 "item": "Flawed Sapphire Gemstone",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -7148,7 +7131,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 4.0,
+"oldAmount": 20.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -7165,7 +7148,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 4.0,
+"oldAmount": 20.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -7182,7 +7165,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 4.0,
+"oldAmount": 20.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -7198,8 +7181,8 @@ const DROPS = [
 "item": "Nether Quartz",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.04,
-"oldAmount": 2.0,
+"oldChance": 1.0,
+"oldAmount": 10.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -9208,7 +9191,7 @@ const DROPS = [
 "item": "Raw Rabbit",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9224,7 +9207,7 @@ const DROPS = [
 "item": "Rabbit Hide",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.14,
+"oldChance": 0.7,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9240,7 +9223,7 @@ const DROPS = [
 "item": "Rabbit Foot",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.14,
+"oldChance": 0.7,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9257,7 +9240,7 @@ const DROPS = [
 "newChance": 0.05,
 "newAmount": 1,
 "oldChance": 0.05,
-"oldAmount": 3.0,
+"oldAmount": 15.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -9304,7 +9287,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -9320,7 +9303,7 @@ const DROPS = [
 "item": "Mutton",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9336,7 +9319,7 @@ const DROPS = [
 "item": "White Wool",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9353,7 +9336,7 @@ const DROPS = [
 "newChance": 0.05,
 "newAmount": 1,
 "oldChance": 0.05,
-"oldAmount": 3.0,
+"oldAmount": 15.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -9384,7 +9367,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -9400,7 +9383,7 @@ const DROPS = [
 "item": "Enchanted Cooked Mutton",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.0002,
+"oldChance": 0.001,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -9500,8 +9483,8 @@ const DROPS = [
 "item": "Shark Fin",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.5,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -9517,7 +9500,7 @@ const DROPS = [
 "item": "Nurse Shark Tooth",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.02,
+"oldChance": 0.1,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9552,7 +9535,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 2,
 "oldChance": 1.0,
-"oldAmount": 1.0,
+"oldAmount": 4.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -9568,7 +9551,7 @@ const DROPS = [
 "item": "Blue Shark Tooth",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.02,
+"oldChance": 0.1,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9603,7 +9586,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 4,
 "oldChance": 1.0,
-"oldAmount": 2.0,
+"oldAmount": 8.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -9619,7 +9602,7 @@ const DROPS = [
 "item": "Tiger Shark Tooth",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.02,
+"oldChance": 0.1,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9653,9 +9636,9 @@ const DROPS = [
 "item": "EPIC Megalodon Pet",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -9671,8 +9654,8 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 16,
 "oldChance": 1.0,
-"oldAmount": 3.0,
-"status": "changed",
+"oldAmount": 16.0,
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -9688,7 +9671,7 @@ const DROPS = [
 "item": "Great White Shark Tooth",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.02,
+"oldChance": 0.1,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -9742,9 +9725,9 @@ const DROPS = [
 "item": "LEGENDARY Megalodon Pet",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -12803,9 +12786,9 @@ const DROPS = [
 "item": "Sea Lumies",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.3,
-"oldAmount": 1.0,
-"status": "changed",
+"oldChance": 1.0,
+"oldAmount": 1,
+"status": "same",
 "types": [
 "Aquatic",
 "Sea Creature",
@@ -12819,8 +12802,8 @@ const DROPS = [
 "item": "Mangrove Log",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.3,
-"oldAmount": 8.0,
+"oldChance": 1.0,
+"oldAmount": 1,
 "status": "changed",
 "types": [
 "Aquatic",
@@ -12869,8 +12852,8 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 16,
 "oldChance": 1.0,
-"oldAmount": 16.0,
-"status": "same",
+"oldAmount": 1,
+"status": "changed",
 "types": [
 "Animal",
 "Aquatic",
@@ -12885,9 +12868,9 @@ const DROPS = [
 "item": "Enchanted Mangrove Log",
 "newChance": 0.1,
 "newAmount": 1,
-"oldChance": 0.02,
+"oldChance": 0.1,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -12902,9 +12885,9 @@ const DROPS = [
 "item": "Wet Water",
 "newChance": 0.025,
 "newAmount": 1,
-"oldChance": 0.005,
+"oldChance": 0.025,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -13015,9 +12998,9 @@ const DROPS = [
 "item": "Enchanted Mangrove Log",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Aquatic",
 "Sea Creature",
@@ -13031,7 +13014,7 @@ const DROPS = [
 "item": "Enchanted Sea Lumies",
 "newChance": 0.1,
 "newAmount": 1,
-"oldChance": 0.01,
+"oldChance": 0.05,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -13047,9 +13030,9 @@ const DROPS = [
 "item": "Mangcore",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.001,
+"oldChance": 0.005,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Aquatic",
 "Sea Creature",
@@ -13079,7 +13062,7 @@ const DROPS = [
 "item": "UNCOMMON Foraging Exp Boost",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -16208,7 +16191,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 2,
 "oldChance": 1.0,
-"oldAmount": 1.0,
+"oldAmount": 3.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -16224,7 +16207,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 32,
 "oldChance": 1.0,
-"oldAmount": 15.0,
+"oldAmount": 1,
 "status": "changed",
 "types": [
 "Animal",
@@ -16239,9 +16222,9 @@ const DROPS = [
 "item": "Enchanted Carrot",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -16287,9 +16270,9 @@ const DROPS = [
 "item": "Enchanted Rabbit Foot",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -16319,9 +16302,9 @@ const DROPS = [
 "item": "Rabbit Hat",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.05,
+"oldChance": 0.25,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Animal",
 "Aquatic",
@@ -16335,9 +16318,9 @@ const DROPS = [
 "item": "Caster VI",
 "newChance": 0.02,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -16351,7 +16334,7 @@ const DROPS = [
 "item": "Lucky Clover Core",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.00132,
+"oldChance": 0.0066,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16367,7 +16350,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -16383,7 +16366,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.1,
+"oldChance": 0.5,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -16400,7 +16383,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 8,
 "oldChance": 1.0,
-"oldAmount": 1,
+"oldAmount": 20.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -16527,7 +16510,7 @@ const DROPS = [
 "item": "Frail VI",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16543,7 +16526,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -16559,7 +16542,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -16591,9 +16574,9 @@ const DROPS = [
 "item": "Enchanted Iron",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.2,
-"oldAmount": 2.0,
-"status": "changed",
+"oldChance": 1.0,
+"oldAmount": 1,
+"status": "same",
 "types": [
 "Aquatic",
 "Construct",
@@ -16639,7 +16622,7 @@ const DROPS = [
 "item": "Angler VI",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16671,7 +16654,7 @@ const DROPS = [
 "item": "Tropical Fish",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -16687,7 +16670,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -16704,7 +16687,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 32,
 "oldChance": 1.0,
-"oldAmount": 3.0,
+"oldAmount": 15.0,
 "status": "changed",
 "types": [
 "Aquatic",
@@ -16783,7 +16766,7 @@ const DROPS = [
 "item": "Enchanted Prismarine Crystals",
 "newChance": 0.2,
 "newAmount": 1,
-"oldChance": 0.1,
+"oldChance": 0.5,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16799,7 +16782,7 @@ const DROPS = [
 "item": "Lure VI",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16831,7 +16814,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -16915,7 +16898,7 @@ const DROPS = [
 "item": "Enchanted Rotten Flesh",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.1,
+"oldChance": 0.5,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16932,7 +16915,7 @@ const DROPS = [
 "item": "Enchanted Feather",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.1,
+"oldChance": 0.5,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -16983,7 +16966,7 @@ const DROPS = [
 "item": "Magnet VI",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -17000,8 +16983,8 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "removed",
 "types": [
 "Animal",
@@ -17017,7 +17000,7 @@ const DROPS = [
 "item": "Dark Bait",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.1,
+"oldChance": 0.5,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17034,7 +17017,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17051,7 +17034,7 @@ const DROPS = [
 "item": "Bone",
 "newChance": 1.0,
 "newAmount": 2,
-"oldChance": 0.8,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "changed",
 "types": [
@@ -17083,9 +17066,9 @@ const DROPS = [
 "item": "Enchanted Bone",
 "newChance": 0.01,
 "newAmount": 1,
-"oldChance": 0.002,
+"oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Aquatic",
 "Sea Creature",
@@ -17099,8 +17082,8 @@ const DROPS = [
 "item": "Raw Cod",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17115,7 +17098,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17132,7 +17115,7 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 8,
 "oldChance": 1.0,
-"oldAmount": 2.0,
+"oldAmount": 10.0,
 "status": "changed",
 "types": [
 "Animal",
@@ -17163,7 +17146,7 @@ const DROPS = [
 "item": "Spiked Hook VI",
 "newChance": 0.005,
 "newAmount": 1,
-"oldChance": 0.004,
+"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -17211,7 +17194,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -17243,7 +17226,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.08,
+"oldChance": 0.4,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17291,7 +17274,7 @@ const DROPS = [
 "item": "Raw Cod",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 2.0,
 "status": "removed",
 "types": [
@@ -17307,7 +17290,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17493,7 +17476,7 @@ const DROPS = [
 "item": "Raw Salmon",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -17510,7 +17493,7 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -17527,7 +17510,7 @@ const DROPS = [
 "item": "Tropical Fish",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.04,
+"oldChance": 0.2,
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
@@ -17544,8 +17527,8 @@ const DROPS = [
 "item": "Fairy Armor Piece",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.01,
-"oldAmount": 1,
+"oldChance": 0.05,
+"oldAmount": 1.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17561,9 +17544,9 @@ const DROPS = [
 "item": "Ink Sac",
 "newChance": 1.0,
 "newAmount": 1,
-"oldChance": 0.5,
+"oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Animal",
 "Aquatic",
@@ -17593,8 +17576,8 @@ const DROPS = [
 "item": "Lily Pad",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.2,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1,
 "status": "removed",
 "types": [
 "Animal",
@@ -17709,7 +17692,7 @@ const DROPS = [
 "item": "Water Hydra Head",
 "newChance": 0.2,
 "newAmount": 1,
-"oldChance": 0.027999999999999997,
+"oldChance": 0.14,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -17726,9 +17709,9 @@ const DROPS = [
 "item": "Fish Affinity Talisman",
 "newChance": 0.3,
 "newAmount": 1,
-"oldChance": 0.06,
+"oldChance": 0.3,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Aquatic",
 "Elusive",
@@ -17812,7 +17795,7 @@ const DROPS = [
 "newChance": null,
 "newAmount": null,
 "oldChance": 1.0,
-"oldAmount": 4.0,
+"oldAmount": 20.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17828,8 +17811,8 @@ const DROPS = [
 "item": "Raw Salmon",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17845,8 +17828,8 @@ const DROPS = [
 "item": "Pufferfish",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17862,8 +17845,8 @@ const DROPS = [
 "item": "Tropical Fish",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.4,
-"oldAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 2.0,
 "status": "removed",
 "types": [
 "Aquatic",
@@ -17879,7 +17862,7 @@ const DROPS = [
 "item": "Sponge",
 "newChance": null,
 "newAmount": null,
-"oldChance": 0.8,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "removed",
 "types": [
@@ -21097,7 +21080,7 @@ const DROPS = [
 "item": "Ender Pearl",
 "newChance": 1.0,
 "newAmount": 8,
-"oldChance": 0.4,
+"oldChance": 1.0,
 "oldAmount": 1,
 "status": "changed",
 "types": [
@@ -21111,7 +21094,7 @@ const DROPS = [
 "item": "Enchanted Ender Pearl",
 "newChance": 0.05,
 "newAmount": 1,
-"oldChance": 0.008,
+"oldChance": 0.04,
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
@@ -26655,86 +26638,6 @@ const DROPS = [
 ]
 },
 {
-"region": "Other Sea Creatures",
-"mob": "Night Squid",
-"variant": "",
-"item": "Lily Pad",
-"newChance": 0.2,
-"newAmount": 1.0,
-"oldChance": 0.2,
-"oldAmount": 1.0,
-"status": "unlisted",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Night Squid",
-"variant": "",
-"item": "Ink Sac",
-"newChance": 0.2,
-"newAmount": 1,
-"oldChance": 0.2,
-"oldAmount": 1,
-"status": "unlisted",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Night Squid",
-"variant": "",
-"item": "Squid Boots",
-"newChance": 0.016,
-"newAmount": 1.0,
-"oldChance": 0.016,
-"oldAmount": 1.0,
-"status": "unlisted",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Night Squid",
-"variant": "",
-"item": "UNCOMMON Fishing Exp Boost",
-"newChance": 0.001,
-"newAmount": 1.0,
-"oldChance": 0.001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Night Squid",
-"variant": "",
-"item": "RARE Fishing Exp Boost",
-"newChance": 0.0002,
-"newAmount": 1.0,
-"oldChance": 0.0002,
-"oldAmount": 1.0,
-"status": "unlisted",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
 "region": "Critter Safari",
 "mob": "Nozzlenose",
 "variant": "",
@@ -27305,54 +27208,6 @@ const DROPS = [
 "newChance": 0.1,
 "newAmount": 1.0,
 "oldChance": 0.1,
-"oldAmount": 1.0,
-"status": "unlisted",
-"types": [
-"Aquatic",
-"Arcane",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Sea Guardian",
-"variant": "",
-"item": "Prismarine Crystals",
-"newChance": 0.4,
-"newAmount": 1,
-"oldChance": 0.4,
-"oldAmount": 1,
-"status": "unlisted",
-"types": [
-"Aquatic",
-"Arcane",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Sea Guardian",
-"variant": "",
-"item": "Lily Pad",
-"newChance": 0.2,
-"newAmount": 1,
-"oldChance": 0.2,
-"oldAmount": 1,
-"status": "unlisted",
-"types": [
-"Aquatic",
-"Arcane",
-"Sea Creature"
-]
-},
-{
-"region": "Other Sea Creatures",
-"mob": "Sea Guardian",
-"variant": "",
-"item": "Sea Lantern",
-"newChance": 0.02,
-"newAmount": 1.0,
-"oldChance": 0.02,
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
