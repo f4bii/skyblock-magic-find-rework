@@ -479,10 +479,22 @@ def main():
     rows.append({"region": "Dragon's Nest", "mob": "Ender Dragon", "variant": "Superior", "item": "Pearlescent Dye",
                  "newChance": 1 / 25000, "newAmount": 1, "oldChance": 1 / 50000, "oldAmount": 1, "status": "changed"})
     # End Stone Protector's wiki loot is a plain wikitable (quality-based), not Mob Drops Rows
-    rows += [{"region": "The End", "mob": "Endstone Protector", "variant": "", "item": item, "newChance": c,
+    rows += [{"region": "The End", "mob": "End Stone Protector", "variant": "", "item": item, "newChance": c,
               "newAmount": 1, "oldChance": c, "oldAmount": 1, "status": "unlisted"}
              for item, c in [("Tier Boost Core", 0.002), ("LEGENDARY Golem Pet", 0.006), ("EPIC Golem Pet", 0.02)]]
-    texts.update(wiki_pages(["Endstone Protector"]))
+    texts.update(wiki_pages(["End Stone Protector", "Arachne"]))
+    # Arachne's wiki loot is a plain wikitable per tier: Drop | Count | Requirement | Chance
+    sec = texts["Arachne"][texts["Arachne"].find("== Drops"):texts["Arachne"].find("</tabber>")]
+    for tier, body in re.findall(r"\|-\|([^=\n]+)=(.*?)(?=\|-\|[^=\n]+=|$)", sec, re.S):
+        for row in body.split("\n|-")[1:]:
+            c = wt_cells(row)
+            if len(c) == 4 and keep(c[0], "Arachne"):
+                pet = re.search(r"rarity=(\w)", row)
+                item = (RARITY_CODE[pet[1]] + " " if pet else "") + c[0]
+                rows.append({"region": "Spider's Den", "mob": "Arachne", "variant": tier.strip(), "item": item,
+                             "newChance": parse_chance(c[3]), "newAmount": avg_amount(c[1].split(" +")[0]),
+                             "oldChance": parse_chance(c[3]), "oldAmount": avg_amount(c[1].split(" +")[0]),
+                             "status": "unlisted"})
     for (region, mob, variant), old_rows in unlisted_tables(set(pages.values()), texts).items():
         rows += [{"region": region, "mob": mob, "variant": variant, "item": o["item"],
                   "newChance": o["chance"], "newAmount": o["amount"], "oldChance": o["chance"], "oldAmount": o["amount"],

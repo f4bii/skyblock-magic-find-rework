@@ -22445,7 +22445,7 @@ const DROPS = [
 },
 {
 "region": "The End",
-"mob": "Endstone Protector",
+"mob": "End Stone Protector",
 "variant": "",
 "item": "Tier Boost Core",
 "newChance": 0.002,
@@ -22460,7 +22460,7 @@ const DROPS = [
 },
 {
 "region": "The End",
-"mob": "Endstone Protector",
+"mob": "End Stone Protector",
 "variant": "",
 "item": "LEGENDARY Golem Pet",
 "newChance": 0.006,
@@ -22475,7 +22475,7 @@ const DROPS = [
 },
 {
 "region": "The End",
-"mob": "Endstone Protector",
+"mob": "End Stone Protector",
 "variant": "",
 "item": "EPIC Golem Pet",
 "newChance": 0.02,
@@ -22486,6 +22486,411 @@ const DROPS = [
 "types": [
 "Construct",
 "Ender"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne Fragment",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Luxurious Spool",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Spider Essence",
+"newChance": 1.0,
+"newAmount": 8.0,
+"oldChance": 1.0,
+"oldAmount": 8.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "String",
+"newChance": 1.0,
+"newAmount": 15.0,
+"oldChance": 1.0,
+"oldAmount": 15.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Enchanted String",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Spider Eye",
+"newChance": 1.0,
+"newAmount": 15.0,
+"oldChance": 1.0,
+"oldAmount": 15.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Enchanted Spider Eye",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Soul String",
+"newChance": 1.0,
+"newAmount": 5.5,
+"oldChance": 1.0,
+"oldAmount": 5.5,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne's Fang",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne's Helmet",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne's Chestplate",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne's Leggings",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "Arachne's Boots",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Lower Tier",
+"item": "EPIC Tarantula Pet",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.02,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Spider Essence",
+"newChance": 1.0,
+"newAmount": 30.0,
+"oldChance": 1.0,
+"oldAmount": 30.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "String",
+"newChance": 1.0,
+"newAmount": 35.0,
+"oldChance": 1.0,
+"oldAmount": 35.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Enchanted String",
+"newChance": 1.0,
+"newAmount": 3.0,
+"oldChance": 1.0,
+"oldAmount": 3.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Spider Eye",
+"newChance": 1.0,
+"newAmount": 35.0,
+"oldChance": 1.0,
+"oldAmount": 35.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Enchanted Spider Eye",
+"newChance": 1.0,
+"newAmount": 3.0,
+"oldChance": 1.0,
+"oldAmount": 3.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Soul String",
+"newChance": 1.0,
+"newAmount": 31.0,
+"oldChance": 1.0,
+"oldAmount": 31.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Dark Queen's Soul",
+"newChance": 1.0,
+"newAmount": 1.0,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Arack",
+"newChance": 0.25,
+"newAmount": 1.0,
+"oldChance": 0.25,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Arachne's Helmet",
+"newChance": 0.25,
+"newAmount": 1.0,
+"oldChance": 0.25,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Arachne's Chestplate",
+"newChance": 0.25,
+"newAmount": 1.0,
+"oldChance": 0.25,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Arachne's Leggings",
+"newChance": 0.25,
+"newAmount": 1.0,
+"oldChance": 0.25,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "Arachne's Boots",
+"newChance": 0.25,
+"newAmount": 1.0,
+"oldChance": 0.25,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
+]
+},
+{
+"region": "Spider's Den",
+"mob": "Arachne",
+"variant": "Higher Tier",
+"item": "LEGENDARY Tarantula Pet",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.02,
+"oldAmount": 1.0,
+"status": "unlisted",
+"types": [
+"Arcane",
+"Arthropod"
 ]
 },
 {
