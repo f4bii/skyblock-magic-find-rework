@@ -96,7 +96,7 @@ def new(mob, item, variant=None):
     return [(r["newChance"], r["newAmount"]) for r in m]
 
 expect = [
-    ("Sphinx", "Looting VII", None, 0.01), ("Milennia-Aged Blaze", "Fire Aspect III", None, 0.001),
+    ("Sphinx", "Looting VII", None, 0.005), ("Milennia-Aged Blaze", "Fire Aspect III", None, 0.001),
     ("Grim Reaper", "Shredded Line", None, 0.01), ("Alligator", "Box of Junk", None, 0.2),
     ("Small Mithril Grubber", "Plasma", None, 0.025), ("Bloated Mithril Grubber", "Plasma", None, 0.025),
     ("Atoll Croaker", "Tropical Fish", None, 1), ("Lotus Guardian", "Tropical Fish", None, 1), ("gorF", "Tropical Fish", None, 1),
@@ -195,5 +195,12 @@ for(const r of DROPS){const pet=isPet(r.item);
 console.log(JSON.stringify(bad));"""
 bad = json.loads(subprocess.run(["node", "-e", js], cwd=b.HERE, capture_output=True, text=True, check=True).stdout)
 check("10 formulas: MF 0 = base, more MF never lowers a drop, no NaN", bad, len(ROWS))
+
+# 11. Looting I-VII flat MF in mf.js matches the Oct 23 post ("Looting V: 6 -> 15").
+OCT23 = b.first_post_text(b.fetch(b.OCT15.replace("october-15-magic-find-rework-ghost-visitors.6162638",
+                                                  "october-23-magic-find-rework-testing-3-faq.6165335"), "oct23.html"))
+posted = [float(m[1]) for l in OCT23 if (m := re.match(r"Looting [IVX]+: [\d.]+ -> ([\d.]+)$", l))]
+in_js = json.loads(re.search(r"NEW_LOOTING_MF = (\[.*?\])", (b.HERE.parent / "mf.js").read_text())[1])[1:]
+check("11 Looting MF matches the Oct 23 post", [] if posted == in_js and len(posted) == 7 else [(posted, in_js)], 7)
 
 print("\n" + "\n".join(f"{'OK ' if not n else 'BAD'} {name} ({t - n}/{t})" for name, n, t in results))

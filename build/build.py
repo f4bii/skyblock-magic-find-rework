@@ -83,7 +83,7 @@ def patch_oct22(t):
         rows[:] = [r for r in rows if r["item"] != item]
 
     for v in ("LEGENDARY", "MYTHIC"):
-        set_chance(mob("Mythological Ritual", "Sphinx", v), "Looting VII", 1)
+        set_chance(mob("Mythological Ritual", "Sphinx", v), "Looting VII", 0.5)  # Oct 22: 1%, Oct 23: 0.5%
     set_chance(mob("Crimson Isle", "Milennia-Aged Blaze"), "Fire Aspect III", 0.1)
     grim = mob("Spooky Festival", "Grim Reaper")
     set_chance(grim, "Shredded Line", 1)

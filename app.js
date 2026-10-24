@@ -67,7 +67,6 @@ function updateEstimate() {
   for (const el of $("est").querySelectorAll("input")) {
     if (el.dataset.mult) { if (el.checked) mult *= Number(el.dataset.mult); continue; }
     if (el.type === "checkbox") sum += el.checked ? Number(el.dataset.mf) : 0;
-    else if (el.dataset.per) sum += Math.floor(num(el) / Number(el.dataset.per));
     else sum += num(el) * Number(el.dataset.mf);
   }
   $("newMf").value = +(sum * mult).toFixed(1);

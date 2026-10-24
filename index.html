@@ -86,7 +86,6 @@
         <label>Booster Cookie (+20) <input type="checkbox" data-mf="20" checked></label>
         <label>God Potion / MF Potion IV (+20) <input type="checkbox" data-mf="20" checked></label>
         <label>MF Account Upgrades (0–5) <input type="number" min="0" max="5" value="5" data-mf="1"></label>
-        <label>SkyBlock Level (+1 per 20) <input type="number" min="0" value="536" data-per="20"></label>
         <label>Pet Score MF (0–13) <input type="number" min="0" max="13" value="11" data-mf="1"></label>
         <label>Private Island Beacon (0–6) <input type="number" min="0" max="6" value="5" data-mf="1"></label>
         <label>Cinderbat attribute (0–5) <input type="number" min="0" max="5" value="5" step="0.5" data-mf="1"></label>
@@ -143,7 +142,7 @@
   <section class="panel notes">
     <h2>How it's calculated</h2>
     <p><b>Live:</b> chance = base × (1 + 0.15 × Looting). If that's below 5%, it's then × (1 + MF/100), with MF capped at 900. Looting doesn't apply to pets; pets add Pet Luck to MF. Over 100% means extra copies.</p>
-    <p><b>Alpha:</b> every mob drop gets MF (cap 500). Looting I–VII is now flat +1/2/3/4/6/8/10 MF. For drops under 100%: chance = base × (1 + MF/100); anything over 100% is a guaranteed drop plus a chance of another (e.g. 122 MF on a 50% drop gives 1 + 11%). For 100% drops, you get MF/100 extra items (8 Pumpkins at 145 MF = 9.45 on average).</p>
+    <p><b>Alpha:</b> every mob drop gets MF (cap 500). Looting I–VII is now flat +2.5/5/7.5/10/15/20/25 MF (Oct 23). For drops under 100%: chance = base × (1 + MF/100); anything over 100% is a guaranteed drop plus a chance of another (e.g. 122 MF on a 50% drop gives 1 + 11%). For 100% drops, you get MF/100 extra items (8 Pumpkins at 145 MF = 9.45 on average).</p>
     <p><b>Mobs not in the patch notes</b> keep their live base rates (from the wiki), but MF now applies to all of their drops, so their real rates still change. Rift mobs (no MF there) and Garden pests are left out.</p>
     <p><b>Mob-type MF</b> (shards, Griffin, Megalodon, Sorrow Armor…) is added to your Alpha MF only on mobs with that type, before the 500 cap. It isn't added to live, since the live MF you enter already includes whatever you use. Some mobs have no type on the wiki and get none.</p>
     <p><b>"Change"</b> compares the average items per kill. Amount ranges from the wiki (e.g. 2–4) are averaged.</p>

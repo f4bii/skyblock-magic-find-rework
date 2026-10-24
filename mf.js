@@ -4,7 +4,7 @@
 const OLD_CAP = 900;
 const NEW_CAP = 500;
 // Oct 22: Looting I-VII = +1/2/3/4/6/8/10 Magic Find
-const NEW_LOOTING_MF = [0, 1, 2, 3, 4, 6, 8, 10];
+const NEW_LOOTING_MF = [0, 2.5, 5, 7.5, 10, 15, 20, 25]; // Oct 23 values
 // Oct 22 /reclaim: Looting I-III -> V, IV -> VI, V -> VII (Chance/Luck likewise)
 const OLD_TO_NEW_LOOTING = [0, 5, 5, 5, 6, 7];
 
