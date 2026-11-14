@@ -1,4 +1,4 @@
-"""Validates ../data.js against the raw sources (forum posts, Zombie Slayer sheet, wiki), row by row.
+"""Validates ../data.js against the raw sources (forum posts, slayer sheets, wiki), row by row.
 Run after build.py: python3 build/check.py. Uses build/cache; prints each check with its failures."""
 import csv
 import io
@@ -11,8 +11,8 @@ import build as b
 
 s = (b.HERE.parent / "data.js").read_text(encoding="utf8")
 ROWS = json.loads(s[s.index("["):s.rindex("]") + 1])
-OCT15 = b.first_post_text(b.fetch(b.OCT15, "oct15.html"))
-OCT22 = b.first_post_text(b.fetch("https://hypixel.net/threads/october-22-magic-find-rework-testing-2.6164761/", "oct22.html"))
+NOV10 = b.first_post_text(b.fetch(b.NOV10, "nov10.html"))
+NOV12 = b.first_post_text(b.fetch(b.NOV12, "nov12.html"))
 results = []
 
 
@@ -59,88 +59,116 @@ fails = [k for k, c in keys.items() if c > 1]
 fails += [r["item"] for r in ROWS if re.search(r"[{}\[\]$&|]|''", r["item"] + r["mob"])]
 check("2 no duplicates, no leftover wiki markup", fails, len(ROWS))
 
-# 3. Oct 15: every drop line in the "New Drop Tables" section is on the site with the same chance and amount.
-start, end = OCT15.index("➥ New Drop Tables"), OCT15.index("➥ Related Changes")
+# 3. Nov 10: every drop line in the "Drop Table Changes" tables is on the site with the same chance and amount
+#    (unless a later Nov 12 / prose change, checked in 5, moved it).
+start, end = NOV10.index("➥ Drop Table Changes"), NOV10.index("➥ Item Adjustments")
 forum, section = [], None
-for line in OCT15[start:end]:
+for line in NOV10[start:end]:
     if line.startswith("Spoiler: "):
         section = line[9:]
     for m in re.finditer(r"(?:([\d,]+)x )?([^|()\s][^|()]*?) \(([\d.]+)%\)", line):
         if section not in b.SKIP_SECTIONS:
-            forum.append((m[2].strip(), float(m[3]) / 100, int((m[1] or "1").replace(",", ""))))
+            item = b.FORUM_TYPOS.get(m[2].strip(), m[2].strip())
+            forum.append((item, float(m[3]) / 100, int((m[1] or "1").replace(",", ""))))
 site_new = Counter((r["item"], round(r["newChance"], 9), r["newAmount"]) for r in ROWS
                    if r["status"] in ("changed", "same", "added", "unknown") and r["newChance"])
-OCT22_ITEMS = {"Looting VII", "Fire Aspect III", "Shredded Line", "Deep Sea Orb", "Box of Junk", "Plasma",
-               "Daedalus Stick", "Manti-Core", "Shimmering Wool", "Glacite Amalgamation", "Rotten Flesh",
-               "Poisonous Potato", "Potato", "Carrot", "Umber Key", "Tungsten Key", "Skeleton Key"}
-fails = [f for f in forum if not site_new[(f[0], round(f[1], 9), f[2])] and f[0] not in OCT22_ITEMS]
-check("3 every Oct 15 table drop is on the site", fails, len(forum))
+CHANGED_ITEMS = {c[2] for c in b.CHANGES}
+fails = [f for f in forum if not site_new[(f[0], round(f[1], 9), f[2])] and f[0] not in CHANGED_ITEMS]
+check("3 every Nov 10 table drop is on the site", fails, len(forum))
 
-# 4. The other way: every Alpha chance on the site comes from a source line.
-oct22_text = "\n".join(OCT22).lower()
+# 4. The other way: every Alpha chance on a forum mob comes from a Nov 10 table line or a later change.
 forum_set = {(i, round(c, 9), a) for i, c, a in forum}
-fails = []
-total = 0
+fails, total = [], 0
 for r in ROWS:
-    if r["status"] in ("unlisted", "removed") or r["mob"] == "Revenant Horror" or r["region"] == "Slayer" \
-            or r["mob"] == "Ender Dragon":
+    if r["status"] in ("unlisted", "removed") or r["region"] == "Slayer" or r["mob"] == "Ender Dragon":
         continue
     total += 1
-    if (r["item"], round(r["newChance"], 9), r["newAmount"]) not in forum_set and r["item"].lower() not in oct22_text:
+    if (r["item"], round(r["newChance"], 9), r["newAmount"]) not in forum_set and r["item"] not in CHANGED_ITEMS:
         fails.append((r["mob"], r["variant"], r["item"], r["newChance"], r["newAmount"]))
-check("4 every Alpha chance on the site is in the Oct 15/22 posts", fails, total)
+check("4 every Alpha chance on the site is in the Nov 10 tables", fails, total)
 
-# 5. Oct 22 changes, re-transcribed independently from the post.
-def new(mob, item, variant=None):
-    m = [r for r in ROWS if r["mob"] == mob and r["item"] == item and (variant is None or r["variant"] == variant)]
-    return [(r["newChance"], r["newAmount"]) for r in m]
 
-expect = [
-    ("Sphinx", "Looting VII", None, 0.005), ("Milennia-Aged Blaze", "Fire Aspect III", None, 0.001),
-    ("Grim Reaper", "Shredded Line", None, 0.01), ("Alligator", "Box of Junk", None, 0.2),
-    ("Small Mithril Grubber", "Plasma", None, 0.025), ("Bloated Mithril Grubber", "Plasma", None, 0.025),
-    ("Atoll Croaker", "Tropical Fish", None, 1), ("Lotus Guardian", "Tropical Fish", None, 1), ("gorF", "Tropical Fish", None, 1),
-    ("gorF", "Enchanted Tropical Fish", None, 0.05), ("Drowned Captain", "Enchanted Tropical Fish", None, 0.2),
-    ("Puddle Jumper", "Enchanted Tropical Fish", None, 1), ("Frog Prince", "Enchanted Tropical Fish", None, 1),
-    ("Drowned Captain", "Unlucky Doubloon", None, 0.025), ("Frog Prince", "Prince's Crown Jewel", None, 0.01),
-    ("Puck", "Bottled Mischief", None, 0.1), ("Werewolf", "Deep Sea Orb", None, 0.002),
-    ("Phantom Fisher", "Deep Sea Orb", None, 0.01), ("Grim Reaper", "Deep Sea Orb", None, 0.04),
-    ("Minotaur", "Daedalus Stick", "EPIC", 0.0015), ("Minotaur", "Daedalus Stick", "LEGENDARY", 0.002),
-    ("Minotaur", "Daedalus Stick", "MYTHIC", 0.0025), ("Zombie", "Poisonous Potato", None, 0.05),
-    ("Graveyard Zombie", "Carrot", None, 0.025), ("Manticore", "Manti-Core", "MYTHIC", 0.0075),
-    ("King Minos", "Shimmering Wool", "MYTHIC", 0.0075), ("Littlefoot", "Glacite Amalgamation", None, 0.05),
-    ("Drowned Captain", "Enchanted Gold Ingot", None, 1),
-]
-fails = [(m, i, v, want, got) for m, i, v, want in expect if not (got := new(m, i, v)) or not all(close(c, want) for c, _ in got)]
-fails += [("Littlefoot still drops", r["item"]) for r in ROWS if r["mob"] == "Littlefoot" and r["item"].endswith("Key") and r["newChance"]]
-fails += [("Drowned Captain gold amount", a) for c, a in new("Drowned Captain", "Enchanted Gold Ingot") if a != 1]
-check("5 every Oct 22 drop change is applied", fails, len(expect) + 2)
+# 5. Nov 12 (and Nov 10 prose) changes, parsed straight from the post text rather than from build.CHANGES.
+def new(mob, item, variants=None):
+    return [r for r in ROWS if r["mob"] == mob and r["item"] == item and (variants is None or r["variant"] in variants)]
 
-# 6. Zombie Slayer: every row of Hypixel's sheet, all 5 tiers.
+
+MOB_WORDS = {"Tarantula Slayer": "Tarantula Broodfather", "Wolf Slayer": "Sven Packmaster", "Enderman Slayer": "Voidgloom Seraph",
+             "Blaze Slayer": "Inferno Demonlord", "Drowned Pirate": "Drowned Captain", "Griffin Minotaur variant": "Minotaur"}
+ITEM_WORDS = {"Spooky Hook": "Phantom Hook"}
+expect = []  # (mob, variants, item, chance or None, amount or None, source line)
+for line in NOV12:
+    m = re.match(r"(?:Increased drop-rate of|Reduced) (.+?) \(([^)]+?)\)?,? (?:drop-rate )?from ([\d.]+)% → ([\d.]+)%", line)
+    if not m:
+        continue
+    item, where, to = ITEM_WORDS.get(m[1], m[1]), m[2].replace(" drop-rate", ""), float(m[4]) / 100
+    tiers = re.search(r"Tier ([\d/]+)", where)
+    variants = tuple(f"Tier {t}" for t in tiers[1].split("/")) if tiers else None
+    rar = re.match(r"(EPIC|LEGENDARY|MYTHIC) (.*)", where)
+    if rar:
+        variants, where = (rar[1],), rar[2]
+    mob = next((v for k, v in MOB_WORDS.items() if k in where), re.sub(r" Tier.*", "", where))
+    expect.append((mob, variants, item, to, None, line))
+for m in re.finditer(r"Increased Derelict Ashe \(Inferno Demonlord (I+V?|IV)\) from [\d-]+ → ([\d-]+)", "\n".join(NOV12)):
+    expect.append(("Inferno Demonlord", (f"Tier {['I', 'II', 'III', 'IV'].index(m[1]) + 1}",), "Derelict Ashe", None, b.avg_amount(m[2]), m[0]))
+for rar, frm, to in re.findall(r"(EPIC|LEGENDARY): Increased from ([\d.]+)% → ([\d.]+)% per eye", "\n".join(NOV12)):
+    expect.append(("Ender Dragon", None, f"{rar} Ender Dragon Pet", float(to) * 4 / 100, None, f"{rar} {to}% per eye x 4 eyes"))
+if m := re.search(r"Added (.+) to Sven Packmaster ([\d/]+) Drop Table\s+Requires .*?, ([\d.]+)% drop-rate", "\n".join(NOV12)):
+    expect.append(("Sven Packmaster", tuple(f"Tier {t}" for t in m[2].split("/")), m[1], float(m[3]) / 100, None, m[0]))
+for line in NOV10:
+    if m := re.match(r"Increased the (weaker|stronger) Arachne’s (\w+ Tarantula) Pet drop chance from [\d.]+% → ([\d.]+)%", line):
+        expect.append(("Arachne", ("Lower Tier" if m[1] == "weaker" else "Higher Tier",), m[2] + " Pet", float(m[3]) / 100, None, line))
+    elif m := re.match(r"Increased (.+) from (.+) from [\d.]+% (?:→|->) ([\d.]+)%", line):
+        expect.append((m[2], None, m[1], float(m[3]) / 100, None, line))
+    elif m := re.match(r"Reduced [\d-]+x Enchanted Honeycomb \(100%\) from (\w[\w ]*?) ?→ (\d+)x", line):
+        expect.append((m[1], None, "Enchanted Honeycomb", None, float(m[2]), line))
+fails = []
+for mob, variants, item, chance, amount, line in expect:
+    got = new(mob, item, variants)
+    if not got or (variants and len(got) != len(variants)) or not all(
+            (chance is None or close(r["newChance"], chance)) and (amount is None or close(r["newAmount"], amount)) for r in got):
+        fails.append((line, [(r["variant"], r["newChance"], r["newAmount"]) for r in got]))
+if len(expect) != len(b.CHANGES):
+    fails.append(f"post has {len(expect)} changes, build.CHANGES has {len(b.CHANGES)}")
+check("5 every Nov 12 / Nov 10 prose change is applied", fails, len(expect))
+
+# 6. Slayers: every row of Hypixel's six sheets, every tier (dyes in 7; Nov 12 edits in 5).
 fails, total = [], 0
-for tier, gid in b.REV_TIERS.items():
-    for row in csv.DictReader(io.StringIO((b.CACHE / f"revenant_{gid}.csv").read_text(encoding="utf8"))):
-        total += 1
-        c = b.parse_chance(row["Drop Chance"].replace("in", "/").replace("Million", "m").replace(" ", "")) \
-            if " in " in row["Drop Chance"] else float(row["Drop Chance"].rstrip("%")) / 100
-        got = [r for r in ROWS if r["mob"] == "Revenant Horror" and r["variant"] == tier and r["item"] == row["Drop"]]
-        if not got or not close(got[0]["newChance"], c):
-            fails.append((tier, row["Drop"], row["Drop Chance"], got and got[0]["newChance"]))
-check("6 Zombie Slayer matches Hypixel's sheet", fails, total)
+nov12_hit = {(e[0], e[2]) for e in expect}
+for boss, key in b.SHEETS.items():
+    for f in sorted(b.CACHE.glob(f"{key[-6:]}_*.csv")):
+        page = (b.CACHE / f"sheet_{key[-6:]}.html").read_text(encoding="utf8")
+        tier = "Tier " + re.search(rf'name: "[^"]*?Tier (\d)[^"]*", pageUrl: "[^"]*gid={f.stem.split("_")[1]}"', page)[1]
+        for drop, amount, chance, _ in list(csv.reader(io.StringIO(f.read_text(encoding="utf8"))))[1:]:
+            if "Dye" in drop or (boss, drop) in nov12_hit:
+                continue
+            total += 1
+            got = new(boss, drop, (tier,))
+            if len(got) != 1 or not close(got[0]["newChance"], b.sheet_chance(chance)) or not close(got[0]["newAmount"], b.avg_amount(amount)):
+                fails.append((boss, tier, drop, amount, chance, [(r["newChance"], r["newAmount"]) for r in got]))
+check("6 every slayer matches Hypixel's sheets", fails, total)
 
-# 7. Dyes: every "T#: 1/X → 1/Y" slayer line and the Superior Dragon line.
+# 7. Dyes: every "T#: 1/X → 1/Y" slayer line (and the sheets agree), and the Superior Dragon line.
 fails, total, dye, boss = [], 0, None, None
-for line in OCT15:
+for line in NOV10:
     if line.rstrip(" |").endswith(" Dye"):
         dye, boss = line.rstrip(" |"), None
     elif m := re.match(r"Increased (.+) drop rates?:?", line):
         boss = m[1]
     elif dye and boss and (m := re.match(r"T(\d): 1/([\d,]+) → 1/([\d,]+)", line)) and boss in b.SLAYERS:
         total += 1
-        got = [r for r in ROWS if r["mob"] == boss and r["item"] == dye and r["variant"] == f"Tier {m[1]}"]
+        got = new(boss, dye, (f"Tier {m[1]}",))
         old, nw = (1 / int(x.replace(",", "")) for x in m.groups()[1:])
-        if not got or not (close(got[0]["oldChance"], old) and close(got[0]["newChance"], nw)):
-            fails.append((boss, dye, line))
+        key = b.SHEETS[boss][-6:]
+        tabs = dict(re.findall(r'name: "[^"]*?Tier (\d)[^"]*", pageUrl: "[^"]*gid=(\d+)', (b.CACHE / f"sheet_{key}.html").read_text(encoding="utf8")))
+        sheet = [(t, b.sheet_chance(c)) for t, gid in tabs.items()
+                 for d, _, c, _ in list(csv.reader(io.StringIO((b.CACHE / f"{key}_{gid}.csv").read_text(encoding="utf8"))))[1:] if d == dye]
+        tab = [x for x in sheet if x[0] == m[1]]  # the sheet is newer than the post and wins where they differ
+        want = tab[0][1] if tab else nw
+        if not got or not (close(got[0]["oldChance"], old) and close(got[0]["newChance"], want)):
+            fails.append((boss, dye, line, got and got[0]["newChance"], "sheet:", tab))
+        elif not close(want, nw):
+            print(f"    note: {boss} {dye} T{m[1]}: post says 1/{1 / nw:,.0f}, sheet says 1/{1 / want:,.0f} (sheet used)")
 total += 1
 if not [r for r in ROWS if r["mob"] == "Ender Dragon" and r["item"] == "Pearlescent Dye" and close(r["newChance"], 1 / 25000)]:
     fails.append("Superior Dragon Pearlescent Dye")
@@ -170,7 +198,7 @@ check("8 every live chance is on the mob's wiki page", fails, total)
 
 # 9. Slayer live chances: the boss page shows that percentage for that item.
 fails, total = [], 0
-pages = b.wiki_pages(b.SLAYERS - {"Riftstalker Bloodfiend"})
+pages = b.wiki_pages(b.SLAYERS)
 for r in ROWS:
     if r["region"] != "Slayer" or r["mob"] not in pages or r["oldChance"] is None or "Dye" in r["item"] or r["mob"] == "Revenant Horror":
         continue
@@ -202,5 +230,19 @@ OCT23 = b.first_post_text(b.fetch(b.OCT15.replace("october-15-magic-find-rework-
 posted = [float(m[1]) for l in OCT23 if (m := re.match(r"Looting [IVX]+: [\d.]+ -> ([\d.]+)$", l))]
 in_js = json.loads(re.search(r"NEW_LOOTING_MF = (\[.*?\])", (b.HERE.parent / "mf.js").read_text())[1])[1:]
 check("11 Looting MF matches the Oct 23 post", [] if posted == in_js and len(posted) == 7 else [(posted, in_js)], 7)
+
+# 12. MF estimator in index.html: the last value of each "Reduced/Increased X ... -> a/b/c" line in Nov 10/12.
+page = (b.HERE.parent / "index.html").read_text(encoding="utf8")
+posts = "\n".join(NOV10 + NOV12)
+fails = []
+for post_name, label, attr in [("Booster Cookie", "Booster Cookie", "data-mf"), ("Magic Find Potion I/II/III/IV's Magic Find", "MF Potion IV", "data-mf"),
+                               ("Private Island Beacon", "Private Island Beacon", "data-mf"), ("Pulse Ring", "Pulse Ring", "max"),
+                               ("Anguish Artifact", "Anguish line", "max"), ("Celestial Mason Jar", "Celestial Mason Jar", "data-mf")]:
+    m = re.search(re.escape(post_name) + r" from [+\d./]+ -> \+?([\d./]*\d)", posts)
+    want = float(m[1].split("/")[0 if label == "Private Island Beacon" else -1]) if m else None  # Beacon: per level
+    got = re.search(re.escape(label) + rf'[^<]*<input[^>]*{attr}="([\d.]+)"', page)
+    if want is None or not got or float(got[1]) != want:
+        fails.append((post_name, want, got and got[1]))
+check("12 MF estimator values match the Nov 10/12 posts", fails, 6)
 
 print("\n" + "\n".join(f"{'OK ' if not n else 'BAD'} {name} ({t - n}/{t})" for name, n, t in results))

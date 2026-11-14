@@ -21,8 +21,9 @@ near(newDrop(0.75, 1, C).avg, 1.5);      // Alligator Skin: 1 + 50% for a 2nd
 // Wiki Magic Find/Alpha examples
 near(newDrop(0.025, 1, { mf: 145, petLuck: 0 }).p, 0.06125);
 near(newDrop(0.5, 1, { mf: 122, petLuck: 0 }).avg, 1.11);
-near(newDrop(1, 8, { mf: 145, petLuck: 0 }).avg, 9.45);
-near(newDrop(1, 4, { mf: 122, petLuck: 0 }).avg, 5.22);
+// Nov 10 RC: 150 MF, 8x Lily Pad (100%) -> guaranteed 16, 50% chance of 24 (replaces the wiki's "8 + 1.45")
+near(newDrop(1, 8, { mf: 150, petLuck: 0 }).avg, 20);
+near(newDrop(1, 8, { mf: 150, petLuck: 0 }).p, 1);
 // caps
 near(newDrop(0.01, 1, { mf: 9999, petLuck: 0 }).p, 0.06);
 near(oldDrop(0.01, 1, { mf: 9999, looting: 0, petLuck: 0 }).p, 0.10);

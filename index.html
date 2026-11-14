@@ -62,7 +62,7 @@
 <body>
 <header>
   <h1>Magic Find Rework — <span>Drop Rate Compare</span></h1>
-  <p>Hypixel SkyBlock: live drop rates vs. the Alpha rework (Oct 15 + Oct 22, 2026), calculated with your Magic Find.</p>
+  <p>Hypixel SkyBlock: live drop rates vs. the 0.27.3 release candidate on Alpha (Nov 10 + Nov 12, 2026), calculated with your Magic Find.</p>
 </header>
 <main>
   <noscript><p class="panel">This page needs JavaScript to calculate drop rates.</p></noscript>
@@ -83,27 +83,30 @@
     <details>
       <summary>Estimate my Magic Find after the rework</summary>
       <div class="est" id="est">
-        <label>Booster Cookie (+20) <input type="checkbox" data-mf="20" checked></label>
-        <label>God Potion / MF Potion IV (+20) <input type="checkbox" data-mf="20" checked></label>
+        <label>Booster Cookie (+10) <input type="checkbox" data-mf="10" checked></label>
+        <label>God Potion / MF Potion IV (+10) <input type="checkbox" data-mf="10" checked></label>
+        <label>Combat level (0–60, up to +20) <input type="number" min="0" max="60" value="50" data-combat="1"></label>
         <label>MF Account Upgrades (0–5) <input type="number" min="0" max="5" value="5" data-mf="1"></label>
         <label>Pet Score MF (0–13) <input type="number" min="0" max="13" value="11" data-mf="1"></label>
-        <label>Private Island Beacon (0–6) <input type="number" min="0" max="6" value="5" data-mf="1"></label>
+        <label>Private Island Beacon level (0–6, +0.5 each) <input type="number" min="0" max="6" value="5" data-mf="0.5"></label>
         <label>Cinderbat attribute (0–5) <input type="number" min="0" max="5" value="5" step="0.5" data-mf="1"></label>
-        <label>Divine Gift (0–5) <input type="number" min="0" max="5" value="0" data-mf="1"></label>
+        <label>Divine Gifts consumed (0–5) <input type="number" min="0" max="5" value="0" data-mf="1"></label>
         <label>Pulse Ring (0.5–2) <input type="number" min="0" max="2" value="0" step="0.5" data-mf="1"></label>
         <label>Anguish line (0.5–1.5) <input type="number" min="0" max="1.5" value="1.5" step="0.5" data-mf="1"></label>
         <label>Century Cake (+1) <input type="checkbox" data-mf="1" checked></label>
         <label>Diana's Bookshelf (+1) <input type="checkbox" data-mf="1"></label>
         <label>Necron's Ladder (+1) <input type="checkbox" data-mf="1"></label>
+        <label>Bucket of Dye (+1) <input type="checkbox" data-mf="1"></label>
+        <label>Celestial Mason Jar (+1) <input type="checkbox" data-mf="1"></label>
         <label>Bestiary on this mob (0–75) <input type="number" min="0" max="75" value="0" data-mf="1"></label>
         <label>Mayor Aatrox Pathfinder (+20) <input type="checkbox" data-mf="20"></label>
-        <label>Other MF (tagged mob, island shards…) <input type="number" min="0" value="0" data-mf="1"></label>
+        <label>Other MF (Shuriken-tagged mob 5, Giant Isopod / Silkbreeze Shard on their islands 5, stews…) <input type="number" min="0" value="0" data-mf="1"></label>
         <label>Mayor Jerry (+10%) <input type="checkbox" data-mult="1.1"></label>
       </div>
     </details>
     <details>
       <summary>Mob-type Magic Find (Alpha, added only on mobs of that type)</summary>
-      <p class="summary">Each mob's types come from its wiki page and are listed under its name. The max is every source from the Alpha post stacked. <button id="typeMax" type="button">Fill all max</button> <button id="typeZero" type="button">Clear</button></p>
+      <p class="summary">Each mob's types come from its wiki page and are listed under its name. The max is every source from the Alpha posts stacked. <button id="typeMax" type="button">Fill all max</button> <button id="typeZero" type="button">Clear</button></p>
       <div class="est" id="types"></div>
     </details>
   </section>
@@ -142,16 +145,16 @@
   <section class="panel notes">
     <h2>How it's calculated</h2>
     <p><b>Live:</b> chance = base × (1 + 0.15 × Looting). If that's below 5%, it's then × (1 + MF/100), with MF capped at 900. Looting doesn't apply to pets; pets add Pet Luck to MF. Over 100% means extra copies.</p>
-    <p><b>Alpha:</b> every mob drop gets MF (cap 500). Looting I–VII is now flat +2.5/5/7.5/10/15/20/25 MF (Oct 23). For drops under 100%: chance = base × (1 + MF/100); anything over 100% is a guaranteed drop plus a chance of another (e.g. 122 MF on a 50% drop gives 1 + 11%). For 100% drops, you get MF/100 extra items (8 Pumpkins at 145 MF = 9.45 on average).</p>
-    <p><b>Mobs not in the patch notes</b> keep their live base rates (from the wiki), but MF now applies to all of their drops, so their real rates still change. Rift mobs (no MF there) and Garden pests are left out.</p>
+    <p><b>Alpha (0.27.3 RC):</b> every mob drop gets MF (cap 500). Looting I–VII is now flat +2.5/5/7.5/10/15/20/25 MF. Chance = base × (1 + MF/100); anything past 100% is a chance at another full stack. Hypixel's example: 150 MF on 8× Lily Pad (100%) gives 16 guaranteed and a 50% chance of 24 (20 on average).</p>
+    <p><b>Mobs not in the patch notes</b> keep their live base rates (from the wiki), but MF now applies to all of their drops, so their real rates still change. Rift mobs (no MF there, except Vampire Slayer levels on the Riftstalker) and Garden pests are left out.</p>
     <p><b>Mob-type MF</b> (shards, Griffin, Megalodon, Sorrow Armor…) is added to your Alpha MF only on mobs with that type, before the 500 cap. It isn't added to live, since the live MF you enter already includes whatever you use. Some mobs have no type on the wiki and get none.</p>
     <p><b>"Change"</b> compares the average items per kill. Amount ranges from the wiki (e.g. 2–4) are averaged.</p>
-    <p><b>Assumptions:</b> Pet Luck is assumed to still add to MF for pets on Alpha. For drops under 100% with more than one item, extra rolls are assumed to give the whole stack. Zombie Slayer uses Hypixel's published Alpha sheet; its live rates are worked out from the wiki's weights at max Slayer level. Slayer boss loot (from the wiki's weight tables) ignores Looting and only gets MF on drops under 5%. Tarantula, Sven, Voidgloom and Inferno keep that system on Alpha (Hypixel is trialling the new one on Revenant first), so only your MF and their dye rates change. Riftstalker is in the Rift, where MF doesn't apply, so only its dye change is listed. Other dyes, Dungeon chests, and tables marked "No Changes" aren't included. Mobs that share a name with a different wiki page (Hub Skeleton, Private Island Enderman, Crystal Hollows Goblin, Hub Rat) have no live data.</p>
-    <p><b>Sources:</b> <a href="https://hypixel.net/threads/october-15-magic-find-rework-ghost-visitors.6162638/">Oct 15 Alpha post</a> ·
-      <a href="https://hypixel.net/threads/october-22-magic-find-rework-testing-2.6164761/">Oct 22 Alpha post</a> ·
-      <a href="https://hypixel.net/threads/design-thread-magic-find-march-17th-update.6015417/">Design thread</a> ·
-      <a href="https://hypixelskyblock.minecraft.wiki/w/Magic_Find">Wiki: Magic Find</a> ·
-      <a href="https://hypixelskyblock.minecraft.wiki/w/Magic_Find/Alpha">Wiki: Magic Find/Alpha</a>.
+    <p><b>Slayers:</b> on Alpha every slayer boss (Vampire included) uses a normal table where each drop rolls on its own, from Hypixel's published sheets plus the Nov 12 changes. Live rates are worked out from the wiki's weight tables at max Slayer level; those ignore Looting and only get MF on drops under 5%. Slayer levels now give MF on their own boss (set per slayer under Mob-type MF). In the Rift only Vampire Slayer level MF counts, and live had none.</p>
+    <p><b>Assumptions:</b> Pet Luck is assumed to still add to MF for pets on Alpha. Ender Dragon drops assume 4 Summoning Eyes placed. Other dyes, Dungeon chests, and tables marked "No Changes" aren't included. Mobs that share a name with a different wiki page (Hub Skeleton, Private Island Enderman, Crystal Hollows Goblin, Hub Rat) have no live data. The Clover Helmet's "double or nothing" isn't modelled: Hypixel is reverting it to +5 MF before release.</p>
+    <p><b>Sources:</b> <a href="https://hypixel.net/threads/november-10-0-27-3-release-candidate.6171140/">Nov 10 release candidate</a> (all drop tables and slayer sheets) ·
+      <a href="https://hypixel.net/threads/november-12-0-27-3-release-candidate-2.6171435/">Nov 12 release candidate 2</a> ·
+      <a href="https://hypixel.net/threads/october-15-magic-find-rework-ghost-visitors.6162638/">Oct 15</a>, <a href="https://hypixel.net/threads/october-22-magic-find-rework-testing-2.6164761/">Oct 22</a>, <a href="https://hypixel.net/threads/october-23-magic-find-rework-testing-3-faq.6165335/">Oct 23</a> and <a href="https://hypixel.net/threads/october-27-magic-find-rework-testing-4.6166283/">Oct 27</a> testing posts ·
+      <a href="https://hypixelskyblock.minecraft.wiki/w/Magic_Find">Wiki: Magic Find</a>.
       Live drop tables are scraped from each mob's wiki page; rebuild with <code>python3 build/build.py</code>.</p>
   </section>
 </main>

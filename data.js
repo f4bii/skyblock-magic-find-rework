@@ -326,23 +326,6 @@ const DROPS = [
 "region": "Backwater Bayou",
 "mob": "Alligator",
 "variant": "",
-"item": "Condensed Lily Pad",
-"newChance": 0.01,
-"newAmount": 1,
-"oldChance": 0.005,
-"oldAmount": 1.0,
-"status": "changed",
-"types": [
-"Animal",
-"Aquatic",
-"Elusive",
-"Sea Creature"
-]
-},
-{
-"region": "Backwater Bayou",
-"mob": "Alligator",
-"variant": "",
 "item": "Box of Junk",
 "newChance": 0.2,
 "newAmount": 1,
@@ -358,11 +341,28 @@ const DROPS = [
 },
 {
 "region": "Backwater Bayou",
+"mob": "Alligator",
+"variant": "",
+"item": "Condensed Lily Pad",
+"newChance": 0.01,
+"newAmount": 1,
+"oldChance": 0.005,
+"oldAmount": 1.0,
+"status": "changed",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Backwater Bayou",
 "mob": "Titanoboa",
 "variant": "",
 "item": "Enchanted Lily Pad",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 4,
 "oldChance": 1.0,
 "oldAmount": 3.0,
 "status": "changed",
@@ -463,7 +463,7 @@ const DROPS = [
 "mob": "Apostle",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -482,10 +482,10 @@ const DROPS = [
 "variant": "",
 "item": "Diamond Essence",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Humanoid",
 "Subterranean"
@@ -569,7 +569,7 @@ const DROPS = [
 "mob": "Cellar Spider",
 "variant": "",
 "item": "Spider Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": 0.12,
 "oldAmount": 1.0,
@@ -594,7 +594,7 @@ const DROPS = [
 "mob": "Crypt Dreadlord",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -644,7 +644,7 @@ const DROPS = [
 "mob": "Crypt Lurker",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -694,7 +694,7 @@ const DROPS = [
 "mob": "Crypt Souleater",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -744,11 +744,11 @@ const DROPS = [
 "mob": "Crypt Undead",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1,
-"status": "same",
+"status": "changed",
 "types": [],
 "floors": []
 },
@@ -783,7 +783,7 @@ const DROPS = [
 "mob": "Fels",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -822,10 +822,10 @@ const DROPS = [
 "variant": "",
 "item": "Ice Essence",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Frozen",
 "Humanoid"
@@ -966,10 +966,10 @@ const DROPS = [
 "variant": "",
 "item": "Gold Essence",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1,
-"status": "changed",
+"status": "same",
 "types": [
 "Humanoid"
 ],
@@ -1031,7 +1031,7 @@ const DROPS = [
 "variant": "",
 "item": "Draconic Essence",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
 "status": "added",
@@ -1193,7 +1193,7 @@ const DROPS = [
 "mob": "Scared Skeleton",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1253,7 +1253,7 @@ const DROPS = [
 "mob": "Shadow Assassin",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 8,
 "oldChance": null,
 "oldAmount": null,
@@ -1319,7 +1319,7 @@ const DROPS = [
 "mob": "Skeleton Grunt",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1439,7 +1439,7 @@ const DROPS = [
 "mob": "Skeleton Lord",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1524,7 +1524,7 @@ const DROPS = [
 "mob": "Skeleton Master",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1678,7 +1678,7 @@ const DROPS = [
 "mob": "Skeleton Soldier",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1793,7 +1793,7 @@ const DROPS = [
 "mob": "Skeletor",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1903,7 +1903,7 @@ const DROPS = [
 "mob": "Skeletor Prime",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -1998,7 +1998,7 @@ const DROPS = [
 "mob": "Sniper",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2094,7 +2094,7 @@ const DROPS = [
 "mob": "Super Archer",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2194,7 +2194,7 @@ const DROPS = [
 "mob": "Super Tank Zombie",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2354,7 +2354,7 @@ const DROPS = [
 "mob": "Tank Zombie",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2474,7 +2474,7 @@ const DROPS = [
 "mob": "Undead (All Watcher Undeads)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2487,7 +2487,7 @@ const DROPS = [
 "mob": "Undead Skeleton",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2537,7 +2537,7 @@ const DROPS = [
 "mob": "Wither Guard",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 0.25,
+"newChance": 0.025,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2556,7 +2556,7 @@ const DROPS = [
 "mob": "Wither Husk",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2574,7 +2574,7 @@ const DROPS = [
 "mob": "Wither Miner",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 0.25,
+"newChance": 0.025,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2593,7 +2593,7 @@ const DROPS = [
 "mob": "Withermancer",
 "variant": "",
 "item": "Wither Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2637,7 +2637,7 @@ const DROPS = [
 "mob": "Zombie Commander",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2763,7 +2763,7 @@ const DROPS = [
 "mob": "Zombie Grunt",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -2896,7 +2896,7 @@ const DROPS = [
 "mob": "Zombie Knight",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3085,7 +3085,7 @@ const DROPS = [
 "mob": "Zombie Lord",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3170,7 +3170,7 @@ const DROPS = [
 "mob": "Zombie Soldier",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3338,7 +3338,7 @@ const DROPS = [
 "mob": "Bonzo (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3372,7 +3372,7 @@ const DROPS = [
 "mob": "Scarf (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3404,7 +3404,7 @@ const DROPS = [
 "mob": "Undead Archer (Scarf Boss Fight)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3440,7 +3440,7 @@ const DROPS = [
 "mob": "Undead Mage (Scarf Boss Fight)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3476,7 +3476,7 @@ const DROPS = [
 "mob": "Undead Warrior (Scarf Boss Fight)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3512,7 +3512,7 @@ const DROPS = [
 "mob": "Undead Priest (Scarf Boss Fight)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3548,7 +3548,7 @@ const DROPS = [
 "mob": "The Professor (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3561,7 +3561,7 @@ const DROPS = [
 "mob": "Spirit Bear (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3606,7 +3606,7 @@ const DROPS = [
 "mob": "Livid (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3638,7 +3638,7 @@ const DROPS = [
 "mob": "L.A.S.R. (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3668,7 +3668,7 @@ const DROPS = [
 "mob": "Bigfoot (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3698,7 +3698,7 @@ const DROPS = [
 "mob": "Jolly Pink Giant (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -3728,7 +3728,7 @@ const DROPS = [
 "mob": "The Diamond Giant (Watcher Summon)",
 "variant": "",
 "item": "Undead Essence",
-"newChance": 1.0,
+"newChance": 0.1,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -4290,10 +4290,10 @@ const DROPS = [
 "variant": "",
 "item": "Blaze Rod",
 "newChance": 1.0,
-"newAmount": 32,
+"newAmount": 16,
 "oldChance": 1.0,
 "oldAmount": 32.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Infernal",
 "Subterranean"
@@ -4363,12 +4363,12 @@ const DROPS = [
 "region": "Crimson Isle",
 "mob": "Milennia-Aged Blaze",
 "variant": "",
-"item": "Smoldering VI",
-"newChance": 0.0001,
+"item": "Fire Aspect III",
+"newChance": 0.001,
 "newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
+"oldChance": 0.001,
+"oldAmount": 1.0,
+"status": "same",
 "types": [
 "Infernal",
 "Subterranean"
@@ -4379,21 +4379,6 @@ const DROPS = [
 "mob": "Milennia-Aged Blaze",
 "variant": "",
 "item": "Enchanted Blaze Rod",
-"newChance": 0.001,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Infernal",
-"Subterranean"
-]
-},
-{
-"region": "Crimson Isle",
-"mob": "Milennia-Aged Blaze",
-"variant": "",
-"item": "Fire Aspect III",
 "newChance": 0.001,
 "newAmount": 1,
 "oldChance": null,
@@ -4857,7 +4842,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -4873,7 +4859,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -4889,7 +4876,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -4965,7 +4953,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -4981,7 +4970,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -4997,7 +4987,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5149,7 +5140,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5165,7 +5157,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5181,7 +5174,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5197,7 +5191,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5213,7 +5208,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5229,7 +5225,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5245,7 +5242,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5261,7 +5259,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5270,7 +5269,7 @@ const DROPS = [
 "variant": "",
 "item": "Silver Magmafish",
 "newChance": 1.0,
-"newAmount": 32,
+"newAmount": 16,
 "oldChance": 1.0,
 "oldAmount": 24.0,
 "status": "changed",
@@ -5278,7 +5277,8 @@ const DROPS = [
 "Construct",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5286,16 +5286,17 @@ const DROPS = [
 "mob": "Lord Jawbus",
 "variant": "",
 "item": "Magma Lord Fragment",
-"newChance": 1.0,
+"newChance": 0.5,
 "newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Construct",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5312,7 +5313,8 @@ const DROPS = [
 "Construct",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5320,7 +5322,7 @@ const DROPS = [
 "mob": "Lord Jawbus",
 "variant": "",
 "item": "Radioactive Vial",
-"newChance": 0.01,
+"newChance": 0.0125,
 "newAmount": 1,
 "oldChance": 0.005,
 "oldAmount": 1.0,
@@ -5329,7 +5331,8 @@ const DROPS = [
 "Construct",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5570,7 +5573,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5586,7 +5590,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5602,7 +5607,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5664,7 +5670,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5681,7 +5688,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5698,7 +5706,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5715,7 +5724,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5732,7 +5742,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5749,7 +5760,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5766,7 +5778,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5782,7 +5795,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5798,7 +5812,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5814,7 +5829,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5830,7 +5846,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5847,7 +5864,8 @@ const DROPS = [
 "Animal",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5864,7 +5882,8 @@ const DROPS = [
 "Animal",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5881,7 +5900,8 @@ const DROPS = [
 "Animal",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5890,7 +5910,7 @@ const DROPS = [
 "variant": "",
 "item": "Silver Magmafish",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 4,
 "oldChance": 1.0,
 "oldAmount": 12.0,
 "status": "changed",
@@ -5898,7 +5918,8 @@ const DROPS = [
 "Arcane",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5906,7 +5927,7 @@ const DROPS = [
 "mob": "Thunder",
 "variant": "",
 "item": "Thunder Shard",
-"newChance": 1.0,
+"newChance": 0.5,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -5915,7 +5936,8 @@ const DROPS = [
 "Arcane",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5923,7 +5945,7 @@ const DROPS = [
 "mob": "Thunder",
 "variant": "",
 "item": "Flash I",
-"newChance": 0.02,
+"newChance": 0.04,
 "newAmount": 1,
 "oldChance": 0.015,
 "oldAmount": 1.0,
@@ -5932,7 +5954,8 @@ const DROPS = [
 "Arcane",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5949,7 +5972,8 @@ const DROPS = [
 "Arcane",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -5958,10 +5982,10 @@ const DROPS = [
 "variant": "",
 "item": "Nether Star",
 "newChance": 1.0,
-"newAmount": 3,
+"newAmount": 2,
 "oldChance": 1.0,
 "oldAmount": 3.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Elusive",
 "Wither"
@@ -6118,9 +6142,9 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Boss Corleone",
 "variant": "",
-"item": "Fine Jade Gemstone",
+"item": "Flawed Jade Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
+"newAmount": 32,
 "oldChance": null,
 "oldAmount": null,
 "status": "added",
@@ -6251,7 +6275,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6267,7 +6292,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6283,7 +6309,8 @@ const DROPS = [
 "types": [
 "Arthropod",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6365,9 +6392,9 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Key Guardian",
 "variant": "",
-"item": "Fine Amethyst Gemstone",
+"item": "Flawed Amethyst Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
+"newAmount": 32,
 "oldChance": null,
 "oldAmount": null,
 "status": "added",
@@ -6389,7 +6416,8 @@ const DROPS = [
 "types": [
 "Magmatic",
 "Sea Creature",
-"Undead"
+"Undead",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6405,7 +6433,8 @@ const DROPS = [
 "types": [
 "Magmatic",
 "Sea Creature",
-"Undead"
+"Undead",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6421,7 +6450,8 @@ const DROPS = [
 "types": [
 "Magmatic",
 "Sea Creature",
-"Undead"
+"Undead",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6437,7 +6467,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6453,7 +6484,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6469,7 +6501,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6485,7 +6518,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6501,7 +6535,8 @@ const DROPS = [
 "types": [
 "Infernal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -6593,12 +6628,12 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Scatha",
 "variant": "",
-"item": "Fine Amethyst Gemstone",
+"item": "Flawed Amethyst Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
-"oldChance": 0.4,
-"oldAmount": 1.0,
-"status": "changed",
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Elusive",
 "Shielded",
@@ -6609,12 +6644,12 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Scatha",
 "variant": "",
-"item": "Fine Jade Gemstone",
+"item": "Flawed Jade Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
-"oldChance": 0.2,
-"oldAmount": 1.0,
-"status": "changed",
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Elusive",
 "Shielded",
@@ -6625,12 +6660,12 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Scatha",
 "variant": "",
-"item": "Fine Sapphire Gemstone",
+"item": "Flawed Sapphire Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
-"oldChance": 0.1,
-"oldAmount": 1.0,
-"status": "changed",
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Elusive",
 "Shielded",
@@ -6641,12 +6676,12 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Scatha",
 "variant": "",
-"item": "Fine Amber Gemstone",
+"item": "Flawed Amber Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
-"oldChance": 0.1,
-"oldAmount": 1.0,
-"status": "changed",
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Elusive",
 "Shielded",
@@ -6657,12 +6692,12 @@ const DROPS = [
 "region": "Crystal Hollows",
 "mob": "Scatha",
 "variant": "",
-"item": "Fine Topaz Gemstone",
+"item": "Flawed Topaz Gemstone",
 "newChance": 1.0,
-"newAmount": 1,
-"oldChance": 1.0,
-"oldAmount": 1.0,
-"status": "same",
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
 "types": [
 "Elusive",
 "Shielded",
@@ -6742,6 +6777,86 @@ const DROPS = [
 "newAmount": null,
 "oldChance": 1.0,
 "oldAmount": 4.0,
+"status": "removed",
+"types": [
+"Elusive",
+"Shielded",
+"Subterranean"
+]
+},
+{
+"region": "Crystal Hollows",
+"mob": "Scatha",
+"variant": "",
+"item": "Fine Topaz Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "removed",
+"types": [
+"Elusive",
+"Shielded",
+"Subterranean"
+]
+},
+{
+"region": "Crystal Hollows",
+"mob": "Scatha",
+"variant": "",
+"item": "Fine Amethyst Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.4,
+"oldAmount": 1.0,
+"status": "removed",
+"types": [
+"Elusive",
+"Shielded",
+"Subterranean"
+]
+},
+{
+"region": "Crystal Hollows",
+"mob": "Scatha",
+"variant": "",
+"item": "Fine Jade Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.2,
+"oldAmount": 1.0,
+"status": "removed",
+"types": [
+"Elusive",
+"Shielded",
+"Subterranean"
+]
+},
+{
+"region": "Crystal Hollows",
+"mob": "Scatha",
+"variant": "",
+"item": "Fine Amber Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "removed",
+"types": [
+"Elusive",
+"Shielded",
+"Subterranean"
+]
+},
+{
+"region": "Crystal Hollows",
+"mob": "Scatha",
+"variant": "",
+"item": "Fine Sapphire Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.1,
+"oldAmount": 1.0,
 "status": "removed",
 "types": [
 "Elusive",
@@ -7255,8 +7370,8 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 1,
 "oldChance": 1.0,
-"oldAmount": 1.5,
-"status": "changed",
+"oldAmount": 1.0,
+"status": "same",
 "types": [
 "Undead"
 ]
@@ -8725,11 +8840,11 @@ const DROPS = [
 "mob": "Diamond Goblin",
 "variant": "",
 "item": "Pure Mithril Gem",
-"newChance": 0.01,
+"newChance": 0.015,
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Elusive",
 "Shielded",
@@ -9669,7 +9784,7 @@ const DROPS = [
 "mob": "Great White Shark",
 "variant": "",
 "item": "Great White Shark Tooth",
-"newChance": 0.05,
+"newChance": 0.075,
 "newAmount": 1,
 "oldChance": 0.1,
 "oldAmount": 1.0,
@@ -9742,7 +9857,7 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Glacite",
 "newChance": 1.0,
-"newAmount": 16,
+"newAmount": 8,
 "oldChance": 1.0,
 "oldAmount": 24.0,
 "status": "changed",
@@ -9789,7 +9904,7 @@ const DROPS = [
 "mob": "Littlefoot",
 "variant": "",
 "item": "Littlefoot Fluff",
-"newChance": 0.005,
+"newChance": 0.0075,
 "newAmount": 1,
 "oldChance": 0.002,
 "oldAmount": 1.0,
@@ -10409,7 +10524,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10425,7 +10541,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10441,7 +10558,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10457,7 +10575,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10473,7 +10592,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10489,7 +10609,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10505,7 +10626,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10521,7 +10643,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10537,7 +10660,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10553,7 +10677,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10569,7 +10694,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10585,7 +10711,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10601,7 +10728,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10617,7 +10745,8 @@ const DROPS = [
 "types": [
 "Animal",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10634,7 +10763,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10651,7 +10781,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10668,7 +10799,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10685,7 +10817,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10702,7 +10835,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10719,7 +10853,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10736,7 +10871,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10753,7 +10889,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10770,7 +10907,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10787,7 +10925,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10804,7 +10943,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10821,7 +10961,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10838,7 +10979,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10855,7 +10997,8 @@ const DROPS = [
 "Arcane",
 "Humanoid",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10871,7 +11014,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10887,7 +11031,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10903,7 +11048,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10919,7 +11065,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10935,7 +11082,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10951,7 +11099,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10967,7 +11116,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10983,7 +11133,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -10999,7 +11150,8 @@ const DROPS = [
 "types": [
 "Cubic",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11016,7 +11168,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11033,7 +11186,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11050,7 +11204,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11067,7 +11222,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11084,7 +11240,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11101,7 +11258,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11118,7 +11276,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11135,7 +11294,8 @@ const DROPS = [
 "Animal",
 "Elusive",
 "Magmatic",
-"Sea Creature"
+"Sea Creature",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11152,7 +11312,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11169,7 +11330,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11186,7 +11348,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11203,7 +11366,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11220,7 +11384,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11237,7 +11402,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11254,7 +11420,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11271,7 +11438,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11288,7 +11456,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11305,7 +11474,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11322,7 +11492,8 @@ const DROPS = [
 "Elusive",
 "Magmatic",
 "Sea Creature",
-"Skeletal"
+"Skeletal",
+"Lava Sea Creature"
 ]
 },
 {
@@ -11333,8 +11504,8 @@ const DROPS = [
 "newChance": 1.0,
 "newAmount": 1,
 "oldChance": 1.0,
-"oldAmount": 1.5,
-"status": "changed",
+"oldAmount": 1,
+"status": "same",
 "types": [
 "Undead"
 ]
@@ -11347,7 +11518,7 @@ const DROPS = [
 "newChance": 0.0001,
 "newAmount": 1,
 "oldChance": 3e-05,
-"oldAmount": 0.5,
+"oldAmount": 1.0,
 "status": "changed",
 "types": [
 "Undead"
@@ -11361,7 +11532,7 @@ const DROPS = [
 "newChance": 3e-05,
 "newAmount": 1,
 "oldChance": 1e-05,
-"oldAmount": 0.5,
+"oldAmount": 1.0,
 "status": "changed",
 "types": [
 "Undead"
@@ -11484,7 +11655,7 @@ const DROPS = [
 "mob": "Graveyard Zombie",
 "variant": "",
 "item": "Rotten Flesh",
-"newChance": 1,
+"newChance": 1.0,
 "newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1.0,
@@ -11512,7 +11683,7 @@ const DROPS = [
 "mob": "Graveyard Zombie",
 "variant": "",
 "item": "Potato",
-"newChance": 0.025,
+"newChance": 0.05,
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
@@ -11526,7 +11697,7 @@ const DROPS = [
 "mob": "Graveyard Zombie",
 "variant": "",
 "item": "Carrot",
-"newChance": 0.025,
+"newChance": 0.05,
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
@@ -12357,7 +12528,7 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Ice",
 "newChance": 1.0,
-"newAmount": 8,
+"newAmount": 4,
 "oldChance": 1.0,
 "oldAmount": 48.0,
 "status": "changed",
@@ -12482,11 +12653,11 @@ const DROPS = [
 "mob": "Yeti",
 "variant": "",
 "item": "True Ice",
-"newChance": 0.01,
+"newChance": 0.05,
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Aquatic",
 "Elusive",
@@ -12500,11 +12671,11 @@ const DROPS = [
 "mob": "Yeti",
 "variant": "",
 "item": "COMMON Baby Yeti Pet",
-"newChance": 0.02,
+"newChance": 0.035,
 "newAmount": 1,
 "oldChance": 0.02,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Aquatic",
 "Elusive",
@@ -12529,6 +12700,436 @@ const DROPS = [
 "Frozen",
 "Sea Creature",
 "Winter Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Atoll Croaker",
+"variant": "",
+"item": "Lotus",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Atoll Croaker",
+"variant": "",
+"item": "Tropical Fish",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Lotus Guardian",
+"variant": "",
+"item": "Lotus",
+"newChance": 1.0,
+"newAmount": 2,
+"oldChance": 1.0,
+"oldAmount": 2.0,
+"status": "same",
+"types": [
+"Aquatic",
+"Construct",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Lotus Guardian",
+"variant": "",
+"item": "Frogcoin",
+"newChance": 0.05,
+"newAmount": 1,
+"oldChance": 0.05,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Aquatic",
+"Construct",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Lotus Guardian",
+"variant": "",
+"item": "Tropical Fish",
+"newChance": 1.0,
+"newAmount": 2,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Aquatic",
+"Construct",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "gorF",
+"variant": "",
+"item": "Lotus",
+"newChance": 1.0,
+"newAmount": 8,
+"oldChance": 1.0,
+"oldAmount": 8.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Arcane",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "gorF",
+"variant": "",
+"item": "Silver Lotus",
+"newChance": 0.05,
+"newAmount": 1,
+"oldChance": 0.05,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Arcane",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "gorF",
+"variant": "",
+"item": "Tropical Fish",
+"newChance": 1.0,
+"newAmount": 8,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Arcane",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "gorF",
+"variant": "",
+"item": "Enchanted Tropical Fish",
+"newChance": 0.05,
+"newAmount": 1,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Arcane",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "gorF",
+"variant": "",
+"item": "eroC enotS egrofeR",
+"newChance": 0.01,
+"newAmount": 1,
+"oldChance": 0.01,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Arcane",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Lotus",
+"newChance": 1.0,
+"newAmount": 32,
+"oldChance": 1.0,
+"oldAmount": 32.0,
+"status": "same",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Enchanted Gold Ingot",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": 1.0,
+"oldAmount": 1.5,
+"status": "changed",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Silver Lotus",
+"newChance": 0.2,
+"newAmount": 1,
+"oldChance": 0.2,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Enchanted Gold Block",
+"newChance": 0.005,
+"newAmount": 1,
+"oldChance": 0.005,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Unlucky Doubloon",
+"newChance": 0.033,
+"newAmount": 1,
+"oldChance": 0.01,
+"oldAmount": 1.0,
+"status": "changed",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Tropical Fish",
+"newChance": 1.0,
+"newAmount": 32,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Drowned Captain",
+"variant": "",
+"item": "Enchanted Tropical Fish",
+"newChance": 0.2,
+"newAmount": 1,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Aquatic",
+"Sea Creature",
+"Undead"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Puddle Jumper",
+"variant": "",
+"item": "Silver Lotus",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Puddle Jumper",
+"variant": "",
+"item": "Enchanted Tropical Fish",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Puddle Jumper",
+"variant": "",
+"item": "Puddle Jumper",
+"newChance": 1.0,
+"newAmount": 1,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Puddle Jumper",
+"variant": "",
+"item": "Gold Lotus",
+"newChance": 0.01,
+"newAmount": 1,
+"oldChance": 0.01,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Puddle Jumper",
+"variant": "",
+"item": "Puddle Jumper Trophy Frog",
+"newChance": null,
+"newAmount": null,
+"oldChance": 1.0,
+"oldAmount": 1.0,
+"status": "removed",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Frog Prince",
+"variant": "",
+"item": "Silver Lotus",
+"newChance": 1.0,
+"newAmount": 4,
+"oldChance": 1.0,
+"oldAmount": 8.0,
+"status": "changed",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Frog Prince",
+"variant": "",
+"item": "Enchanted Tropical Fish",
+"newChance": 1.0,
+"newAmount": 8,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Frog Prince",
+"variant": "",
+"item": "Gold Lotus",
+"newChance": 0.05,
+"newAmount": 1,
+"oldChance": 0.05,
+"oldAmount": 1.0,
+"status": "same",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
+]
+},
+{
+"region": "Lotus Atoll",
+"mob": "Frog Prince",
+"variant": "",
+"item": "Prince\u2019s Crown Jewel",
+"newChance": 0.01,
+"newAmount": 1,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"types": [
+"Animal",
+"Aquatic",
+"Elusive",
+"Sea Creature"
 ]
 },
 {
@@ -15493,7 +16094,7 @@ const DROPS = [
 "mob": "Minotaur",
 "variant": "EPIC",
 "item": "Daedalus Stick",
-"newChance": 0.0015,
+"newChance": 0.003,
 "newAmount": 1,
 "oldChance": 0.0008,
 "oldAmount": 1.0,
@@ -15541,7 +16142,7 @@ const DROPS = [
 "mob": "Minotaur",
 "variant": "LEGENDARY",
 "item": "Daedalus Stick",
-"newChance": 0.002,
+"newChance": 0.0034999999999999996,
 "newAmount": 1,
 "oldChance": 0.0012,
 "oldAmount": 1.0,
@@ -15589,7 +16190,7 @@ const DROPS = [
 "mob": "Minotaur",
 "variant": "MYTHIC",
 "item": "Daedalus Stick",
-"newChance": 0.0025,
+"newChance": 0.004,
 "newAmount": 1,
 "oldChance": 0.0016,
 "oldAmount": 1.0,
@@ -15804,7 +16405,7 @@ const DROPS = [
 "mob": "Sphinx",
 "variant": "LEGENDARY",
 "item": "Looting VII",
-"newChance": 0.005,
+"newChance": 0.0025,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -18526,7 +19127,7 @@ const DROPS = [
 "mob": "Zombie",
 "variant": "",
 "item": "Rotten Flesh",
-"newChance": 1,
+"newChance": 1.0,
 "newAmount": 1,
 "oldChance": 1.0,
 "oldAmount": 1.0,
@@ -19181,7 +19782,8 @@ const DROPS = [
 "oldAmount": null,
 "status": "added",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19195,7 +19797,8 @@ const DROPS = [
 "oldAmount": null,
 "status": "added",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19209,7 +19812,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "same",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19223,7 +19827,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19237,7 +19842,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "changed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19251,7 +19857,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19265,7 +19872,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19279,7 +19887,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19293,7 +19902,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "removed",
 "types": [
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -19775,7 +20385,7 @@ const DROPS = [
 "mob": "Phantom Fisher",
 "variant": "",
 "item": "Phantom Hook",
-"newChance": 0.01,
+"newChance": 0.02,
 "newAmount": 1,
 "oldChance": null,
 "oldAmount": null,
@@ -19979,11 +20589,11 @@ const DROPS = [
 "mob": "Grim Reaper",
 "variant": "",
 "item": "Shredded Line",
-"newChance": 0.01,
+"newChance": 0.025,
 "newAmount": 1,
 "oldChance": 0.01,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "types": [
 "Aquatic",
 "Elusive",
@@ -20750,11 +21360,11 @@ const DROPS = [
 "mob": "Voidling Extremist",
 "variant": "",
 "item": "Enderman Cortex Rewriter",
-"newChance": 0.0005,
+"newChance": 0.001,
 "newAmount": 1,
 "oldChance": 0.001,
 "oldAmount": 1.0,
-"status": "changed",
+"status": "same",
 "types": [
 "Ender"
 ]
@@ -21102,187 +21712,6 @@ const DROPS = [
 ]
 },
 {
-"region": "Lotus Atoll",
-"mob": "Atoll Croaker",
-"variant": "",
-"item": "Tropical Fish",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Animal",
-"Aquatic",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Lotus Guardian",
-"variant": "",
-"item": "Tropical Fish",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Aquatic",
-"Construct",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "gorF",
-"variant": "",
-"item": "Tropical Fish",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Animal",
-"Aquatic",
-"Arcane",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "gorF",
-"variant": "",
-"item": "Enchanted Tropical Fish",
-"newChance": 0.05,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Animal",
-"Aquatic",
-"Arcane",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Drowned Captain",
-"variant": "",
-"item": "Enchanted Tropical Fish",
-"newChance": 0.2,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Aquatic",
-"Sea Creature",
-"Undead"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Drowned Captain",
-"variant": "",
-"item": "Unlucky Doubloon",
-"newChance": 0.025,
-"newAmount": 1,
-"oldChance": 0.01,
-"oldAmount": 1.0,
-"status": "changed",
-"types": [
-"Aquatic",
-"Sea Creature",
-"Undead"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Drowned Captain",
-"variant": "",
-"item": "Enchanted Gold Ingot",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": 1.0,
-"oldAmount": 1.5,
-"status": "changed",
-"types": [
-"Aquatic",
-"Sea Creature",
-"Undead"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Puddle Jumper",
-"variant": "",
-"item": "Enchanted Tropical Fish",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Animal",
-"Aquatic",
-"Elusive",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Frog Prince",
-"variant": "",
-"item": "Enchanted Tropical Fish",
-"newChance": 1.0,
-"newAmount": 1,
-"oldChance": null,
-"oldAmount": null,
-"status": "added",
-"types": [
-"Animal",
-"Aquatic",
-"Elusive",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Frog Prince",
-"variant": "",
-"item": "Prince's Crown Jewel",
-"newChance": 0.01,
-"newAmount": 1,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "changed",
-"types": [
-"Animal",
-"Aquatic",
-"Elusive",
-"Sea Creature"
-]
-},
-{
-"region": "Lotus Atoll",
-"mob": "Puck",
-"variant": "",
-"item": "Bottled Mischief",
-"newChance": 0.1,
-"newAmount": 1,
-"oldChance": 0.05,
-"oldAmount": 1.0,
-"status": "changed",
-"types": [
-"Airborne",
-"Critter",
-"Woodland"
-]
-},
-{
 "region": "Slayer",
 "mob": "Revenant Horror",
 "variant": "Tier 1",
@@ -21295,7 +21724,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21311,7 +21741,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21327,7 +21758,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21343,7 +21775,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21359,7 +21792,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21375,7 +21809,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21391,7 +21826,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21407,7 +21843,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21423,7 +21860,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21439,7 +21877,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21455,7 +21894,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21471,7 +21911,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21487,7 +21928,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21503,7 +21945,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21519,7 +21962,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21535,7 +21979,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21551,7 +21996,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21567,7 +22013,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21583,7 +22030,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21599,7 +22047,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21615,7 +22064,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21631,7 +22081,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21639,15 +22090,16 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 4",
 "item": "Paragon Shard",
-"newChance": 0.0025,
+"newChance": 0.005,
 "newAmount": 1.0,
 "oldChance": 0.0025,
 "oldAmount": 1.0,
-"status": "same",
+"status": "changed",
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21663,7 +22115,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21671,7 +22124,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 4",
 "item": "Festering Maggot",
-"newChance": 0.00075,
+"newChance": 0.001,
 "newAmount": 1.0,
 "oldChance": 0.000804052424218059,
 "oldAmount": 1.0,
@@ -21679,7 +22132,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21687,7 +22141,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 4",
 "item": "Scythe Blade",
-"newChance": 0.001,
+"newChance": 0.002,
 "newAmount": 1.0,
 "oldChance": 0.0005628366969526413,
 "oldAmount": 1.0,
@@ -21695,7 +22149,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21711,7 +22166,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21727,7 +22183,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21743,7 +22200,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21759,7 +22217,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21775,7 +22234,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21791,7 +22251,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21807,7 +22268,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21823,7 +22285,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21831,7 +22294,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Paragon Shard",
-"newChance": 0.0025,
+"newChance": 0.01,
 "newAmount": 1.0,
 "oldChance": 0.005,
 "oldAmount": 1.0,
@@ -21839,7 +22302,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21855,7 +22319,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21863,7 +22328,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Festering Maggot",
-"newChance": 0.00075,
+"newChance": 0.001,
 "newAmount": 1.0,
 "oldChance": 0.0013608219364496157,
 "oldAmount": 1.0,
@@ -21871,7 +22336,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21887,7 +22353,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21895,7 +22362,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Scythe Blade",
-"newChance": 0.001,
+"newChance": 0.002,
 "newAmount": 1.0,
 "oldChance": 0.0010206164523372118,
 "oldAmount": 1.0,
@@ -21903,7 +22370,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21911,7 +22379,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Shredded Sinew",
-"newChance": 0.0005,
+"newChance": 0.001,
 "newAmount": 1.0,
 "oldChance": 0.0005443287745798462,
 "oldAmount": 1.0,
@@ -21919,7 +22387,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21927,7 +22396,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Severed Hand",
-"newChance": 0.0005,
+"newChance": 0.00075,
 "newAmount": 1.0,
 "oldChance": 0.00047628767775736546,
 "oldAmount": 1.0,
@@ -21935,7 +22404,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -21943,7 +22413,7 @@ const DROPS = [
 "mob": "Revenant Horror",
 "variant": "Tier 5",
 "item": "Warden Heart",
-"newChance": 0.0001,
+"newChance": 0.0002,
 "newAmount": 1.0,
 "oldChance": 0.00013608219364496155,
 "oldAmount": 1.0,
@@ -21951,7 +22421,2946 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 1",
+"item": "Tarantula Web",
+"newChance": 1.0,
+"newAmount": 1.5,
+"oldChance": 1.0,
+"oldAmount": 2.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 1",
+"item": "Toxic Arrow Poison",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.1525,
+"oldAmount": 6.0,
+"status": "removed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 2",
+"item": "Tarantula Web",
+"newChance": 1.0,
+"newAmount": 6.0,
+"oldChance": 1.0,
+"oldAmount": 13.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 2",
+"item": "Toxic Arrow Poison",
+"newChance": 0.05,
+"newAmount": 8.0,
+"oldChance": 0.1509,
+"oldAmount": 7.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 2",
+"item": "Spider Catalyst",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0105,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 2",
+"item": "Bite Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0069,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Tarantula Web",
+"newChance": 1.0,
+"newAmount": 12.0,
+"oldChance": 1.0,
+"oldAmount": 24.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Toxic Arrow Poison",
+"newChance": 0.05,
+"newAmount": 16.0,
+"oldChance": 0.1485,
+"oldAmount": 24.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Spider Catalyst",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0206,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Bite Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.026699999999999998,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Tarantula Catalyst",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Bane of Arthropods VI",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0021,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Fly Swatter",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.00082,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 3",
+"item": "Tarantula Talisman",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.00082,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Tarantula Web",
+"newChance": 1.0,
+"newAmount": 24.0,
+"oldChance": 1.0,
+"oldAmount": 40.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Toxic Arrow Poison",
+"newChance": 0.05,
+"newAmount": 32.0,
+"oldChance": 0.1497,
+"oldAmount": 40.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Spider Catalyst",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0062,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Bite Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0645,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Tarantula Catalyst",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0037,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Bane of Arthropods VI",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0042,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Fly Swatter",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0017000000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Tarantula Talisman",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0017000000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Darkness Within Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0039000000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Vial of Venom",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.00083,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Digested Mosquito",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.00058,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 4",
+"item": "Paragon Shard",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Tarantula Web",
+"newChance": 1.0,
+"newAmount": 48.0,
+"oldChance": 1.0,
+"oldAmount": 64.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Toxic Arrow Poison",
+"newChance": 0.05,
+"newAmount": 64.0,
+"oldChance": 0.1272,
+"oldAmount": 64.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Spider Catalyst",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0018,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Bite Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0552,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Tarantula Catalyst",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0042,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Bane of Arthropods VI",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0034999999999999996,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Fly Swatter",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0021,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Tarantula Talisman",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0021,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Darkness Within Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0066,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Vial of Venom",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0014000000000000002,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Digested Mosquito",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0007099999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Paragon Shard",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.005,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Primordial Shard",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0070999999999999995,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Shriveled Wasp",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.0014000000000000002,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Ensnared Snail",
+"newChance": 0.00075,
+"newAmount": 1.0,
+"oldChance": 0.00042,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Tarantula Silk",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.1413,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Tarantula Broodfather",
+"variant": "Tier 5",
+"item": "Primordial Eye",
+"newChance": 0.0002,
+"newAmount": 1.0,
+"oldChance": 0.00014000000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Arthropod",
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 1",
+"item": "Wolf Tooth",
+"newChance": 1.0,
+"newAmount": 1.5,
+"oldChance": 1.0,
+"oldAmount": 2.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 2",
+"item": "Wolf Tooth",
+"newChance": 1.0,
+"newAmount": 6.0,
+"oldChance": 1.0,
+"oldAmount": 13.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 2",
+"item": "Hamster Wheel",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.16670000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 2",
+"item": "Spirit Rune I",
+"newChance": 0.025,
+"newAmount": 1,
+"oldChance": 0.0068000000000000005,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Wolf Tooth",
+"newChance": 1.0,
+"newAmount": 12.0,
+"oldChance": 1.0,
+"oldAmount": 40.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Hamster Wheel",
+"newChance": 0.05,
+"newAmount": 2.0,
+"oldChance": 0.16449999999999998,
+"oldAmount": 3.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Furball",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.008199999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Critical VI",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0040999999999999995,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Red Claw Egg",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 3",
+"item": "Spirit Rune I",
+"newChance": 0.025,
+"newAmount": 1,
+"oldChance": 0.026600000000000002,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Wolf Tooth",
+"newChance": 1.0,
+"newAmount": 24.0,
+"oldChance": 1.0,
+"oldAmount": 57.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Hamster Wheel",
+"newChance": 0.05,
+"newAmount": 3.0,
+"oldChance": 0.1635,
+"oldAmount": 4.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Furball",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.016200000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Critical VI",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.008100000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Red Claw Egg",
+"newChance": 0.002,
+"newAmount": 1.0,
+"oldChance": 0.0012,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Paragon Shard",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Couture Rune",
+"newChance": 0.0015,
+"newAmount": 1.0,
+"oldChance": 0.0024,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Grizzly Salmon",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0006,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Overflux Capacitor",
+"newChance": 0.00075,
+"newAmount": 1.0,
+"oldChance": 0.0004,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Sven Packmaster",
+"variant": "Tier 4",
+"item": "Spirit Rune I",
+"newChance": 0.025,
+"newAmount": 1,
+"oldChance": 0.0637,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Animal",
+"Slayer Boss",
+"Wolf Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 1",
+"item": "Null Sphere",
+"newChance": 1.0,
+"newAmount": 3.0,
+"oldChance": 1.0,
+"oldAmount": 2.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 2",
+"item": "Null Sphere",
+"newChance": 1.0,
+"newAmount": 12.0,
+"oldChance": 1.0,
+"oldAmount": 19.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 2",
+"item": "Twilight Arrow Poison",
+"newChance": 0.05,
+"newAmount": 16.0,
+"oldChance": 0.1515,
+"oldAmount": 16.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 2",
+"item": "Summoning Eye",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0067,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 2",
+"item": "Endersnake Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Null Sphere",
+"newChance": 1.0,
+"newAmount": 24.0,
+"oldChance": 1.0,
+"oldAmount": 70.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Twilight Arrow Poison",
+"newChance": 0.05,
+"newAmount": 32.0,
+"oldChance": 0.1341,
+"oldAmount": 28.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Summoning Eye",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.006,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Endersnake Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0242,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Mana Steal I",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0447,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Transmission Tuner",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.022400000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Hazmat Enderman",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0104,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 3",
+"item": "Null Atom",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.0373,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Null Sphere",
+"newChance": 1.0,
+"newAmount": 48.0,
+"oldChance": 1.0,
+"oldAmount": 130.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Twilight Arrow Poison",
+"newChance": 0.05,
+"newAmount": 64.0,
+"oldChance": 0.127,
+"oldAmount": 62.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Summoning Eye",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.005600000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Endersnake Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.053,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Mana Steal I",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.042300000000000004,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Transmission Tuner",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0212,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Hazmat Enderman",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0155,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Null Atom",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.049400000000000006,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Paragon Shard",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Smarty Pants I",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.0176,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "End Rune",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0066,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Sinful Dice",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0046,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Etherwarp Merger",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0042,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Pocket Espresso Machine",
+"newChance": 0.005,
+"newAmount": 1.0,
+"oldChance": 0.0039000000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Handy Blood Chalice",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0018,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Void Conqueror",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0017000000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Enchant Rune",
+"newChance": 0.00075,
+"newAmount": 1.0,
+"oldChance": 0.00046,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Exceedingly Rare Ender Artifact Upgrader",
+"newChance": 0.0005,
+"newAmount": 1.0,
+"oldChance": 0.00028000000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "End Stone Idol",
+"newChance": 0.00075,
+"newAmount": 1.0,
+"oldChance": 0.00014000000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Voidgloom Seraph",
+"variant": "Tier 4",
+"item": "Judgement Core",
+"newChance": 0.00075,
+"newAmount": 1.0,
+"oldChance": 0.0005600000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Ender",
+"Slayer Boss",
+"Enderman Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 1",
+"item": "Derelict Ashe",
+"newChance": 1.0,
+"newAmount": 12.0,
+"oldChance": 1.0,
+"oldAmount": 7.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 1",
+"item": "Enchanted Blaze Powder",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.1304,
+"oldAmount": 1.0,
+"status": "removed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Derelict Ashe",
+"newChance": 1.0,
+"newAmount": 24.0,
+"oldChance": 1.0,
+"oldAmount": 17.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Enchanted Blaze Powder",
+"newChance": 0.05,
+"newAmount": 2.0,
+"oldChance": 0.0926,
+"oldAmount": 2.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Wisp's Ice-Flavored Water I Splash Potion",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.030899999999999997,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Bundle of Magma Arrows",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.0926,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Lavatears Rune",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Mana Disintegrator",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0432,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Scorched Books",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.024700000000000003,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Inferno Demonlord Shard",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.0154,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Kelvin Inverter",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.030899999999999997,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 2",
+"item": "Gabagool Distillate",
+"newChance": 0.05,
+"newAmount": 4.0,
+"oldChance": 0.0519,
+"oldAmount": 4.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Derelict Ashe",
+"newChance": 1.0,
+"newAmount": 48.0,
+"oldChance": 1.0,
+"oldAmount": 70.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Enchanted Blaze Powder",
+"newChance": 0.05,
+"newAmount": 8.0,
+"oldChance": 0.087,
+"oldAmount": 6.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Wisp's Ice-Flavored Water I Splash Potion",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.028999999999999998,
+"oldAmount": 2.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Bundle of Magma Arrows",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.087,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Lavatears Rune",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0115,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Mana Disintegrator",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0406,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Scorched Books",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0232,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Inferno Demonlord Shard",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.028999999999999998,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Kelvin Inverter",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.028999999999999998,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Gabagool Distillate",
+"newChance": 0.05,
+"newAmount": 16.0,
+"oldChance": 0.0487,
+"oldAmount": 12.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Scorched Power Crystal",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0348,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Archfiend Dice",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0116,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 3",
+"item": "Smoldering VI",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Derelict Ashe",
+"newChance": 1.0,
+"newAmount": 80.0,
+"oldChance": 1.0,
+"oldAmount": 132.5,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Enchanted Blaze Powder",
+"newChance": 0.05,
+"newAmount": 16.0,
+"oldChance": 0.0791,
+"oldAmount": 28.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Wisp's Ice-Flavored Water I Splash Potion",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0264,
+"oldAmount": 5.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Bundle of Magma Arrows",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.0791,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Lavatears Rune",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0231,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Mana Disintegrator",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0369,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Scorched Books",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.021099999999999997,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Inferno Demonlord Shard",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.0527,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Kelvin Inverter",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0264,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Gabagool Distillate",
+"newChance": 0.05,
+"newAmount": 32.0,
+"oldChance": 0.0443,
+"oldAmount": 28.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Scorched Power Crystal",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.0316,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Archfiend Dice",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.0105,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Smoldering VI",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Paragon Shard",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0025,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Fiery Burst Rune",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0021,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Fine Opal Gemstone",
+"newChance": 0.025,
+"newAmount": 1.5,
+"oldChance": null,
+"oldAmount": null,
+"status": "added",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Duplex I",
+"newChance": 0.02,
+"newAmount": 1.0,
+"oldChance": 0.0184,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "High Class Archfiend Dice",
+"newChance": 0.0025,
+"newAmount": 1.0,
+"oldChance": 0.0026,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Wilson's Engineering Plans",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0009,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Subzero Inverter",
+"newChance": 0.001,
+"newAmount": 1.0,
+"oldChance": 0.0009,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Fire Aspect III",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.0132,
+"oldAmount": 1.0,
+"status": "removed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Inferno Demonlord",
+"variant": "Tier 4",
+"item": "Flawed Opal Gemstone",
+"newChance": null,
+"newAmount": null,
+"oldChance": 0.028999999999999998,
+"oldAmount": 320.0,
+"status": "removed",
+"weighted": "old",
+"types": [
+"Infernal",
+"Slayer Boss",
+"Blaze Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 1",
+"item": "Coven Seal",
+"newChance": 1.0,
+"newAmount": 6.0,
+"oldChance": 1.0,
+"oldAmount": 9.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 2",
+"item": "Coven Seal",
+"newChance": 1.0,
+"newAmount": 12.0,
+"oldChance": 1.0,
+"oldAmount": 13.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 2",
+"item": "Enchanted Book Bundle (Quantum)",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1333,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 2",
+"item": "Soultwist Rune I",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1176,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 2",
+"item": "Bubba Blister",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 2",
+"item": "Fang-tastic Chocolate Chip",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.1,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Coven Seal",
+"newChance": 1.0,
+"newAmount": 24.0,
+"oldChance": 1.0,
+"oldAmount": 38.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Enchanted Book Bundle (Quantum)",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.125,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Soultwist Rune I",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.11109999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Bubba Blister",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.09380000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Fang-tastic Chocolate Chip",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.09380000000000001,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 3",
+"item": "Guardian Lucky Block",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.0625,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Coven Seal",
+"newChance": 1.0,
+"newAmount": 48.0,
+"oldChance": 1.0,
+"oldAmount": 58.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Enchanted Book Bundle (Quantum)",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.122,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Soultwist Rune I",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.10869999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Bubba Blister",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.0915,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Fang-tastic Chocolate Chip",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.0915,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Guardian Lucky Block",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.061,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "McGrubber's Burger",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.012199999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 4",
+"item": "Unfanged Vampire Part",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.012199999999999999,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Coven Seal",
+"newChance": 1.0,
+"newAmount": 96.0,
+"oldChance": 1.0,
+"oldAmount": 96.0,
+"status": "same",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Enchanted Book Bundle (Quantum)",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.1198,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Soultwist Rune I",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.107,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Bubba Blister",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.0898,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Fang-tastic Chocolate Chip",
+"newChance": 0.075,
+"newAmount": 1.0,
+"oldChance": 0.0898,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Guardian Lucky Block",
+"newChance": 0.05,
+"newAmount": 1.0,
+"oldChance": 0.0599,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "McGrubber's Burger",
+"newChance": 0.025,
+"newAmount": 1.0,
+"oldChance": 0.012,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Unfanged Vampire Part",
+"newChance": 0.01,
+"newAmount": 1.0,
+"oldChance": 0.012,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
+]
+},
+{
+"region": "Slayer",
+"mob": "Riftstalker Bloodfiend",
+"variant": "Tier 5",
+"item": "Enchanted Book Bundle (The One)",
+"newChance": 0.0175,
+"newAmount": 1.0,
+"oldChance": 0.018000000000000002,
+"oldAmount": 1.0,
+"status": "changed",
+"weighted": "old",
+"rift": true,
+"types": [
+"Vampire Slayer"
 ]
 },
 {
@@ -21959,14 +25368,15 @@ const DROPS = [
 "mob": "Riftstalker Bloodfiend",
 "variant": "Tier 1",
 "item": "Sangria Dye",
-"newChance": 4e-05,
+"newChance": 1e-05,
 "newAmount": 1,
 "oldChance": 1e-05,
 "oldAmount": 1,
-"status": "changed",
-"noMf": true,
+"status": "same",
+"weighted": "old",
+"rift": true,
 "types": [
-"Slayer Boss"
+"Vampire Slayer"
 ]
 },
 {
@@ -21974,14 +25384,15 @@ const DROPS = [
 "mob": "Riftstalker Bloodfiend",
 "variant": "Tier 2",
 "item": "Sangria Dye",
-"newChance": 5e-05,
+"newChance": 1.25e-05,
 "newAmount": 1,
 "oldChance": 1.25e-05,
 "oldAmount": 1,
-"status": "changed",
-"noMf": true,
+"status": "same",
+"weighted": "old",
+"rift": true,
 "types": [
-"Slayer Boss"
+"Vampire Slayer"
 ]
 },
 {
@@ -21989,14 +25400,15 @@ const DROPS = [
 "mob": "Riftstalker Bloodfiend",
 "variant": "Tier 3",
 "item": "Sangria Dye",
-"newChance": 6.666666666666667e-05,
+"newChance": 1.6666666666666667e-05,
 "newAmount": 1,
 "oldChance": 1.6666666666666667e-05,
 "oldAmount": 1,
-"status": "changed",
-"noMf": true,
+"status": "same",
+"weighted": "old",
+"rift": true,
 "types": [
-"Slayer Boss"
+"Vampire Slayer"
 ]
 },
 {
@@ -22004,14 +25416,15 @@ const DROPS = [
 "mob": "Riftstalker Bloodfiend",
 "variant": "Tier 4",
 "item": "Sangria Dye",
-"newChance": 0.0001,
+"newChance": 2.5e-05,
 "newAmount": 1,
 "oldChance": 2.5e-05,
 "oldAmount": 1,
-"status": "changed",
-"noMf": true,
+"status": "same",
+"weighted": "old",
+"rift": true,
 "types": [
-"Slayer Boss"
+"Vampire Slayer"
 ]
 },
 {
@@ -22019,14 +25432,15 @@ const DROPS = [
 "mob": "Riftstalker Bloodfiend",
 "variant": "Tier 5",
 "item": "Sangria Dye",
-"newChance": 0.0002,
+"newChance": 0.0001,
 "newAmount": 1,
 "oldChance": 0.0001,
 "oldAmount": 1,
-"status": "changed",
-"noMf": true,
+"status": "same",
+"weighted": "old",
+"rift": true,
 "types": [
-"Slayer Boss"
+"Vampire Slayer"
 ]
 },
 {
@@ -22039,10 +25453,11 @@ const DROPS = [
 "oldChance": 1e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Animal",
-"Slayer Boss"
+"Slayer Boss",
+"Wolf Slayer"
 ]
 },
 {
@@ -22055,10 +25470,11 @@ const DROPS = [
 "oldChance": 4e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Animal",
-"Slayer Boss"
+"Slayer Boss",
+"Wolf Slayer"
 ]
 },
 {
@@ -22071,10 +25487,11 @@ const DROPS = [
 "oldChance": 1e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Animal",
-"Slayer Boss"
+"Slayer Boss",
+"Wolf Slayer"
 ]
 },
 {
@@ -22087,10 +25504,11 @@ const DROPS = [
 "oldChance": 2e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Animal",
-"Slayer Boss"
+"Slayer Boss",
+"Wolf Slayer"
 ]
 },
 {
@@ -22103,10 +25521,11 @@ const DROPS = [
 "oldChance": 1e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Infernal",
-"Slayer Boss"
+"Slayer Boss",
+"Blaze Slayer"
 ]
 },
 {
@@ -22119,10 +25538,11 @@ const DROPS = [
 "oldChance": 4e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Infernal",
-"Slayer Boss"
+"Slayer Boss",
+"Blaze Slayer"
 ]
 },
 {
@@ -22135,10 +25555,11 @@ const DROPS = [
 "oldChance": 1e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Infernal",
-"Slayer Boss"
+"Slayer Boss",
+"Blaze Slayer"
 ]
 },
 {
@@ -22151,10 +25572,11 @@ const DROPS = [
 "oldChance": 2e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Infernal",
-"Slayer Boss"
+"Slayer Boss",
+"Blaze Slayer"
 ]
 },
 {
@@ -22170,7 +25592,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -22186,7 +25609,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -22202,7 +25626,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -22218,7 +25643,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -22234,7 +25660,8 @@ const DROPS = [
 "weighted": "old",
 "types": [
 "Slayer Boss",
-"Undead"
+"Undead",
+"Zombie Slayer"
 ]
 },
 {
@@ -22247,10 +25674,12 @@ const DROPS = [
 "oldChance": 1e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Arthropod",
-"Slayer Boss"
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
 ]
 },
 {
@@ -22263,10 +25692,12 @@ const DROPS = [
 "oldChance": 4e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Arthropod",
-"Slayer Boss"
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
 ]
 },
 {
@@ -22279,10 +25710,12 @@ const DROPS = [
 "oldChance": 1e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Arthropod",
-"Slayer Boss"
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
 ]
 },
 {
@@ -22295,10 +25728,12 @@ const DROPS = [
 "oldChance": 2e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Arthropod",
-"Slayer Boss"
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
 ]
 },
 {
@@ -22311,10 +25746,12 @@ const DROPS = [
 "oldChance": 4e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Arthropod",
-"Slayer Boss"
+"Slayer Boss",
+"Arachne / Broodmother / Tarantula",
+"Spider Slayer"
 ]
 },
 {
@@ -22327,10 +25764,11 @@ const DROPS = [
 "oldChance": 1e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Ender",
-"Slayer Boss"
+"Slayer Boss",
+"Enderman Slayer"
 ]
 },
 {
@@ -22343,10 +25781,11 @@ const DROPS = [
 "oldChance": 4e-07,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Ender",
-"Slayer Boss"
+"Slayer Boss",
+"Enderman Slayer"
 ]
 },
 {
@@ -22359,10 +25798,11 @@ const DROPS = [
 "oldChance": 1e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Ender",
-"Slayer Boss"
+"Slayer Boss",
+"Enderman Slayer"
 ]
 },
 {
@@ -22375,10 +25815,11 @@ const DROPS = [
 "oldChance": 2e-06,
 "oldAmount": 1,
 "status": "changed",
-"weighted": "both",
+"weighted": "old",
 "types": [
 "Ender",
-"Slayer Boss"
+"Slayer Boss",
+"Enderman Slayer"
 ]
 },
 {
@@ -22454,7 +25895,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22469,7 +25911,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22484,7 +25927,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22499,7 +25943,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22514,7 +25959,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22529,7 +25975,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22544,7 +25991,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22559,7 +26007,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22574,7 +26023,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22589,7 +26039,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22604,7 +26055,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22619,7 +26071,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22634,7 +26087,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22642,14 +26096,15 @@ const DROPS = [
 "mob": "Arachne",
 "variant": "Lower Tier",
 "item": "EPIC Tarantula Pet",
-"newChance": 0.02,
+"newChance": 0.05,
 "newAmount": 1.0,
 "oldChance": 0.02,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22664,7 +26119,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22679,7 +26135,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22694,7 +26151,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22709,7 +26167,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22724,7 +26183,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22739,7 +26199,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22754,7 +26215,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22769,7 +26231,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22784,7 +26247,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22799,7 +26263,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22814,7 +26279,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22829,7 +26295,8 @@ const DROPS = [
 "status": "unlisted",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -22837,14 +26304,15 @@ const DROPS = [
 "mob": "Arachne",
 "variant": "Higher Tier",
 "item": "LEGENDARY Tarantula Pet",
-"newChance": 0.02,
+"newChance": 0.025,
 "newAmount": 1.0,
 "oldChance": 0.02,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Arcane",
-"Arthropod"
+"Arthropod",
+"Arachne / Broodmother / Tarantula"
 ]
 },
 {
@@ -24169,11 +27637,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Protector",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24185,11 +27653,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Protector",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24265,11 +27733,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Old",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24281,11 +27749,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Old",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24361,11 +27829,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Wise",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24377,11 +27845,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Wise",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24473,11 +27941,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Unstable",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24489,11 +27957,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Unstable",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24585,11 +28053,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Young",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24601,11 +28069,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Young",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24681,11 +28149,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Strong",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24697,11 +28165,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Strong",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24777,11 +28245,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Superior",
 "item": "EPIC Ender Dragon Pet",
-"newChance": 0.002,
+"newChance": 0.004,
 "newAmount": 1.0,
 "oldChance": 0.002,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -24793,11 +28261,11 @@ const DROPS = [
 "mob": "Ender Dragon",
 "variant": "Superior",
 "item": "LEGENDARY Ender Dragon Pet",
-"newChance": 0.0004,
+"newChance": 0.0008,
 "newAmount": 1.0,
 "oldChance": 0.0004,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Arcane",
@@ -25017,8 +28485,8 @@ const DROPS = [
 "oldAmount": 32.0,
 "status": "unlisted",
 "types": [
-"Animal",
 "Aquatic",
+"Critter",
 "Elusive"
 ]
 },
@@ -25033,8 +28501,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
-"Animal",
 "Aquatic",
+"Critter",
 "Elusive"
 ]
 },
@@ -25160,11 +28628,11 @@ const DROPS = [
 "mob": "Giant Isopod",
 "variant": "",
 "item": "Isopod Husk",
-"newChance": 0.02,
+"newChance": 0.025,
 "newAmount": 1.0,
 "oldChance": 0.02,
 "oldAmount": 1.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Aquatic",
 "Arthropod",
@@ -25862,10 +29330,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 6.0,
+"newAmount": 3.0,
 "oldChance": 1.0,
 "oldAmount": 6.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Woodland"
 ]
@@ -26014,10 +29482,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 6.0,
+"newAmount": 3.0,
 "oldChance": 1.0,
 "oldAmount": 6.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Cubic"
@@ -26089,10 +29557,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 1.5,
+"newAmount": 1.0,
 "oldChance": 1.0,
 "oldAmount": 1.5,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Critter",
 "Woodland"
@@ -26119,10 +29587,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 6.0,
+"newAmount": 2.0,
 "oldChance": 1.0,
-"oldAmount": 6.0,
-"status": "unlisted",
+"oldAmount": 3.0,
+"status": "changed",
 "types": [
 "Arthropod",
 "Woodland"
@@ -26134,9 +29602,9 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Fig Log",
 "newChance": 1.0,
-"newAmount": 12.0,
+"newAmount": 6.0,
 "oldChance": 1.0,
-"oldAmount": 12.0,
+"oldAmount": 6.0,
 "status": "unlisted",
 "types": [
 "Arthropod",
@@ -26211,8 +29679,8 @@ const DROPS = [
 "oldAmount": 8.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -26226,8 +29694,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -26241,8 +29709,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -26256,8 +29724,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -26480,10 +29948,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 6.0,
+"newAmount": 3.0,
 "oldChance": 1.0,
 "oldAmount": 6.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne"
 ]
@@ -26674,10 +30142,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 3.0,
+"newAmount": 2.0,
 "oldChance": 1.0,
 "oldAmount": 3.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Undead",
 "Woodland"
@@ -26758,10 +30226,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 1.5,
+"newAmount": 1.0,
 "oldChance": 1.0,
 "oldAmount": 1.5,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Airborne",
 "Critter"
@@ -26916,6 +30384,38 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": []
+},
+{
+"region": "Torrhus Canyon",
+"mob": "Puck",
+"variant": "",
+"item": "Enchanted Helix Log",
+"newChance": 1.0,
+"newAmount": 1.5,
+"oldChance": 1.0,
+"oldAmount": 1.5,
+"status": "unlisted",
+"types": [
+"Airborne",
+"Critter",
+"Woodland"
+]
+},
+{
+"region": "Torrhus Canyon",
+"mob": "Puck",
+"variant": "",
+"item": "Bottled Mischief",
+"newChance": 0.1,
+"newAmount": 1.0,
+"oldChance": 0.05,
+"oldAmount": 1.0,
+"status": "changed",
+"types": [
+"Airborne",
+"Critter",
+"Woodland"
+]
 },
 {
 "region": "Private Island",
@@ -27643,10 +31143,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 1.5,
+"newAmount": 1.0,
 "oldChance": 1.0,
 "oldAmount": 1.5,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Arthropod"
 ]
@@ -27796,8 +31296,8 @@ const DROPS = [
 "oldAmount": 8.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -27811,8 +31311,8 @@ const DROPS = [
 "oldAmount": 1.0,
 "status": "unlisted",
 "types": [
-"Animal",
-"Aquatic"
+"Aquatic",
+"Critter"
 ]
 },
 {
@@ -28108,10 +31608,10 @@ const DROPS = [
 "variant": "",
 "item": "Enchanted Honeycomb",
 "newChance": 1.0,
-"newAmount": 3.0,
+"newAmount": 2.0,
 "oldChance": 1.0,
 "oldAmount": 3.0,
-"status": "unlisted",
+"status": "changed",
 "types": [
 "Arthropod"
 ]
@@ -28143,2214 +31643,6 @@ const DROPS = [
 "types": [
 "Shielded",
 "Undead"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 1",
-"item": "Derelict Ashe",
-"newChance": 1.0,
-"newAmount": 7.0,
-"oldChance": 1.0,
-"oldAmount": 7.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 1",
-"item": "Enchanted Blaze Powder",
-"newChance": 0.1304,
-"newAmount": 1.0,
-"oldChance": 0.1304,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Derelict Ashe",
-"newChance": 1.0,
-"newAmount": 17.0,
-"oldChance": 1.0,
-"oldAmount": 17.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Enchanted Blaze Powder",
-"newChance": 0.0926,
-"newAmount": 2.5,
-"oldChance": 0.0926,
-"oldAmount": 2.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Wisp's Ice-Flavored Water I Splash Potion",
-"newChance": 0.030899999999999997,
-"newAmount": 1.0,
-"oldChance": 0.030899999999999997,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Bundle of Magma Arrows",
-"newChance": 0.0926,
-"newAmount": 1.0,
-"oldChance": 0.0926,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Mana Disintegrator",
-"newChance": 0.0432,
-"newAmount": 1.0,
-"oldChance": 0.0432,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Scorched Books",
-"newChance": 0.024700000000000003,
-"newAmount": 1.0,
-"oldChance": 0.024700000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Inferno Demonlord Shard",
-"newChance": 0.0154,
-"newAmount": 1.0,
-"oldChance": 0.0154,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Kelvin Inverter",
-"newChance": 0.030899999999999997,
-"newAmount": 1.0,
-"oldChance": 0.030899999999999997,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 2",
-"item": "Gabagool Distillate",
-"newChance": 0.0519,
-"newAmount": 4.0,
-"oldChance": 0.0519,
-"oldAmount": 4.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Derelict Ashe",
-"newChance": 1.0,
-"newAmount": 70.0,
-"oldChance": 1.0,
-"oldAmount": 70.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Enchanted Blaze Powder",
-"newChance": 0.087,
-"newAmount": 6.0,
-"oldChance": 0.087,
-"oldAmount": 6.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Lavatears Rune I",
-"newChance": 0.0115,
-"newAmount": 1.0,
-"oldChance": 0.0115,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Wisp's Ice-Flavored Water I Splash Potion",
-"newChance": 0.028999999999999998,
-"newAmount": 2.0,
-"oldChance": 0.028999999999999998,
-"oldAmount": 2.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Bundle of Magma Arrows",
-"newChance": 0.087,
-"newAmount": 1.0,
-"oldChance": 0.087,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Mana Disintegrator",
-"newChance": 0.0406,
-"newAmount": 1.0,
-"oldChance": 0.0406,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Scorched Books",
-"newChance": 0.0232,
-"newAmount": 1.0,
-"oldChance": 0.0232,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Inferno Demonlord Shard",
-"newChance": 0.028999999999999998,
-"newAmount": 1.0,
-"oldChance": 0.028999999999999998,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Kelvin Inverter",
-"newChance": 0.028999999999999998,
-"newAmount": 1.0,
-"oldChance": 0.028999999999999998,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Gabagool Distillate",
-"newChance": 0.0487,
-"newAmount": 12.0,
-"oldChance": 0.0487,
-"oldAmount": 12.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Scorched Power Crystal",
-"newChance": 0.0348,
-"newAmount": 1.0,
-"oldChance": 0.0348,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 3",
-"item": "Archfiend Dice",
-"newChance": 0.0116,
-"newAmount": 1.0,
-"oldChance": 0.0116,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Derelict Ashe",
-"newChance": 1.0,
-"newAmount": 132.5,
-"oldChance": 1.0,
-"oldAmount": 132.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Enchanted Blaze Powder",
-"newChance": 0.0791,
-"newAmount": 28.0,
-"oldChance": 0.0791,
-"oldAmount": 28.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Lavatears Rune I",
-"newChance": 0.0231,
-"newAmount": 1.0,
-"oldChance": 0.0231,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Wisp's Ice-Flavored Water I Splash Potion",
-"newChance": 0.0264,
-"newAmount": 5.0,
-"oldChance": 0.0264,
-"oldAmount": 5.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Bundle of Magma Arrows",
-"newChance": 0.0791,
-"newAmount": 1.0,
-"oldChance": 0.0791,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Mana Disintegrator",
-"newChance": 0.0369,
-"newAmount": 1.0,
-"oldChance": 0.0369,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Scorched Books",
-"newChance": 0.021099999999999997,
-"newAmount": 1.0,
-"oldChance": 0.021099999999999997,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Inferno Demonlord Shard",
-"newChance": 0.0527,
-"newAmount": 1.0,
-"oldChance": 0.0527,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Kelvin Inverter",
-"newChance": 0.0264,
-"newAmount": 1.0,
-"oldChance": 0.0264,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Gabagool Distillate",
-"newChance": 0.0443,
-"newAmount": 28.0,
-"oldChance": 0.0443,
-"oldAmount": 28.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Scorched Power Crystal",
-"newChance": 0.0316,
-"newAmount": 1.0,
-"oldChance": 0.0316,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Archfiend Dice",
-"newChance": 0.0105,
-"newAmount": 1.0,
-"oldChance": 0.0105,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Smoldering VI (was Fire Aspect III)",
-"newChance": 0.0132,
-"newAmount": 1.0,
-"oldChance": 0.0132,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Fiery Burst Rune I",
-"newChance": 0.0021,
-"newAmount": 1.0,
-"oldChance": 0.0021,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Flawed Opal Gemstone",
-"newChance": 0.028999999999999998,
-"newAmount": 320.0,
-"oldChance": 0.028999999999999998,
-"oldAmount": 320.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Duplex I",
-"newChance": 0.0184,
-"newAmount": 1.0,
-"oldChance": 0.0184,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "High Class Archfiend Dice",
-"newChance": 0.0026,
-"newAmount": 1.0,
-"oldChance": 0.0026,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Wilson's Engineering Plans",
-"newChance": 0.0009,
-"newAmount": 1.0,
-"oldChance": 0.0009,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Subzero Inverter",
-"newChance": 0.0009,
-"newAmount": 1.0,
-"oldChance": 0.0009,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Inferno Demonlord",
-"variant": "Tier 4",
-"item": "Paragon Shard",
-"newChance": 0.0025,
-"newAmount": 1.0,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Infernal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 1",
-"item": "Wolf Tooth",
-"newChance": 1.0,
-"newAmount": 2.0,
-"oldChance": 1.0,
-"oldAmount": 2.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 2",
-"item": "Wolf Tooth",
-"newChance": 1.0,
-"newAmount": 13.5,
-"oldChance": 1.0,
-"oldAmount": 13.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 2",
-"item": "Hamster Wheel",
-"newChance": 0.16670000000000001,
-"newAmount": 1.0,
-"oldChance": 0.16670000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 2",
-"item": "Spirit Rune I",
-"newChance": 0.0068000000000000005,
-"newAmount": 1.0,
-"oldChance": 0.0068000000000000005,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Wolf Tooth",
-"newChance": 1.0,
-"newAmount": 40.0,
-"oldChance": 1.0,
-"oldAmount": 40.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Hamster Wheel",
-"newChance": 0.16449999999999998,
-"newAmount": 3.0,
-"oldChance": 0.16449999999999998,
-"oldAmount": 3.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Spirit Rune I",
-"newChance": 0.026600000000000002,
-"newAmount": 1.0,
-"oldChance": 0.026600000000000002,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Critical VI",
-"newChance": 0.0040999999999999995,
-"newAmount": 1.0,
-"oldChance": 0.0040999999999999995,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Furball",
-"newChance": 0.008199999999999999,
-"newAmount": 1.0,
-"oldChance": 0.008199999999999999,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 3",
-"item": "Red Claw Egg",
-"newChance": 0.0004,
-"newAmount": 1.0,
-"oldChance": 0.0004,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Wolf Tooth",
-"newChance": 1.0,
-"newAmount": 57.0,
-"oldChance": 1.0,
-"oldAmount": 57.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Hamster Wheel",
-"newChance": 0.1635,
-"newAmount": 4.5,
-"oldChance": 0.1635,
-"oldAmount": 4.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Spirit Rune I",
-"newChance": 0.0637,
-"newAmount": 1.0,
-"oldChance": 0.0637,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Critical VI",
-"newChance": 0.008100000000000001,
-"newAmount": 1.0,
-"oldChance": 0.008100000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Furball",
-"newChance": 0.016200000000000003,
-"newAmount": 1.0,
-"oldChance": 0.016200000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Red Claw Egg",
-"newChance": 0.0012,
-"newAmount": 1.0,
-"oldChance": 0.0012,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Paragon Shard",
-"newChance": 0.0025,
-"newAmount": 1.0,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Couture Rune I",
-"newChance": 0.0024,
-"newAmount": 1.0,
-"oldChance": 0.0024,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Grizzly Salmon",
-"newChance": 0.0006,
-"newAmount": 1.0,
-"oldChance": 0.0006,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Sven Packmaster",
-"variant": "Tier 4",
-"item": "Overflux Capacitor",
-"newChance": 0.0004,
-"newAmount": 1.0,
-"oldChance": 0.0004,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Animal",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 1",
-"item": "Tarantula Web",
-"newChance": 1.0,
-"newAmount": 2.0,
-"oldChance": 1.0,
-"oldAmount": 2.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 1",
-"item": "Toxic Arrow Poison",
-"newChance": 0.1525,
-"newAmount": 6.0,
-"oldChance": 0.1525,
-"oldAmount": 6.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 2",
-"item": "Tarantula Web",
-"newChance": 1.0,
-"newAmount": 13.5,
-"oldChance": 1.0,
-"oldAmount": 13.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 2",
-"item": "Toxic Arrow Poison",
-"newChance": 0.1509,
-"newAmount": 7.0,
-"oldChance": 0.1509,
-"oldAmount": 7.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 2",
-"item": "Spider Catalyst",
-"newChance": 0.0105,
-"newAmount": 1.0,
-"oldChance": 0.0105,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 2",
-"item": "Bite Rune",
-"newChance": 0.0069,
-"newAmount": 1.0,
-"oldChance": 0.0069,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Tarantula Web",
-"newChance": 1.0,
-"newAmount": 24.0,
-"oldChance": 1.0,
-"oldAmount": 24.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Toxic Arrow Poison",
-"newChance": 0.1485,
-"newAmount": 24.0,
-"oldChance": 0.1485,
-"oldAmount": 24.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Bite Rune",
-"newChance": 0.026699999999999998,
-"newAmount": 1.0,
-"oldChance": 0.026699999999999998,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Spider Catalyst",
-"newChance": 0.0206,
-"newAmount": 1.0,
-"oldChance": 0.0206,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Tarantula Catalyst",
-"newChance": 0.0025,
-"newAmount": 1.0,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Bane of Arthropods VI",
-"newChance": 0.0021,
-"newAmount": 1.0,
-"oldChance": 0.0021,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Fly Swatter",
-"newChance": 0.00082,
-"newAmount": 1.0,
-"oldChance": 0.00082,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 3",
-"item": "Tarantula Talisman",
-"newChance": 0.00082,
-"newAmount": 1.0,
-"oldChance": 0.00082,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Tarantula Web",
-"newChance": 1.0,
-"newAmount": 40.0,
-"oldChance": 1.0,
-"oldAmount": 40.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Toxic Arrow Poison",
-"newChance": 0.1497,
-"newAmount": 40.0,
-"oldChance": 0.1497,
-"oldAmount": 40.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Bite Rune",
-"newChance": 0.0645,
-"newAmount": 1.0,
-"oldChance": 0.0645,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Spider Catalyst",
-"newChance": 0.0062,
-"newAmount": 1.0,
-"oldChance": 0.0062,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Darkness Within Rune",
-"newChance": 0.0039000000000000003,
-"newAmount": 1.0,
-"oldChance": 0.0039000000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Bane of Arthropods VI",
-"newChance": 0.0042,
-"newAmount": 1.0,
-"oldChance": 0.0042,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Tarantula Catalyst",
-"newChance": 0.0037,
-"newAmount": 1.0,
-"oldChance": 0.0037,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Fly Swatter",
-"newChance": 0.0017000000000000001,
-"newAmount": 1.0,
-"oldChance": 0.0017000000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Tarantula Talisman",
-"newChance": 0.0017000000000000001,
-"newAmount": 1.0,
-"oldChance": 0.0017000000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Vial of Venom",
-"newChance": 0.00083,
-"newAmount": 1.0,
-"oldChance": 0.00083,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Digested Mosquito",
-"newChance": 0.00058,
-"newAmount": 1.0,
-"oldChance": 0.00058,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 4",
-"item": "Paragon Shard",
-"newChance": 0.0025,
-"newAmount": 1.0,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Tarantula Web",
-"newChance": 1.0,
-"newAmount": 64.0,
-"oldChance": 1.0,
-"oldAmount": 64.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Tarantula Silk",
-"newChance": 0.1413,
-"newAmount": 1.0,
-"oldChance": 0.1413,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Toxic Arrow Poison",
-"newChance": 0.1272,
-"newAmount": 64.0,
-"oldChance": 0.1272,
-"oldAmount": 64.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Bite Rune",
-"newChance": 0.0552,
-"newAmount": 1.0,
-"oldChance": 0.0552,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Primordial Shard",
-"newChance": 0.0070999999999999995,
-"newAmount": 1.0,
-"oldChance": 0.0070999999999999995,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Darkness Within Rune",
-"newChance": 0.0066,
-"newAmount": 1.0,
-"oldChance": 0.0066,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Tarantula Catalyst",
-"newChance": 0.0042,
-"newAmount": 1.0,
-"oldChance": 0.0042,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Bane of Arthropods VI",
-"newChance": 0.0034999999999999996,
-"newAmount": 1.0,
-"oldChance": 0.0034999999999999996,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Fly Swatter",
-"newChance": 0.0021,
-"newAmount": 1.0,
-"oldChance": 0.0021,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Tarantula Talisman",
-"newChance": 0.0021,
-"newAmount": 1.0,
-"oldChance": 0.0021,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Spider Catalyst",
-"newChance": 0.0018,
-"newAmount": 1.0,
-"oldChance": 0.0018,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Vial of Venom",
-"newChance": 0.0014000000000000002,
-"newAmount": 1.0,
-"oldChance": 0.0014000000000000002,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Shriveled Wasp",
-"newChance": 0.0014000000000000002,
-"newAmount": 1.0,
-"oldChance": 0.0014000000000000002,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Digested Mosquito",
-"newChance": 0.0007099999999999999,
-"newAmount": 1.0,
-"oldChance": 0.0007099999999999999,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Ensnared Snail",
-"newChance": 0.00042,
-"newAmount": 1.0,
-"oldChance": 0.00042,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Primordial Eye",
-"newChance": 0.00014000000000000001,
-"newAmount": 1.0,
-"oldChance": 0.00014000000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Tarantula Broodfather",
-"variant": "Tier 5",
-"item": "Paragon Shard",
-"newChance": 0.005,
-"newAmount": 1.0,
-"oldChance": 0.005,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Arthropod",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 1",
-"item": "Null Sphere",
-"newChance": 1.0,
-"newAmount": 2.5,
-"oldChance": 1.0,
-"oldAmount": 2.5,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 2",
-"item": "Null Sphere",
-"newChance": 1.0,
-"newAmount": 19.0,
-"oldChance": 1.0,
-"oldAmount": 19.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 2",
-"item": "Twilight Arrow Poison",
-"newChance": 0.1515,
-"newAmount": 16.0,
-"oldChance": 0.1515,
-"oldAmount": 16.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 2",
-"item": "Summoning Eye",
-"newChance": 0.0067,
-"newAmount": 1.0,
-"oldChance": 0.0067,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Null Sphere",
-"newChance": 1.0,
-"newAmount": 70.0,
-"oldChance": 1.0,
-"oldAmount": 70.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Twilight Arrow Poison",
-"newChance": 0.1341,
-"newAmount": 28.0,
-"oldChance": 0.1341,
-"oldAmount": 28.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Mana Steal I",
-"newChance": 0.0447,
-"newAmount": 1.0,
-"oldChance": 0.0447,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Null Atom",
-"newChance": 0.0373,
-"newAmount": 1.0,
-"oldChance": 0.0373,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Endersnake Rune",
-"newChance": 0.0242,
-"newAmount": 1.0,
-"oldChance": 0.0242,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Transmission Tuner",
-"newChance": 0.022400000000000003,
-"newAmount": 1.0,
-"oldChance": 0.022400000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Hazmat Enderman",
-"newChance": 0.0104,
-"newAmount": 1.0,
-"oldChance": 0.0104,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 3",
-"item": "Summoning Eye",
-"newChance": 0.006,
-"newAmount": 1.0,
-"oldChance": 0.006,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Null Sphere",
-"newChance": 1.0,
-"newAmount": 130.0,
-"oldChance": 1.0,
-"oldAmount": 130.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Twilight Arrow Poison",
-"newChance": 0.127,
-"newAmount": 62.0,
-"oldChance": 0.127,
-"oldAmount": 62.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Endersnake Rune",
-"newChance": 0.053,
-"newAmount": 1.0,
-"oldChance": 0.053,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Null Atom",
-"newChance": 0.049400000000000006,
-"newAmount": 1.0,
-"oldChance": 0.049400000000000006,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Mana Steal I",
-"newChance": 0.042300000000000004,
-"newAmount": 1.0,
-"oldChance": 0.042300000000000004,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Transmission Tuner",
-"newChance": 0.0212,
-"newAmount": 1.0,
-"oldChance": 0.0212,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Smarty Pants I",
-"newChance": 0.0176,
-"newAmount": 1.0,
-"oldChance": 0.0176,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Hazmat Enderman",
-"newChance": 0.0155,
-"newAmount": 1.0,
-"oldChance": 0.0155,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "End Rune",
-"newChance": 0.0066,
-"newAmount": 1.0,
-"oldChance": 0.0066,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Summoning Eye",
-"newChance": 0.005600000000000001,
-"newAmount": 1.0,
-"oldChance": 0.005600000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Sinful Dice",
-"newChance": 0.0046,
-"newAmount": 1.0,
-"oldChance": 0.0046,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Etherwarp Merger",
-"newChance": 0.0042,
-"newAmount": 1.0,
-"oldChance": 0.0042,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Pocket Espresso Machine",
-"newChance": 0.0039000000000000003,
-"newAmount": 1.0,
-"oldChance": 0.0039000000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Handy Blood Chalice",
-"newChance": 0.0018,
-"newAmount": 1.0,
-"oldChance": 0.0018,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Void Conqueror Enderman Skin",
-"newChance": 0.0017000000000000001,
-"newAmount": 1.0,
-"oldChance": 0.0017000000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Judgement Core",
-"newChance": 0.0005600000000000001,
-"newAmount": 1.0,
-"oldChance": 0.0005600000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Enchant Rune",
-"newChance": 0.00046,
-"newAmount": 1.0,
-"oldChance": 0.00046,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Exceedingly Rare Ender Artifact Upgrade",
-"newChance": 0.00028000000000000003,
-"newAmount": 1.0,
-"oldChance": 0.00028000000000000003,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "End Stone Idol",
-"newChance": 0.00014000000000000001,
-"newAmount": 1.0,
-"oldChance": 0.00014000000000000001,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
-]
-},
-{
-"region": "Slayer",
-"mob": "Voidgloom Seraph",
-"variant": "Tier 4",
-"item": "Paragon Shard",
-"newChance": 0.0025,
-"newAmount": 1.0,
-"oldChance": 0.0025,
-"oldAmount": 1.0,
-"status": "unlisted",
-"weighted": "both",
-"types": [
-"Ender",
-"Slayer Boss"
 ]
 }
 ];

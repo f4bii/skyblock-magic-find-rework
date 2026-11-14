@@ -1,13 +1,13 @@
 # Magic Find Rework — Drop Rate Compare
 
-Static site that compares Hypixel SkyBlock drop rates on the live game vs. the Alpha Magic Find rework (Oct 15 + Oct 22, 2026) for the Magic Find you enter.
+Static site that compares Hypixel SkyBlock drop rates on the live game vs. the Magic Find rework in the 0.27.3 release candidate on Alpha (Nov 10 + Nov 12, 2026) for the Magic Find you enter.
 
 - Open `index.html` directly, or serve the folder: `python3 -m http.server`.
-- `python3 build/build.py` regenerates `data.js`: it parses the new tables from the Oct 15 forum post, applies the Oct 22 changes (hand-transcribed in `patch_oct22`), adds the Zombie Slayer sheet and the slayer dye changes, adds every other wiki mob with a drop table (same base rates, new MF rules), and joins everything with the live drop tables scraped from the wiki. Downloads are cached in `build/cache/`; delete it to refresh.
-- `python3 build/check.py` then validates every row of `data.js` against the raw sources (forum posts, Zombie Slayer sheet, wiki) and the formulas in `mf.js`.
+- `python3 build/build.py` regenerates `data.js`: it parses the drop tables from the Nov 10 release candidate post, adds Hypixel's six slayer sheets and the slayer dye changes, applies the Nov 12 changes and the Nov 10 changes written as sentences (hand-transcribed in `CHANGES`), adds every other wiki mob with a drop table (same base rates, new MF rules), and joins everything with the live drop tables scraped from the wiki. Downloads are cached in `build/cache/`; delete it to refresh.
+- `python3 build/check.py` then validates every row of `data.js` against the raw sources (forum posts, slayer sheets, wiki), the formulas in `mf.js` and the MF numbers in `index.html`.
 - `node test.cjs` checks the formulas in `mf.js` against the worked examples from Hypixel's design thread and the wiki.
 
-When a new Alpha patch lands, add its changes to `patch_oct22` (or a new function next to it) and rebuild.
+When a new Alpha patch lands, add its changes to `CHANGES` in `build/build.py` and rebuild. If it reposts full tables, point `NOV10` at it instead.
 
 ## Deploy to GitHub Pages
 

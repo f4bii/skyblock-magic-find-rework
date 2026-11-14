@@ -3,8 +3,8 @@
 
 const OLD_CAP = 900;
 const NEW_CAP = 500;
-// Oct 22: Looting I-VII = +1/2/3/4/6/8/10 Magic Find
-const NEW_LOOTING_MF = [0, 2.5, 5, 7.5, 10, 15, 20, 25]; // Oct 23 values
+// Oct 23 / Nov 10: Looting I-VII = +2.5/5/7.5/10/15/20/25 Magic Find
+const NEW_LOOTING_MF = [0, 2.5, 5, 7.5, 10, 15, 20, 25];
 // Oct 22 /reclaim: Looting I-III -> V, IV -> VI, V -> VII (Chance/Luck likewise)
 const OLD_TO_NEW_LOOTING = [0, 5, 5, 5, 6, 7];
 
@@ -20,13 +20,10 @@ function oldDrop(chance, amount, { mf, looting, petLuck }, pet) {
   return { p: Math.min(x, 1), avg: x * amount };
 }
 
-// Alpha: MF applies to every drop. Below 100% it scales the chance (overflow = extra roll);
-// at 100% it adds MF/100 items to the stack (wiki "Magic Find/Alpha" examples).
-// Pet Luck on alpha pet drops is assumed to work as before.
+// Alpha (Nov 10 RC): MF scales every drop's chance; past 100% the overflow is a chance at another full stack
+// ("150 MF, 8x Lily Pad (100%) -> guaranteed 16x with a 50% chance of 24"). Pet Luck is assumed to work as before.
 function newDrop(chance, amount, { mf, petLuck }, pet) {
-  const bonus = (Math.min(mf, NEW_CAP) + (pet ? petLuck : 0)) / 100;
-  if (chance >= 1) return { p: 1, avg: amount + bonus };
-  const x = chance * (1 + bonus);
+  const x = chance * (1 + (Math.min(mf, NEW_CAP) + (pet ? petLuck : 0)) / 100);
   return { p: Math.min(x, 1), avg: x * amount };
 }
 

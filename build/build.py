@@ -3,15 +3,26 @@ with the current live drop tables scraped from the Hypixel SkyBlock wiki.
 
 Run: python3 build/build.py   (downloads into build/cache on first run; delete it to refresh)
 """
-import hashlib, html, json, re, sys, urllib.parse, urllib.request
+import csv, hashlib, html, io, json, re, sys, urllib.parse, urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).parent
 CACHE = HERE / "cache"
 CACHE.mkdir(exist_ok=True)
 OCT15 = "https://hypixel.net/threads/october-15-magic-find-rework-ghost-visitors.6162638/"
-SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQQA1fvuNx1bVwfTI9066zQ64JnNP6UhJyTy9P7PcD2SrokmZ4BR6GZ0vOJp5hI2pCpPLwS08o-N-YO/pub?output=csv&gid="
-REV_TIERS = {"Tier 1": "0", "Tier 2": "1124738662", "Tier 3": "659254893", "Tier 4": "2114925198", "Tier 5": "827796101"}
+NOV10 = "https://hypixel.net/threads/november-10-0-27-3-release-candidate.6171140/"  # 0.27.3 RC: all tables so far
+NOV12 = "https://hypixel.net/threads/november-12-0-27-3-release-candidate-2.6171435/"
+# Slayer loot sheets: the five linked from the Nov 10 post, Vampire from Nov 12. Tabs are Tier 1..N.
+SHEETS = {
+    "Revenant Horror": "2PACX-1vR89yuHTiqhko583imFPZSokHYdgZ6N7gWsOXqJnduD3xTii5L9z2lCTzYA1zC80OJkEsRhDPpVahJX",
+    "Tarantula Broodfather": "2PACX-1vSUa7o7FXzY04QmDzu1Aww-NDE2OCpaQp7-8PL3RE38PMpyEOIpObqq_GKy7zYsJGG44qA7zQVaZczx",
+    "Sven Packmaster": "2PACX-1vQ4XqZng7-4rNJkvBpkXasHdAgFVUFIywZU221bqKwHfzS-LrZybePGfrSo7mXWue5otoPVcEYhC4hv",
+    "Voidgloom Seraph": "2PACX-1vQQ8uFW6ieUA4lxP-y6nDkHP4hJP48UnvYjHqlgB95r2IiCLPcb1vgeml_Auol9Em3IKXK5spxW8gVP",
+    "Inferno Demonlord": "2PACX-1vSm1LLJ4u4XHvC-0Yk6fV3rrJ6zk__7n1qqJIKeez5oMd28tjVrlxgpHkfqujMOQBSiUPINd0jTYkg9",
+    "Riftstalker Bloodfiend": "2PACX-1vRsDiYGGkmU33X_ff2HND4bjuiNoh2MNKntkpb0X4FbL5ndC3tBJV-VNg44ExGAmADW6rd0d25EJ2s2",
+}
+SHEET_PAGE = "https://docs.google.com/spreadsheets/d/e/{}/pubhtml"
+SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/{}/pub?output=csv&gid={}"
 WIKI_API = "https://hypixelskyblock.minecraft.wiki/api.php?"
 
 
@@ -34,15 +45,15 @@ def first_post_text(page):
     return [l.strip() for l in frag.split("\n") if l.strip()]
 
 
-DROP_RE = re.compile(r"^(?:([\d,]+)x )?(.+?) \(([\d.]+)%\)$")
+DROP_RE = re.compile(r"^(?:([\d,]+)x )?(.+?) \(([\d.]+)%\)\*?$")  # "*" = "Temporary source" footnote
 GRIFFIN = ["COMMON", "UNCOMMON", "RARE", "EPIC", "LEGENDARY", "MYTHIC"]
-SKIP_SECTIONS = {"Dyes", "Jerrypocalypse"}
+SKIP_SECTIONS = {"Dyes", "Jerrypocalypse", "Slayers", "Torrhus Canyon"}
+FORUM_TYPOS = {"FlawedAmber Gemstone": "Flawed Amber Gemstone"}
 
 
-def parse_new_tables(lines):
+def parse_new_tables(lines, start="➥ Drop Table Changes", end="➥ Item Adjustments"):
     """-> {(region, mob, variant): [ {item, amount, chance} ]}"""
-    start = lines.index("➥ New Drop Tables")
-    end = lines.index("➥ Related Changes")
+    start, end = lines.index(start), lines.index(end)
     out, region, key = {}, None, None
     for line in lines[start:end]:
         if line.startswith("Spoiler: "):
@@ -63,83 +74,105 @@ def parse_new_tables(lines):
             line = cells[0]
         m = DROP_RE.match(line)
         if key and m:
-            out[key].append({"item": m[2], "amount": int((m[1] or "1").replace(",", "")), "chance": float(m[3]) / 100})
+            out[key].append({"item": FORUM_TYPOS.get(m[2], m[2]), "amount": int((m[1] or "1").replace(",", "")), "chance": float(m[3]) / 100})
     return {k: v for k, v in out.items() if v}
 
 
-def patch_oct22(t):
-    """Oct 22 alpha changes, transcribed from the 'Magic Find Rework Testing #2' post."""
-    def mob(region, name, variant=""):
-        return t.setdefault((region, name, variant), [])
-
-    def set_chance(rows, item, pct):
-        for r in rows:
-            if r["item"] == item:
-                r["chance"] = pct / 100
-                return
-        rows.append({"item": item, "amount": 1, "chance": pct / 100})
-
-    def remove(rows, item):
-        rows[:] = [r for r in rows if r["item"] != item]
-
-    for v in ("LEGENDARY", "MYTHIC"):
-        set_chance(mob("Mythological Ritual", "Sphinx", v), "Looting VII", 0.5)  # Oct 22: 1%, Oct 23: 0.5%
-    set_chance(mob("Crimson Isle", "Milennia-Aged Blaze"), "Fire Aspect III", 0.1)
-    grim = mob("Spooky Festival", "Grim Reaper")
-    set_chance(grim, "Shredded Line", 1)
-    set_chance(grim, "Deep Sea Orb", 4)
-    set_chance(mob("Spooky Festival", "Werewolf"), "Deep Sea Orb", 0.2)
-    set_chance(mob("Spooky Festival", "Phantom Fisher"), "Deep Sea Orb", 1)
-    set_chance(mob("Backwater Bayou", "Alligator"), "Box of Junk", 20)
-    for size, n in (("Small", 1), ("Medium", 2), ("Large", 4), ("Bloated", 12)):
-        mob("Dwarven Mines", f"{size} Mithril Grubber").append({"item": "Plasma", "amount": n, "chance": 0.025})
-    # Lotus Atoll wasn't in the Oct 15 tables, so these mobs only list what Oct 22 touched.
-    for name, rows in {
-        "Atoll Croaker": [("Tropical Fish", 100)],
-        "Lotus Guardian": [("Tropical Fish", 100)],
-        "gorF": [("Tropical Fish", 100), ("Enchanted Tropical Fish", 5)],
-        # "Removed the 50% chance for an extra Enchanted Gold Ingot": 1-2 -> always 1
-        "Drowned Captain": [("Enchanted Tropical Fish", 20), ("Unlucky Doubloon", 2.5), ("Enchanted Gold Ingot", 100)],
-        "Puddle Jumper": [("Enchanted Tropical Fish", 100)],
-        "Frog Prince": [("Enchanted Tropical Fish", 100), ("Prince's Crown Jewel", 1)],
-        "Puck": [("Bottled Mischief", 10)],
-    }.items():
-        for item, pct in rows:
-            set_chance(mob("Lotus Atoll", name), item, pct)
-    for v, pct in (("EPIC", 0.15), ("LEGENDARY", 0.2), ("MYTHIC", 0.25)):
-        set_chance(mob("Mythological Ritual", "Minotaur", v), "Daedalus Stick", pct)
-    zombie = [{"item": "Rotten Flesh", "amount": 1, "chance": 1}, {"item": "Poisonous Potato", "amount": 1, "chance": 0.05},
-              {"item": "Potato", "amount": 1, "chance": 0.025}, {"item": "Carrot", "amount": 1, "chance": 0.025}]
-    t[("Private Island", "Zombie", "")] = [dict(r) for r in zombie]
-    t[("Hub", "Graveyard Zombie", "")] = [dict(r) for r in zombie]
-    set_chance(mob("Mythological Ritual", "Manticore", "MYTHIC"), "Manti-Core", 0.75)
-    set_chance(mob("Mythological Ritual", "King Minos", "MYTHIC"), "Shimmering Wool", 0.75)
-    littlefoot = mob("Glacite Mineshafts", "Littlefoot")
-    set_chance(littlefoot, "Glacite Amalgamation", 5)
-    for item in ("Umber Key", "Tungsten Key", "Skeleton Key"):
-        remove(littlefoot, item)
+T = lambda *n: tuple(f"Tier {i}" for i in n)  # noqa: E731
+# Alpha changes written as prose, applied to the finished rows (forum, slayer sheet or wiki-only).
+# (mob, variants or None for all, item, "chance" in % | "amount" as posted | "add" for a new drop, from, to)
+CHANGES = [
+    # Nov 10, Spider's Den / Torrhus Canyon spoilers (sentences, not tables)
+    ("Arachne", ("Lower Tier",), "EPIC Tarantula Pet", "chance", 2, 5),
+    ("Arachne", ("Higher Tier",), "LEGENDARY Tarantula Pet", "chance", 2, 2.5),
+    ("Giant Isopod", None, "Isopod Husk", "chance", 2, 2.5),
+    ("Puck", None, "Bottled Mischief", "chance", 5, 10),
+    *[(mob, None, "Enchanted Honeycomb", "amount", old, new) for mob, old, new in [
+        ("Honeyhog", "1-2", "1"), ("Honeymite", "2-4", "2"), ("Hewver", "4-8", "3"),
+        ("Stag Beetle", "1-2", "1"), ("Woodlouse", "2-4", "2"), ("Murkbat", "4-8", "3"),
+        ("Pollendart", "1-2", "1"), ("Parched", "2-4", "2"), ("Hivethief", "4-8", "3")]],
+    # Nov 12 RC2 "Drop Table Changes"
+    ("Sven Packmaster", T(2, 3, 4), "Spirit Rune I", "add", None, 2.5),
+    *[("Inferno Demonlord", T(i), "Derelict Ashe", "amount", old, new)
+      for i, old, new in [(1, "2-4", "8-16"), (2, "8-16", "16-32"), (3, "16-32", "32-64"), (4, "32-64", "64-96")]],
+    # "0.05% -> 0.1% per eye" / "0.01% -> 0.02% per eye"; the site assumes 4 eyes
+    ("Ender Dragon", None, "EPIC Ender Dragon Pet", "chance", 0.2, 0.4),
+    ("Ender Dragon", None, "LEGENDARY Ender Dragon Pet", "chance", 0.04, 0.08),
+    ("Lord Jawbus", None, "Radioactive Vial", "chance", 1, 1.25),
+    ("Thunder", None, "Flash I", "chance", 2, 4),
+    ("Phantom Fisher", None, "Phantom Hook", "chance", 1, 2),  # the post calls it "Spooky Hook"
+    ("Grim Reaper", None, "Shredded Line", "chance", 1, 2.5),
+    ("Yeti", None, "COMMON Baby Yeti Pet", "chance", 2, 3.5),
+    ("Yeti", None, "True Ice", "chance", 3, 5),  # post says "from 3%"; Nov 10 table lists 1%
+    ("Drowned Captain", None, "Unlucky Doubloon", "chance", 2.5, 3.3),  # post says "Drowned Pirate"
+    ("Great White Shark", None, "Great White Shark Tooth", "chance", 5, 7.5),
+    ("Voidling Extremist", None, "Enderman Cortex Rewriter", "chance", 0.05, 0.1),
+    ("Diamond Goblin", None, "Pure Mithril Gem", "chance", 1, 1.5),
+    ("Littlefoot", None, "Littlefoot Fluff", "chance", 0.5, 0.75),
+    ("Minotaur", ("EPIC",), "Daedalus Stick", "chance", 0.15, 0.3),
+    ("Minotaur", ("LEGENDARY",), "Daedalus Stick", "chance", 0.2, 0.35),
+    ("Minotaur", ("MYTHIC",), "Daedalus Stick", "chance", 0.25, 0.4),
+    ("Tarantula Broodfather", T(2, 3, 4, 5), "Toxic Arrow Poison", "chance", 10, 5),
+    ("Tarantula Broodfather", T(2, 3, 4, 5), "Spider Catalyst", "chance", 2.5, 1),
+    ("Tarantula Broodfather", T(5), "Tarantula Silk", "chance", 10, 5),
+    ("Sven Packmaster", T(2, 3, 4), "Hamster Wheel", "chance", 10, 5),
+    ("Voidgloom Seraph", T(2, 3, 4), "Twilight Arrow Poison", "chance", 10, 5),
+    ("Voidgloom Seraph", T(4), "Judgement Core", "chance", 0.1, 0.075),
+    ("Inferno Demonlord", T(2, 3, 4), "Enchanted Blaze Powder", "chance", 10, 5),
+    ("Inferno Demonlord", T(2, 3, 4), "Bundle of Magma Arrows", "chance", 10, 5),
+    ("Inferno Demonlord", T(2, 3, 4), "Inferno Demonlord Shard", "chance", 2.5, 2),
+    ("Inferno Demonlord", T(2, 3, 4), "Kelvin Inverter", "chance", 5, 2.5),
+    ("Inferno Demonlord", T(3, 4), "Archfiend Dice", "chance", 1.5, 1),
+]
 
 
-PARTIAL = {"Atoll Croaker", "Lotus Guardian", "gorF", "Drowned Captain", "Puddle Jumper", "Frog Prince", "Puck"}
+def apply_changes(rows):
+    for mob, variants, item, field, old, new in CHANGES:
+        hit = [r for r in rows if r["mob"] == mob and r["item"] == item and (variants is None or r["variant"] in variants)]
+        if field == "add":  # live may already drop it (then that row was marked "removed")
+            base = next(r for r in rows if r["mob"] == mob)
+            rows += [{**base, "variant": v, "item": item, "newChance": None, "newAmount": None,
+                      "oldChance": None, "oldAmount": None} for v in variants if v not in [r["variant"] for r in hit]]
+            hit = [r for r in rows if r["mob"] == mob and r["item"] == item and r["variant"] in variants]
+            for r in hit:
+                r["newChance"], r["newAmount"], r["status"] = new / 100, 1, "added"
+        assert hit and (variants is None or len(hit) == len(variants)), f"no row for {mob} / {item} {variants or ''}"
+        key, cast = ("newChance", lambda x: x / 100) if field in ("chance", "add") else ("newAmount", avg_amount)
+        for r in hit:
+            if old is not None and abs(r[key] - cast(old)) > 1e-9:
+                print(f"note: {mob} {r['variant']} {item}: post says {field} was {old}, data has {r[key]}", file=sys.stderr)
+            r[key] = cast(new)
+            if r["oldChance"] is not None:
+                r["status"] = "same" if (r["oldChance"], r["oldAmount"]) == (r["newChance"], r["newAmount"]) else "changed"
 
 
-def revenant_tables():
-    out = {}
-    for tier, gid in REV_TIERS.items():
-        rows = []
-        for line in fetch(SHEET + gid, f"revenant_{gid}.csv").splitlines()[1:]:
-            item, amount, chance = re.match(r'([^,]+),([^,]+),("[^"]*"|[^,]+)', line).groups()
-            if "Dye" in item:
-                continue
-            lo, _, hi = amount.partition("-")
-            rows.append({"item": item, "amount": (int(lo) + int(hi or lo)) / 2, "chance": float(chance.strip("%")) / 100})
-        out[("Slayer", "Revenant Horror", tier)] = rows
-    return out
+def slayer_tables():
+    """Alpha slayer loot: one Hypixel sheet per boss, one tab per tier -> (tables, {(boss, tier, dye): chance})."""
+    out, dyes = {}, {}
+    for boss, key in SHEETS.items():
+        tabs = re.findall(r'name: "[^"]*?Tier (\d)[^"]*", pageUrl: "[^"]*gid=(\d+)', fetch(SHEET_PAGE.format(key), f"sheet_{key[-6:]}.html"))
+        assert tabs, boss
+        for tier, gid in tabs:
+            rows = []
+            for item, amount, chance, _ in list(csv.reader(io.StringIO(fetch(SHEET_CSV.format(key, gid), f"{key[-6:]}_{gid}.csv"))))[1:]:
+                if "Dye" in item:
+                    dyes[(boss, f"Tier {tier}", item)] = sheet_chance(chance)
+                else:
+                    rows.append({"item": item, "amount": avg_amount(amount), "chance": sheet_chance(chance)})
+            out[("Slayer", boss, f"Tier {tier}")] = rows
+    return out, dyes
 
 
-def slayer_dyes(lines):
-    """Slayer bosses keep their weight-based tables on Alpha (only Revenant moved); the only
-    rate changes for the others are their dyes, given in the Dyes spoiler as 'T1: 1/X → 1/Y'."""
+def sheet_chance(s):
+    """'10.000%', '100%%', '1 in 2.5 Million', '1 in 100,000' -> fraction."""
+    if m := re.match(r"1 in ([\d.,]+)\s*(Million)?$", s.strip()):
+        return 1 / (float(m[1].replace(",", "")) * (1e6 if m[2] else 1))
+    return float(s.strip().rstrip("%")) / 100
+
+
+def slayer_dyes(lines, sheet):
+    """Slayer dye rates from the Dyes spoiler, 'T1: 1/X → 1/Y'. Where the (newer) sheet disagrees on the new
+    rate, the sheet wins: the Nov 12 Vampire sheet still lists Sangria Dye at its live rates."""
     rows, dye, boss = [], None, None
     for line in lines:
         if line.rstrip(" |").endswith(" Dye"):
@@ -148,17 +181,22 @@ def slayer_dyes(lines):
             boss = m[1] if dye and m[1] in SLAYERS else None
         elif boss and (m := re.match(r"T(\d): 1/([\d,]+) → 1/([\d,]+)", line)):
             old, new = (1 / int(x.replace(",", "")) for x in m.groups()[1:])
+            new = sheet.get((boss, f"Tier {m[1]}", dye), new)
             rows.append({"region": "Slayer", "mob": boss, "variant": f"Tier {m[1]}", "item": dye,
-                         "newChance": new, "newAmount": 1, "oldChance": old, "oldAmount": 1, "status": "changed",
-                         **SLAYER_RULE.get(boss, {"weighted": "both"})})
+                         "newChance": new, "newAmount": 1, "oldChance": old, "oldAmount": 1,
+                         "status": "same" if abs(new - old) < 1e-12 else "changed",
+                         **SLAYER_RULE[boss]})
     return rows
 
 
 SLAYERS = {"Revenant Horror", "Tarantula Broodfather", "Sven Packmaster", "Voidgloom Seraph",
            "Inferno Demonlord", "Riftstalker Bloodfiend"}
-# How app.js rolls slayer boss loot: "weighted" sides use the live slayer rule (MF only below 5%, no Looting).
-# Revenant moved to the normal system on Alpha; Riftstalker is in the Rift, where MF doesn't exist.
-SLAYER_RULE = {"Revenant Horror": {"weighted": "old"}, "Riftstalker Bloodfiend": {"noMf": True}}
+# How app.js rolls slayer boss loot. Live: weighted tables (MF only below 5%, no Looting). Alpha: every boss
+# uses a normal mob table. "rift": no MF live; on Alpha only the Vampire Slayer level MF applies.
+SLAYER_RULE = {b: {"weighted": "old"} for b in SLAYERS} | {"Riftstalker Bloodfiend": {"weighted": "old", "rift": True}}
+# Oct 27/Nov 10: slayer levels give MF on that slayer's boss (+1 at levels 1-8, +2 at 9; Rift: 1-4, +2 at 5)
+SLAYER_TYPE = {"Revenant Horror": "Zombie Slayer", "Tarantula Broodfather": "Spider Slayer", "Sven Packmaster": "Wolf Slayer",
+               "Voidgloom Seraph": "Enderman Slayer", "Inferno Demonlord": "Blaze Slayer", "Riftstalker Bloodfiend": "Vampire Slayer"}
 
 
 def wt_text(s):
@@ -377,7 +415,7 @@ def unlisted_tables(covered_texts, texts):
     Watcher summons (already in the post under other names) are left out."""
     out = {}
     for title, text in wiki_pages(all_drop_pages()).items():
-        if text in covered_texts or title == "Baby Magma Slug" or "motes" in text or "{{mt|Pest}}" in text \
+        if text in covered_texts or title in covered_texts or title == "Baby Magma Slug" or "motes" in text or "{{mt|Pest}}" in text \
                 or re.search(r"\((Stranded|Minion Mob|Watcher|Bonzo|Elle's Quest)\)$", title):
             continue
         if title == "Ender Dragon":  # eye-scaled drops are listed as "0-X%" for 0-8 eyes; assume 4 eyes placed
@@ -414,6 +452,7 @@ ITEM_ALIAS = {
     "rabbit's foot": "rabbit foot", "redstone dust": "redstone", "enchanted redstone dust": "enchanted redstone",
     "enchanted iron ingot": "enchanted iron", "millennia-old blaze ashes": "milennia-old blaze ashes",
     "condensed lily pads": "condensed lily pad", "lapis lazuli": "lapis", "fire protection 6": "fire protection vi",
+    "void conqueror enderman skin": "void conqueror", "exceedingly rare ender artifact upgrade": "exceedingly rare ender artifact upgrader",
 }
 
 
@@ -446,11 +485,12 @@ def keep(item, mob):
 
 
 def main():
-    tables = parse_new_tables(first_post_text(fetch(OCT15, "oct15.html")))
-    patch_oct22(tables)
-    tables.update(revenant_tables())
+    nov10 = first_post_text(fetch(NOV10, "nov10.html"))
+    tables = parse_new_tables(nov10)
+    slayers, sheet_dyes = slayer_tables()
+    tables.update(slayers)
     pages = wiki_pages(page_for(r, m) for (r, m, _) in tables if page_for(r, m))
-    texts = wiki_pages(SLAYERS - {"Riftstalker Bloodfiend"})
+    texts = wiki_pages(SLAYERS)
     bosses = {b: slayer_live(t) for b, t in texts.items()}
 
     rows, missing = [], []
@@ -473,15 +513,15 @@ def main():
                          "oldChance": o["chance"] if o else None, "oldAmount": o["amount"] if o else None,
                          "status": ("changed" if (o["chance"], o["amount"]) != (r["chance"], r["amount"]) else "same") if o
                          else ("unknown" if old_rows is None else "added"), **rule})
-        if old_rows is not None and mob not in PARTIAL:
+        if old_rows is not None:
             for k, o in old_by.items():
                 if k not in seen:
                     rows.append({"region": region, "mob": mob, "variant": variant, "item": o["item"],
                                  "newChance": None, "newAmount": None, "oldChance": o["chance"], "oldAmount": o["amount"],
                                  "status": "removed", **rule})
 
-    rows += slayer_dyes(first_post_text(fetch(OCT15, "oct15.html")))
-    # Oct 15 Dyes spoiler: "Increased Superior Dragon drop rate from 1/50,000 → 1/25,000" (other dragons unchanged)
+    rows += slayer_dyes(nov10, sheet_dyes)
+    # Nov 10 Dyes spoiler: "Increased Superior Dragon drop rate from 1/50,000 → 1/25,000" (other dragons unchanged)
     rows.append({"region": "Dragon's Nest", "mob": "Ender Dragon", "variant": "Superior", "item": "Pearlescent Dye",
                  "newChance": 1 / 25000, "newAmount": 1, "oldChance": 1 / 50000, "oldAmount": 1, "status": "changed"})
     # End Stone Protector's wiki loot is a plain wikitable (quality-based), not Mob Drops Rows
@@ -501,24 +541,21 @@ def main():
                              "newChance": parse_chance(c[3]), "newAmount": avg_amount(c[1].split(" +")[0]),
                              "oldChance": parse_chance(c[3]), "oldAmount": avg_amount(c[1].split(" +")[0]),
                              "status": "unlisted"})
-    for (region, mob, variant), old_rows in unlisted_tables(set(pages.values()), texts).items():
+    for (region, mob, variant), old_rows in unlisted_tables(set(pages.values()) | set(pages), texts).items():
         rows += [{"region": region, "mob": mob, "variant": variant, "item": o["item"],
                   "newChance": o["chance"], "newAmount": o["amount"], "oldChance": o["chance"], "oldAmount": o["amount"],
                   "status": "unlisted"} for o in old_rows if keep(o["item"], mob)]
-    # the other bosses keep their weight tables on Alpha: same base rates, new MF
-    for boss, tiers in bosses.items():
-        if boss in SLAYER_RULE:
-            continue
-        for tier, old_rows in tiers.items():
-            rows += [{"region": "Slayer", "mob": boss, "variant": tier,
-                      # Oct 22: Fire Aspect III replaced by Smoldering VI, same weight
-                      "item": "Smoldering VI (was Fire Aspect III)" if o["item"] == "Fire Aspect III" else o["item"],
-                      "newChance": o["chance"], "newAmount": o["amount"], "oldChance": o["chance"], "oldAmount": o["amount"],
-                      "status": "unlisted", "weighted": "both"} for o in old_rows if keep(o["item"], boss)]
+    apply_changes(rows)
 
     for r in rows:
         text = texts.get(r["mob"]) or pages.get(page_for(r["region"], r["mob"]))
         r["types"] = mob_tags(r["mob"], text)
+        if {"Magmatic", "Sea Creature"} <= set(r["types"]):
+            r["types"].append("Lava Sea Creature")
+        if r["mob"] in ("Arachne", "Broodmother", "Tarantula Broodfather"):  # Shriveled Bracelet
+            r["types"].append("Arachne / Broodmother / Tarantula")
+        if r["region"] == "Slayer" and r["mob"] in SLAYER_TYPE:
+            r["types"] = [SLAYER_TYPE[r["mob"]]] if r.get("rift") else r["types"] + [SLAYER_TYPE[r["mob"]]]
         if "Catacombs" in r["region"]:
             r["floors"] = dungeon_floors(r["mob"], r["region"], text)
             r["region"] = "Catacombs"

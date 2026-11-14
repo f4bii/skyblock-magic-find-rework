@@ -3,20 +3,25 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const num = (el) => Math.max(0, Number(el.value) || 0);
 const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII"];
 const NO_MF = { mf: 0, looting: 0, petLuck: 0 };
-// Alpha conditional MF by mob type: [max when every source is stacked, sources] (Oct 15 + Oct 22 posts)
+// Alpha conditional MF by mob type: [max when every source is stacked, sources] (Oct 15 list + Nov 10/12 changes)
+const SLAYER_LEVEL = "Slayer levels 1-8 +1 each, level 9 +2";
 const TYPE_MF = {
-  "Slayer Boss": [30, "Wolf Fur Mixin 5, Habanero Tactics V 5, Aatrox Pathfinder doubled +20"],
+  "Slayer Boss": [30, "Wolf Fur Mixin 5, Habanero Tactics V 5 (Slayer weapon), Aatrox Pathfinder doubled +20"],
+  "Zombie Slayer": [10, SLAYER_LEVEL], "Spider Slayer": [10, SLAYER_LEVEL], "Wolf Slayer": [10, SLAYER_LEVEL],
+  "Enderman Slayer": [10, SLAYER_LEVEL], "Blaze Slayer": [10, SLAYER_LEVEL],
+  "Vampire Slayer": [6, "Vampire Slayer levels 1-4 +1 each, level 5 +2 (the only MF in the Rift)"],
+  "Arachne / Broodmother / Tarantula": [5, "Shriveled Bracelet 5"],
   Mythological: [84, "Crown of Avarice 10, King of Kings 10, Daedalus Blade 0.2/bestiary tier (~46), Four-Eyed Fish 5, Golden Fleece 5, Minotaur Shard 5, Diana's Favor 3"],
   "Sea Creature": [5, "Bobbin' Time V 5"],
   Shark: [18, "Megalodon Blood Scent 10, Shark Tooth Souvenir 5, Denture Collector 3"],
-  "Winter Sea Creature": [10, "Nutcracker Armor 10"],
-  Magmatic: [15, "Lava Flame Shard 10, Magma Lord Armor 5"],
+  Magmatic: [14, "Lava Flame Shard 10, Odger's Diamond Tooth 4"],
+  "Lava Sea Creature": [10, "Magma Lord Armor 5/5 10"],
   Ghost: [10, "Sorrow Armor 10"],
   Automaton: [10, "Mole Magnetic Nose 10"],
   Undead: [5, "Drowned Shard 5"], Arthropod: [5, "Black Widow Shard 5"], Frozen: [5, "Billygoat Shard 5"],
   Subterranean: [5, "Chuckwalla Shard 5"], Aquatic: [5, "Giant Water Bug Shard 5"], Critter: [5, "Hewver Shard 5"],
   Woodland: [5, "Hideonfloor Shard 5"], Arcane: [5, "Hideonwall Shard 5"], Elusive: [5, "Hideyho Shard 5"],
-  Cubic: [5, "Hivethief Shard 5"], Airborne: [5, "Parakeet Shard 5"], Construct: [5, "Wiki Tiki Shard 5"], Animal: [5, "Wild Hog Shard 5"],
+  Cubic: [5, "Hivethief Shard 5"], Airborne: [5, "Parakeet Shard 5"], Construct: [5, "Wiki Tiki Shard 5"], Animal: [9, "Wild Hog Shard 5, PHD's Grimoire 4"],
 };
 $("types").innerHTML = Object.entries(TYPE_MF).map(([t, [max, src]]) =>
   `<label><span>${t} (max ${max})<span class="sub">${src}</span></span><input type="number" min="0" step="0.5" value="${max}" data-type="${t}" data-max="${max}"></label>`).join("");
@@ -62,11 +67,19 @@ function fmtChange(row, ratio) {
   return `<span class="delta ${d > 0 ? "up" : "down"}">${text}</span>`;
 }
 
+// Combat skill level-up MF: +0.1 per level for 1-10, 0.2 for 11-20, 0.3, 0.4, then 0.5 for 41-60 (max 20)
+function combatMf(level) {
+  let mf = 0;
+  for (let l = 1; l <= level; l++) mf += Math.min(Math.ceil(l / 10), 5) / 10;
+  return mf;
+}
+
 function updateEstimate() {
   let sum = 0, mult = 1;
   for (const el of $("est").querySelectorAll("input")) {
     if (el.dataset.mult) { if (el.checked) mult *= Number(el.dataset.mult); continue; }
     if (el.type === "checkbox") sum += el.checked ? Number(el.dataset.mf) : 0;
+    else if (el.dataset.combat) sum += combatMf(Math.min(num(el), 60));
     else sum += num(el) * Number(el.dataset.mf);
   }
   $("newMf").value = +(sum * mult).toFixed(1);
@@ -98,15 +111,14 @@ function render() {
     if (q && !`${r.mob} ${r.variant} ${r.item}`.toLowerCase().includes(q)) continue;
     if (status === "rare" ? (r.newChance ?? r.oldChance) > 0.05 : status && r.status !== status) continue;
     const pet = isPet(r.item);
-    // slayer boss loot: weighted tables ignore Looting and only boost drops under 5%; the Rift has no MF
-    const os = r.noMf ? NO_MF : r.weighted ? { ...oldS, looting: 0 } : oldS;
+    // live slayer loot: weighted tables ignore Looting and only boost drops under 5%; the Rift had no MF.
+    // Alpha: normal tables everywhere; in the Rift only Vampire Slayer level MF applies.
+    const os = r.rift ? NO_MF : r.weighted ? { ...oldS, looting: 0 } : oldS;
     const extra = r.types.reduce((s, t) => s + (typeMf[t] || 0), 0);
-    const ns = r.noMf ? NO_MF : { ...newS, mf: newS.mf + extra };
+    const ns = r.rift ? { mf: extra, petLuck: 0 } : { ...newS, mf: newS.mf + extra };
     const o = r.oldChance != null ? oldDrop(r.oldChance, r.oldAmount, os, pet) : null;
-    const n = r.newChance == null ? null : r.weighted === "both" || r.noMf
-      ? oldDrop(r.newChance, r.newAmount, { mf: Math.min(ns.mf, NEW_CAP), looting: 0, petLuck: ns.petLuck }, pet)
-      : newDrop(r.newChance, r.newAmount, ns, pet);
-    rows.push({ r, o, n, extra: r.noMf ? 0 : extra, ratio: o && n ? n.avg / o.avg : null });
+    const n = r.newChance != null ? newDrop(r.newChance, r.newAmount, ns, pet) : null;
+    rows.push({ r, o, n, extra, ratio: o && n ? n.avg / o.avg : null });
   }
 
   const sort = $("sort").value;
